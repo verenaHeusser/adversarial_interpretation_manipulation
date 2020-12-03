@@ -1,0 +1,12 @@
+# create env, e.g. via ```conde create -n foolingnns```
+# install latest python version :) 
+
+# packages for Fooling_Neural_Network-Interpretation
+# you can run ```conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch``` based suggestions on https://pytorch.org/ 
+# conda install pytorch=0.4.1 torchvision cuda92 -c pytorch
+torchvision
+h5py
+scipy
+opencv-python
+matplotlib
+scikit-image
