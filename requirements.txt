@@ -4,7 +4,7 @@
 # packages for Fooling_Neural_Network-Interpretation
 # you can run ```conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch``` based suggestions on https://pytorch.org/ 
 # conda install pytorch=0.4.1 torchvision cuda92 -c pytorch
-torchvision
+# pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 h5py
 scipy
 opencv-python
