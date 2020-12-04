@@ -42,7 +42,7 @@
   - interpretability framework metis
   -
 - safeai@aaai 2020 http://lcfi.ac.uk/media/uploads/files/DimanovBhattJamnikWeller_YouShouldntTrustMe.pdf
-  - Here we show a straightforward method for mod-ifying a pre-trained model to manipulate the output of manypopular feature importance explanation methods with littlechange in accuracy, thus demonstrating the danger of trust-ing such explanation methods to evaluate the trustworthines
+  - Here we show a straightforward method for modifying a pre-trained model to manipulate the output of manypopular feature importance explanation methods with little change in accuracy, thus demonstrating the danger of trust-ing such explanation methods to evaluate the trustworthiness
 
 # todo + qus
 
