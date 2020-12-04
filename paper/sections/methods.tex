@@ -2,6 +2,7 @@
 
 \subsection{Explanation Methods}
 \label{subsec:explanation_methods}
+Explanation models aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
 A frequently used type of explanation methods are feature attributions mapping a each input feature to a model to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
 
 
@@ -14,7 +15,7 @@ A frequently used type of explanation methods are feature attributions mapping a
 
 \subsection{Manipulation Methods}
 \label{subsec:manipulation_methods}
-Most of the explanation methods outlined in sec. \ref{subsec:explanation_methods} have been shown to be vulnerable to adversarial perturbations. 
+Most of the explanation methods outlined in sec. \autoref{subsec:explanation_methods} have been shown to be vulnerable to adversarial perturbations. 
 Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
 
 
@@ -32,7 +33,7 @@ The general approach is to perturb input data while observing the effect of this
 
 
 \subsubsection{Model Manipulations}
-Contrary to the methods introduced in sec. \ref{subsec:input_manipuls}, the methods in this section do not operate on the input space of models but rather on the model parameter space itself. 
+Contrary to the methods introduced in sec. \autoref{subsec:input_manipuls}, the methods in this section do not operate on the input space of models but rather on the model parameter space itself. 
 As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2017, this line of research is comparably new. The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
 
 
