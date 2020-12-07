@@ -49,6 +49,10 @@ December 16--20, 2020, Karlsruhe, DE}
 
 \usepackage{todonotes}
 
+% macros etc
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
 \begin{document}
 
 %%
@@ -105,15 +109,20 @@ December 16--20, 2020, Karlsruhe, DE}
 \maketitle
 
 
+% manipulating explanations and explaining manipulations
 \input{sections/introduction}
 
 \input{sections/explanation_methods}
 
 \input{sections/manipulation_mothods}
 
+% TODO add methods to reverse / disclose manipulations
+
 \input{sections/robustness}
 
 \input{sections/transferability}
+
+\input{sections/explaining_manipulations}
 
 \input{sections/experiments}
 

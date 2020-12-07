@@ -29,7 +29,7 @@
 
 # prps
 
-- nips 2020: https://proceedings.neurips.cc/paper/2020/file/9d94c8981a48d12adfeecfe1ae6e0ec1-Paper.pdf
+- nips 2020: ht 
 
   - code: https://github.com/zifanw/smoothed_geometry
   - smoothnessof the model’s decision surfaceis related to the transferability of attacks across multiple attribution methods
