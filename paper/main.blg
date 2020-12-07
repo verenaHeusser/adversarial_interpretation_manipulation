@@ -12,45 +12,47 @@ Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
-You've used 1 entry,
+Warning--empty publisher in evaluating_explanations_security
+Warning--empty address in evaluating_explanations_security
+You've used 2 entries,
             5959 wiz_defined-function locations,
-            1493 strings with 16887 characters,
-and the built_in function-call counts, 1223 in all, are:
-= -- 170
-> -- 41
+            1500 strings with 17138 characters,
+and the built_in function-call counts, 2564 in all, are:
+= -- 309
+> -- 93
 < -- 0
-+ -- 13
-- -- 12
-* -- 91
-:= -- 117
-add.period$ -- 5
-call.type$ -- 1
-change.case$ -- 8
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 90
-empty$ -- 67
-format.name$ -- 16
-if$ -- 294
++ -- 30
+- -- 28
+* -- 189
+:= -- 251
+add.period$ -- 10
+call.type$ -- 2
+change.case$ -- 16
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 219
+empty$ -- 156
+format.name$ -- 36
+if$ -- 610
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 53
-num.names$ -- 8
-pop$ -- 38
+missing$ -- 9
+newline$ -- 60
+num.names$ -- 16
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 33
 quote$ -- 0
-skip$ -- 24
+skip$ -- 72
 stack$ -- 0
-substring$ -- 62
-swap$ -- 5
+substring$ -- 166
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
-warning$ -- 1
-while$ -- 4
+type$ -- 46
+warning$ -- 3
+while$ -- 11
 width$ -- 0
-write$ -- 60
-(There was 1 warning)
+write$ -- 77
+(There were 3 warnings)

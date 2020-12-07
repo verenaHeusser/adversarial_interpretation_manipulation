@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -51,6 +51,18 @@
 \url{http://arxiv.org/abs/1902.02041}
 \showURL{%
 \tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Warnecke, Arp, Wressnegger, and
+  Rieck}{Warnecke et~al\mbox{.}}{2020}]%
+        {evaluating_explanations_security}
+\bibfield{author}{\bibinfo{person}{Alexander Warnecke}, \bibinfo{person}{Daniel
+  Arp}, \bibinfo{person}{Christian Wressnegger}, {and} \bibinfo{person}{Konrad
+  Rieck}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Evaluating explanation methods for deep learning in
+  security}. In \bibinfo{booktitle}{\emph{2020 IEEE European Symposium on
+  Security and Privacy (EuroS\&P)}}. IEEE, \bibinfo{pages}{158--174}.
+\newblock
 
 
 \end{thebibliography}

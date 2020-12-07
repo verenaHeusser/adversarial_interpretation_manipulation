@@ -1,0 +1,35 @@
+\section{Explanation Methods}
+\label{sec:explanation_methods}
+
+
+Explanation models aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
+A frequently used type of explanation methods are feature attributions mapping each input feature to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
+
+\textbf{Definition 1: Explanation Method}\\
+We consider a neural network $N: \mathbb{R}^d \to \mathbb{R}^k$. In case the task is image classification $N$ classifies an input image $x\in  \mathbb{R}$ in $k$ categories where the prediction $f_N(x)=y$ is given by $k= arg max_i f_N(x)_i$.
+
+Given the neural network $N$, it's input vector $x=(x_1, ..., x_d)$ and the the neural networks prediction to $x$ $f_N(x)=y$, an explanation method determines why label $y$ has been chosen by $N$ for input $x$. The explanation is given by an output vector $l=(l_1, ..., l_d)$ where each entry $l_i$ is most often a numeric value describing the relevance of an input dimension $x_i$ of $x$ for $f_N(x)$. 
+As $l$ has the same dimensions as the input $x$ it can be mapped to the input, overlaying $x$ as a heatmap where the color value represents the importance of feature $x_i$ towards the prediction $f_N(x)$.
+
+An example is given in TODO. Higher values, implying a stronger relative importance for making the prediction $f_N(x)$, is depicted in TODD color. 
+
+%%%%%%%%%%
+% \subsection{Model Assumptions}
+% \label{subsec:model_assumptions}
+
+
+While all explanation methods try to obtain importance measures for the network prediction, they differ with respect to how these measures are obtained. 
+\cite{evaluating_explanations_security} propose two major categories for explanation strategies.\\
+
+\noindent\textbf{Black-box Explanations.} Black-box explanations assume no knowledge about the neural network model thus treating it as a black-box. The model is approximated which makes these explanation methods applicable in scenarios where the model parameters are not directly accessible. 
+
+\noindent\textbf{White-box Explanations.} On the other side are white-box explanations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. 
+
+In this paper, I will focus exclusively on white-box methods. 
+
+
+
+
+
+
+\noindent\textbf{Gradient Based Explanation Methods}

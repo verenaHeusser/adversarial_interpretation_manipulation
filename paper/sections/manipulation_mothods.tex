@@ -1,0 +1,60 @@
+\section{Manipulation Methods}
+\label{sec:manipulation_methods}
+Manipulation of explanations refers to 
+
+\textbf{Definition 2: Explanation Manipulation Method}\\
+% as it is the goal to disclose the vulnerability of the explanation method and not the vulnerability of the model.
+A manipulation method is defined as a method for altering the output of an explanation method while leaving the model performance of the neural network $N$ roughly unchanged. 
+This must be the case, as the attack is targeted to fool the explanation method, and is essentially not targeted to fool the model itself. Fooling tho model would only disclose the vulnerability of the model but would not allow to gain insight into the stability of the fooling method. 
+Hence, the two main criteria for an explanation method must be fulfilled: 
+- 
+
+
+
+
+Most of the explanation methods outlined in sec. \autoref{subsec:explanation_methods} have been shown to be vulnerable to adversarial perturbations. 
+Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
+Most approaches aim at providing a relevance measure of the input features. \\
+
+
+%%%%%%%%%%
+\subsection{Manipulation Levels}
+\label{subsec:manipulation_levels}
+
+\noindent\textbf{Input Manipulations.} The general approach is to perturb input data while observing the effect of this perturbation. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
+
+
+\noindent\textbf{Model Manipulations.} 
+Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
+As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2017, this line of research is comparably new. The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
+
+
+\subsubsection{Transferability of Manipulations}
+\cite{fooling_nn_interpreters} find that fooling one explanation method with a fooling scheme transfers to other methods. 
+
+
+%%%%%%%%%%
+\subsection{Manipulation Targets}
+\label{subsec:manipulation_targets}
+A further categorization ef explanation methods can be made based on the target of the explanation. 
+The majority of manipulations is untargeted, meaning that the applied perturbations are mostly random and not designed to change the prediction for a specific portion of an input sample. 
+
+\noindent\textbf{Targeted Manipulations.} 
+On the contrary, targeted manipulations are designed to specificly alter the explanation of a distinct portion. This specific portion might be an object in the input image in the context of image classification. 
+
+
+
+
+
+\subsection{Evaluation Criteria}
+\label{subsec:evaluation_criteria}
+As outlined in section \autoref{subsec:manipulation_methods}, there exists a plethora of explanation methods differing in the assumption about the model character and also in style how explanations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust explanation method. 
+Evaluations of the quality of an explanation method can be separated into qualitative and quantitative evaluations. 
+
+\noindent\textbf{Qualitative Evaluations.} 
+As explanations are attributed to input features, the resulting explanation values $l$ can be easily mapped to the input vector $x$.
+Looking at these evaluations for specific samples is informative albeit not usable to obtain a general statistic about the explanation methods quality.
+
+
+\noindent\textbf{Quantitative Evaluations.} 
+Heo et al. \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR). 

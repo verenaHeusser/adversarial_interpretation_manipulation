@@ -51,3 +51,6 @@
 - is there a universal fooling scheme?\\
 - reconstruction methods: can foolings be detected?\\
 - model explanations are not only used to make models more interpretable, but also to make them more trustworthy. Another topic comes into play if applying the models in the real world: Fairness, which is the unbiasednes of models toward features like skin tone or gender.
+
+# sections and additions
+- add safety article and motivation
