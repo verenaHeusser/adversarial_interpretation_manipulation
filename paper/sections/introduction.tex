@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-In recent years deep learning models have demonstrated superior performance in a number of tasks. While the performance is still rising and more task domains are accomplished, these models still remain black boxes often being uninterpretable even by experts. 
+In recent years deep learning models have demonstrated superior performance in a number of tasks. While the performance is still rising and more task domains are accomplished, these models still remain black boxes often uninterpretable even by experts. 
 In many domains, neural networks currently are the state-of-the-art solution. However, their superior performance comes at the cost of complexity, as the models often employ millions to even billions of parameters in order to achieve universal function approximation. This complexity means a drawback in interpretability as the decision making process of such a network cannot be followed by humans without the help of further tools. For instance, withing object recognition one would like to assume that the presence (or absence) of an object in the image causes a model to decide for a specific object category, closely akin to how humans base their decision process. 
 
 At present, many concerns regard the conformance of automated decisions to ethical standards. Regarding the expanding number of tasks that computer tasks are used for nowadays, this concern is becoming even more valid. The application of algorithms for prediction of recidivism rates as even applied at court \cite{chouldechova2017fair}, the filtering of job applicants or ... is already in use \cite{lipton2018mythos}. 
@@ -12,6 +12,9 @@ At present, many concerns regard the conformance of automated decisions to ethic
 
 % https://dl.acm.org/doi/pdf/10.1145/3387514.3405859?casa_token=lCc16GOTZsEAAAAA:gypLNU1o2Wwl3wt_b8stRbb0mgxEomX8PWprPeciNdkhVften3-5E01RM50e0W9NGQaGd4TrLOhA
 
+% explainability can be viewed as an active characteristic of a model, denoting any action orprocedure taken by a model with the intent of clarifying or detailing its internal functions.
+
+
 Thus, automated interpretation methods are required to make sense of the reasoning process of such deep learning based models and to ensure that a model makes decisions without unfair or hidden biases. 
 The research field approaching the explanation or validation of machine learning models decision processes is called explainable artificial intelligence (XAI).
 %  not knowing why models decide
@@ -19,7 +22,7 @@ Not knowing about the biases of a network the vastly advancing technology of mac
 Furthermore, the rise in machine learning model deployments also caused the development of adversarial attacks. These attacks attempt to fool a machine learning model by providing deceptive input. Fooling refers to the resulting malfunction of the model. 
 % TODO first example
 
-Not knowing about attacks and data arranged to exploit specific vulnerabilities has contributed to a relatively new  research field of XAI comprising topics of (1) \textit{model explanations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{manipulations of model explanations}. All of this is also known by the name of robust machine learning or even explainable artificial intelligence, as all subfields have the common goal to make models more robust and safe for deployment. 
+Not knowing about attacks and data arranged to exploit specific vulnerabilities has contributed to a relatively new research field of XAI comprising topics of (1) \textit{model explanations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{manipulations of model explanations}. All of this is also known by the name of robust machine learning or even explainable artificial intelligence, as all subfields have the common goal to make models more robust and safe for deployment. 
 (1) refers to the development of techniques that can be used to understand and explain the decision making process of a machine learning model or even the development of models that are inherently interpretable. (2) is the field of detecting vulnerabilites in models that cause models to be deceived by altered input. 
 (3) is the main topic of this paper, i.e. how to fool explanation models in order to detect vulnerabilities and malfunctions in explanation methods. 
 
