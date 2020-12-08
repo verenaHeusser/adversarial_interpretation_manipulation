@@ -16,45 +16,45 @@ Warning--empty address in dombrowski2019explanations
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
-You've used 3 entries,
+You've used 5 entries,
             5959 wiz_defined-function locations,
-            1505 strings with 17418 characters,
-and the built_in function-call counts, 4122 in all, are:
-= -- 468
-> -- 167
+            1520 strings with 17759 characters,
+and the built_in function-call counts, 6436 in all, are:
+= -- 854
+> -- 207
 < -- 0
-+ -- 55
-- -- 52
-* -- 310
-:= -- 414
-add.period$ -- 15
-call.type$ -- 3
-change.case$ -- 26
-chr.to.int$ -- 3
-cite$ -- 8
-duplicate$ -- 358
-empty$ -- 251
-format.name$ -- 64
-if$ -- 971
++ -- 67
+- -- 68
+* -- 436
+:= -- 617
+add.period$ -- 25
+call.type$ -- 5
+change.case$ -- 36
+chr.to.int$ -- 5
+cite$ -- 10
+duplicate$ -- 565
+empty$ -- 398
+format.name$ -- 80
+if$ -- 1592
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 67
-num.names$ -- 24
-pop$ -- 150
+missing$ -- 22
+newline$ -- 83
+num.names$ -- 40
+pop$ -- 214
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 80
 quote$ -- 0
-skip$ -- 126
+skip$ -- 193
 stack$ -- 0
-substring$ -- 291
-swap$ -- 37
+substring$ -- 494
+swap$ -- 61
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 108
 warning$ -- 5
-while$ -- 18
+while$ -- 40
 width$ -- 0
-write$ -- 93
+write$ -- 127
 (There were 5 warnings)

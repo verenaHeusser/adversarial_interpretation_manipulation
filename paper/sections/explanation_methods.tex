@@ -1,6 +1,8 @@
 \section{Explanation Methods}
 \label{sec:explanation_methods}
 
+% All explanation methods are post hoc
+
 
 Explanation methods aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
 A frequently used type of explanation methods are feature attributions mapping each input feature to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
@@ -19,13 +21,16 @@ An example is given in TODO. Higher values, implying a stronger relative importa
 
 
 While all explanation methods try to obtain importance measures for the network prediction, they differ with respect to how these measures are obtained. 
-\cite{evaluating_explanations_security} propose two major categories for explanation strategies.\\
+\cite{evaluating_explanations_security} propose two major categories for explanation strategies.
 
-\noindent\textbf{Black-box Explanations.} Black-box explanations assume no knowledge about the neural network model thus treating it as a black-box. The model is approximated which makes these explanation methods applicable in scenarios where the model parameters are not directly accessible. 
+\noindent\textbf{Black-box Explanations.} Black-box explanations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, thy can be used in scenarios where the model itself is not directly accessible. A black-box explanation has the big advantage to be applicable to any model.
+
 
 \noindent\textbf{White-box Explanations.} On the other side are white-box explanations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. 
+However, a white-box method can be used for any model. 
 
-In this paper, I will focus exclusively on white-box methods. 
+This terminology of discriminating between bb and wb models may not be confused with the nature of the underlying models: Models still remain of black-box nature even though a white-box method may contribute to making the decision making process of such a model more insightful. % The opposite ofblack-box-nessistransparency,i.e., the search for a direct understanding of the mechanism by which a model works [5] 
+
 
 
 

@@ -29,7 +29,7 @@
 
 # prps
 
-- nips 2020: ht 
+- nips 2020: ht
 
   - code: https://github.com/zifanw/smoothed_geometry
   - smoothnessof the model’s decision surfaceis related to the transferability of attacks across multiple attribution methods
@@ -52,5 +52,8 @@
 - reconstruction methods: can foolings be detected?\\
 - model explanations are not only used to make models more interpretable, but also to make them more trustworthy. Another topic comes into play if applying the models in the real world: Fairness, which is the unbiasednes of models toward features like skin tone or gender.
 
+- bb --> model agnostic methods
+
 # sections and additions
+
 - add safety article and motivation
