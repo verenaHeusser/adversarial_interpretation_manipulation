@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,6 +37,24 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Arrieta, D{\'\i}az-Rodr{\'\i}guez, Del~Ser,
+  Bennetot, Tabik, Barbado, Garc{\'\i}a, Gil-L{\'o}pez, Molina, Benjamins,
+  et~al\mbox{.}}{Arrieta et~al\mbox{.}}{2020}]%
+        {arrieta2020explainable}
+\bibfield{author}{\bibinfo{person}{Alejandro~Barredo Arrieta},
+  \bibinfo{person}{Natalia D{\'\i}az-Rodr{\'\i}guez}, \bibinfo{person}{Javier
+  Del~Ser}, \bibinfo{person}{Adrien Bennetot}, \bibinfo{person}{Siham Tabik},
+  \bibinfo{person}{Alberto Barbado}, \bibinfo{person}{Salvador Garc{\'\i}a},
+  \bibinfo{person}{Sergio Gil-L{\'o}pez}, \bibinfo{person}{Daniel Molina},
+  \bibinfo{person}{Richard Benjamins}, {et~al\mbox{.}}}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Explainable Artificial Intelligence (XAI):
+  Concepts, taxonomies, opportunities and challenges toward responsible AI}.
+\newblock \bibinfo{journal}{\emph{Information Fusion}}  \bibinfo{volume}{58}
+  (\bibinfo{year}{2020}), \bibinfo{pages}{82--115}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chouldechova}{Chouldechova}{2017}]%
         {chouldechova2017fair}
 \bibfield{author}{\bibinfo{person}{Alexandra Chouldechova}.}
@@ -60,6 +78,19 @@
   blame}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
   Processing Systems}}. \bibinfo{pages}{13589--13600}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Dua and Graff}{Dua and Graff}{2017}]%
+        {adult_income}
+\bibfield{author}{\bibinfo{person}{Dheeru Dua} {and} \bibinfo{person}{Casey
+  Graff}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{{UCI} Machine Learning Repository}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{http://archive.ics.uci.edu/ml}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Heo, Joo, and Moon}{Heo et~al\mbox{.}}{2019}]%

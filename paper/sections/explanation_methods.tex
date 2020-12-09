@@ -2,7 +2,24 @@
 \label{sec:explanation_methods}
 
 % All explanation methods are post hoc
-There exists a variety of definitions in the vastly expanding research field of XAI. This paper follows the terminology proposed by \cite{arrieta2020explainable} to build on the common ground of existing research. The authors make a clear distinction between \textit{interpretability} und \textit{explainibility}: The former refers to a passive characteristic of an underlying model to be understandable by humans, which is also defined as transparency. Contraty, the latter refers to an active charactecristic of a model, referring to any procedure with the aim of specifying or detailing the inner workings of e model. 
+There exists a variety of definitions in the vastly expanding research field of XAI. This paper follows the terminology proposed by \cite{arrieta2020explainable} to build on the common ground of existing research. The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}: The former refers to a passive characteristic of an underlying model to be understandable by humans, which is also defined as transparency. Contrary, the latter refers to an active characteristic of a model, referring to any procedure with the aim of specifying or detailing the inner workings of a model. 
+
+Interpretability refers to the the extent to which cause and effect can be observed in a system.   
+and thus relates to the level at which a human can understand a machine learning algorithm.
+
+Explainability refers to the extent to which a machine learning model can be explained in human terms, and so to say to literally explain what is happening. 
+
+High interpretability is desired as it can help 
+to uncover biases in the model. Suppose a machine learning model is to be deployed for the task of income prediction based on features such as age, race, gender, education and hours of work per week. The performance of the system would mainly be evaluated in terms oft the predictive accuracy and the fairness of the system. The former can be evaluated with metrics, such as accuracy on a held-out test set. For the latter, interpretability methods might be applied to observe which input features are used by the model to predict the income. 
+% TODO note here that tha data from adult_income do actually not allow for these features to be more important than others. 
+If the model uses sensitive features, such as sex and race as important features, it is systematically biased thus unfair. 
+
+
+
+The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
+
+Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
+However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
 
 Thus, explainability 
 
