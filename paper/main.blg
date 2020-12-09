@@ -14,47 +14,49 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Warning--empty publisher in dombrowski2019explanations
 Warning--empty address in dombrowski2019explanations
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
+Warning--no number and no volume in ruede2020multi
+Warning--page numbers missing in both pages and numpages fields in ruede2020multi
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
 You've used 7 entries,
             5959 wiz_defined-function locations,
-            1532 strings with 18358 characters,
-and the built_in function-call counts, 9058 in all, are:
-= -- 1174
-> -- 374
+            1528 strings with 18529 characters,
+and the built_in function-call counts, 9181 in all, are:
+= -- 1160
+> -- 428
 < -- 0
-+ -- 125
-- -- 128
-* -- 660
-:= -- 936
++ -- 143
+- -- 144
+* -- 706
+:= -- 975
 add.period$ -- 35
 call.type$ -- 7
-change.case$ -- 56
+change.case$ -- 61
 chr.to.int$ -- 7
-cite$ -- 12
-duplicate$ -- 738
-empty$ -- 522
-format.name$ -- 148
-if$ -- 2190
+cite$ -- 14
+duplicate$ -- 722
+empty$ -- 512
+format.name$ -- 168
+if$ -- 2200
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 26
 newline$ -- 103
 num.names$ -- 56
-pop$ -- 279
+pop$ -- 287
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 123
 quote$ -- 0
-skip$ -- 258
+skip$ -- 249
 stack$ -- 0
-substring$ -- 647
-swap$ -- 77
+substring$ -- 608
+swap$ -- 71
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 154
-warning$ -- 5
-while$ -- 55
+warning$ -- 7
+while$ -- 48
 width$ -- 0
-write$ -- 164
-(There were 5 warnings)
+write$ -- 163
+(There were 7 warnings)

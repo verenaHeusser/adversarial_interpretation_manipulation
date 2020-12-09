@@ -109,13 +109,17 @@
 \tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Lipton}{Lipton}{2018}]%
-        {lipton2018mythos}
-\bibfield{author}{\bibinfo{person}{Zachary~C Lipton}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \showarticletitle{The mythos of model interpretability}.
-\newblock \bibinfo{journal}{\emph{Queue}} \bibinfo{volume}{16},
-  \bibinfo{number}{3} (\bibinfo{year}{2018}), \bibinfo{pages}{31--57}.
+\bibitem[\protect\citeauthoryear{Ruede, Heusser, Frank, Roitberg, Haurilet, and
+  Stiefelhagen}{Ruede et~al\mbox{.}}{2020}]%
+        {ruede2020multi}
+\bibfield{author}{\bibinfo{person}{Robin Ruede}, \bibinfo{person}{Verena
+  Heusser}, \bibinfo{person}{Lukas Frank}, \bibinfo{person}{Alina Roitberg},
+  \bibinfo{person}{Monica Haurilet}, {and} \bibinfo{person}{Rainer
+  Stiefelhagen}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Multi-Task Learning for Calorie Prediction on a
+  Novel Large-Scale Recipe Dataset Enriched with Nutritional Information}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2011.01082}}
+  (\bibinfo{year}{2020}).
 \newblock
 
 
