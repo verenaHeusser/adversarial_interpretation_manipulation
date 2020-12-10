@@ -43,6 +43,7 @@ While black-box interpretations assume no knowledge about the underlying model, 
 
 This terminology of discriminating between bb and wb models may not be confused with the nature of the underlying models: Models still remain of black-box nature even though a white-box method may contribute to making the decision making process of such a model more insightful. % The opposite ofblack-box-nessistransparency,i.e., the search for a direct understanding of the mechanism by which a model works [5] 
 
+
 The following section details the two categories and will give examples of the state-of-the-art interpretation methods within each group. 
 
 % \noindent\textbf{Black-box Methods.} Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, thy can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
@@ -57,13 +58,12 @@ The following section details the two categories and will give examples of the s
 Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
 
-\subsectitle{LIME}
-LIME perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26
+\subsectitle{LIME.}
+Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro2016should} perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26
 to get a probability
 
 
-\subsectitle{SHapley Additive exPlanations). (SHAP)}
-This method calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
+\subsectitle{SHAP.} SHAP, short for SHapley Additive exPlanations, calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
 
 
 \subsection{White-box Methods}
@@ -71,17 +71,15 @@ This method calculates an additive feature importance score for each prediction 
 
 On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
 
-\subsectitle{Notations}
+\subsectitle{Notations.}
 A white-box interpretation method, in the following named interpreter $\mathcal{I}$, generates a heatmap
  $$h_c^\mathcal{I}(\boldsymbol{\omega}) = \mathcal{I}(\mathbf{x}, c; \boldsymbol{\omega})$$
   for a neural network with parameters $\boldsymbol{\omega}$ and class $c$. The heatmap is a vector $h_c^\mathcal{I}(\boldsymbol{\omega}) \in \mathbb{R}^d$, where the $j$-th value $h_{c, j}^\mathcal{I}(\boldsymbol{\omega})$ represents the importance score of the $j-th$ input feature $x_j$ for the final score of class $c$.
 
-
-
 \subsectitle{Layer-wise Relevance Propagation (LRP)}
 relies on a Taylor series close to the prediction point rather than partial derivatives atthe prediction point itself
 
-\subsectitle{ Gradient-weighted Class Activation Mappin (Grad-CAM)} \cite{selvaraju2017grad}
+\subsectitle{ Gradient-weighted Class Activation Mapping (Grad-CAM)} \cite{selvaraju2017grad}
 To further improve the quality of the visualization, attribution methods suchas heatmaps, saliency maps or class activation methods (GradCAM[292]) are used. Grad-CAM uses the gradients of any target concept, flowing into the final convolutional layer to produce acoarse localization map, highlighting the important regions in the image for predicting the concept
 
 \subsectitle{SimpleGrad (SimpleG)}

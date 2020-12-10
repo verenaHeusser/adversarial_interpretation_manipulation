@@ -20,6 +20,14 @@
    - show that points near the decision line are especially susceptible to interpretability-based analysis
    - Our goal is to devise efficientand visually imperceptible perturbations that change the in-terpretability of the test input while preserving the predictedlabel.
 
+3. the mythos
+   - the term inerpretability has no agreed upon meaning
+   - This paper makes a first step towards providing a compre-hensive taxonomy of both the desiderata and methods ininterpretability research  
+   - tries to leverage the problem of a lacking commonly accepted or even flawed problem definition 
+   - Even  worse,  we  could  imagine  situations,  like  machinelearning for security, where the environment might be ac-tively  adversarial
+   - transparency, i.e.,how does the model work?Thesecond  consists  ofpost-hoc  explanations,  i.e.,what  elsecan the model tell me? This division is a useful organi-zationally, but we note that it is not absolute.  For examplepost-hoc analysis techniques attempt to uncover the signif-icance of various of parameters, an aim we group under theheading of transparency
+
+
 keywords: 
 black box explanations, model interpretability, bias detection, ad-versarial attacks
 
@@ -28,13 +36,15 @@ black box explanations, model interpretability, bias detection, ad-versarial att
 One way to understanding the behavior of such classifiers is to build simpler explanation models that are interpretable approximations of these black boxes.
 The other way is to calculate feature importances for a given model. 
 
-(1)  crafting of adversarial input examples
+(1) crafting of adversarial input examples
 (2) crafting of adversarial classifiers / mdoels 
 
 
 It must be noted that interpretability is mostly assumed to be given if the following holds : 
 1. a model aiming to explain a more complex model achieves lower complexity and is thereby interpretable.
 2. feature attribution is given, i.e. feature importances of single input features
+
+An  interpretation  may  prove  informative  even  withoutshedding  light  on  a  model’s  inner  workings.
 
 
 # questions: 

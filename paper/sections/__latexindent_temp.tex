@@ -1,98 +1,29 @@
-\section{Manipulation Methods}
-\label{sec:manipulation_methods}
+\section{Discussion}
+
+\subsection{Conclusion}
+Finally, it must be noted that the suitability of a method depends on its application domain. 
 
 
-The focus of most works is on adversarial attacks against the prediction of a machine learning model. Contrary, the focus of this paper is on the attacks on the interpretation without changing the prediction.
+Much critique has been applied to methods aiming at interpreting complex and potentially non-interpretable models. 
+Some researchers argue it is not worthwhile to study non interpretable systems while dismissing that using inherently interpretable models in the first place might be the better approach. 
+
+Adversarial attacks show that machine learning systems are still fundamentally fragile: They may be successful in a number of tasks, but fail to adapt to ood scenarios, i.e. when being applied to unfamiliar territory. 
+% Our results raise concerns on how interpretations of neural networks can be manipulated.
+% fail unpredictably
+
+ The findings about manipulating interpretations do not suggest that interpretations are completely meaningless, just as adversarial attacks on predictions models do not imply that machine learning models are useless. However, they suggest that there still are fundamental flaws in the way neural networks operate und that much caution and supervision sould be applied if they are to be deployed in the real wolrd .
 
 
-A manipulation method refers to a method influencing an interpretation method $\mathcal{I}$ to yield a wrong interpretation. This influence on the interpretation method is also called \textit{fooling} or an \textit{attack}. 
+do  notsuggest that interpretations are meaningless, just as adver-sarial  attacks  on  predictions  do  not  imply  that  neural  net-works are useless. 
 
-The goal is to apply efficient and for humans imperceptible perturbations to change the interpretability of the input sample while leaving the prediction unchanged. 
+This paper follows the footseps of \cite{lipton2018mythos}, trying to caution against blindly putting faith into post-hoc explanation methods. 
+Moreover,
 
-Formally, the problem can be defined as: 
-\textbf{Definition 2: Interpretation Manipulation Method}\\
-% as it is the goal to disclose the vulnerability of the explanation method and not the vulnerability of the model.
-A manipulation method $\mathcal{F}$ is defined as a method for altering the output of an explanation method while leaving the model performance of the neural network $N$ roughly unchanged. 
-This must be the case, as the attack is targeted to fool the explanation method, and is essentially not targeted to fool the model itself. Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability of the fooling method. 
-Hence, the main criteria for an explanation manipulation method must be fulfilled: 
-\begin{enumerate}
-    \item[1.] The models prediction stays approximately the same, i.e. $f_N(x_{adv}) \approx f_N(x)$ or $f_{N_{adv}}(x) \approx f_N(x)$
-    \item[2.] The explanation map $h(x_{adv})$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(x)$, i.e. $h(x_{adv})$ or $$\argmax_{\delta} = \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega})$$
-    \item[3.] In case the attack is in the input domain of the model, the perturbation of input samples must be imperceptible by humans. According to \cite{dombrowski2019explanations}, the norm of the added perturbation $\delta$ to an input sample $x$ thus must be small, i.e. $\norm{\delta x} = \norm{x_{adx}-x}_{\inf} \leq \epsilon$ % https://arxiv.org/pdf/1710.10547.pdf 
-\end{enumerate}
-
-Other criteria to a manipulation method are the following:
-
-\noindent\textbf{Effectiveness.} The manipulation scheme is inexpensive to conduct. Input manipulations are by definition inexpensive, as the perturbation can be applied to single input samples. Model manipulations are more expensive as they require tho model parameters to be adapted. However, an adversarial model can be obtained by fine-tuning the model with an adapted objective function. This fine-tuning also has the advantage that the model is adapted to include a systematic bias and can thus be applied to fool explanation methods without further adapting the model or input samples.
-
-\noindent\textbf{Transferability.} The manipulation does not only fool one type of explanation method, but it's effect transfers to other types. 
+% We argue checking the robustness of interpretation methods with respect to our adversarialmodel manipulation should be an indispensable criterion for the interpreters in addition to the sanitychecks proposed in [27];
 
 
-
-Most of the explanation methods outlined in sec. \autoref{sec:interpretation_methods} have been shown to be vulnerable to adversarial perturbations. 
-Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
-Most approaches aim at providing a relevance measure of the input features. \\
-
-
-
-%%%%%%%%%%
-\subsection{Manipulation Levels}
-\label{subsec:manipulation_levels}
-
-\noindent\textbf{Adversarial Input Manipulations.} The general approach is to perturb input data while observing the effect of this perturbation. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
-
-
-\noindent\textbf{Adversarial Model Manipulations.} 
-Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
-As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2017, this line of research is comparably new. 
-Adversarial model manipulations are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ would be the regular cross-entropy classification loss. 
-
-The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
-
-
-
-\subsubsection{Transferability of Manipulations}
-\cite{fooling_nn_interpreters} find that fooling one explanation method with a fooling scheme transfers to other methods. 
-
-
-%%%%%%%%%%
-\subsection{Manipulation Targets}
-\label{subsec:manipulation_targets}
-A further categorization ef interpretation methods can be made based on the target of the manipulation. 
-
-\noindent\textbf{Untargeted Manipulations.} 
-The majority of manipulations is untargeted, meaning that the applied perturbations are mostly random and not designed to change the prediction for a specific portion of an input sample. 
-
-\noindent\textbf{Targeted Manipulations.} 
-On the contrary, targeted manipulations are designed to specificly alter the explanation of a distinct portion. This specific portion might be an object in the input image in the context of image classification. 
-For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the classes elephant and school bus are swapped. 
-Manipulations on the level of the model are mostly targeted, as the explanation methods are being fooled by adapting the model parameters. 
-
-% Model manipulations pose a much higher threat for deploying the models: If a model itself is changed to explicitly, systemactically fool an explanation method, the bias of the model is internal and much harder to reveal than just a different sort of input into the model. 
-
-
-
-\subsection{Evaluation Criteria}
-\label{subsec:evaluation_criteria}
-As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretations methods differing in the assumption about the model character and also in style how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust explanation method. 
-Evaluations of the quality of an explanation method can be separated into qualitative and quantitative evaluations. 
-% \cite{fooling_nn_interpreters} propose to measure the quality of an explanation method by their stability with respect to adversarial model manipulations. 
-
-
-
-\subsectitle{Quantitative Evaluations.} 
-As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations before and after perturbation \cite{ghorbani2019interpretation}.
-Common metrics for measuring this similarity between interpretations are the following: 
-\begin{itemize}
-    \item \textbf{Spearman's rank order correlation:} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
-    \item \textbf{Intersection of the top-$k$ features: } For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
-
-\end{itemize}
-
-
-Heo et al. \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to introduce a measure for systematically measuring the quality of a fooling method. 
-
-
-\subsectitle{Qualitative Evaluations.} 
-As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $x$.
-Looking at these evaluations for specific samples is informative albeit not usable to obtain a general statistic about the explanation methods quality.
+%%%%%%%%%%%%% FUTURE WORK
+\subsection{Future Work}
+We see several possible future directions of future work. 
+Firstly, for approaching the discrepency of in-lab and real-life applications of, more focus might be laid in the development better performance metrics for both measuring the performance of machine learning models as well as their interpreters. 
+More specifically, it might be fruitful to further investigate the correlation between ood samples and the performance of an interpretation method.

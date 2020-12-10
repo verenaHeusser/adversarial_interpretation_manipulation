@@ -82,14 +82,12 @@ Evaluations of the quality of an explanation method can be separated into qualit
 
 \subsectitle{Quantitative Evaluations.} 
 As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations before and after perturbation \cite{ghorbani2019interpretation}.
-Common metrics for measuring this similarity between interpretations are the following: 
+Common metrics for quantitatively measuring this similarity between interpretations are the following: 
 \begin{itemize}
-    \item \textbf{Spearman's rank order correlation:} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
-    \item \textbf{Intersection of the top-$k$ features: } For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
+    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
+    \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
+    \item \textbf{Fooling Success Rate (FSR).} Heo et al. \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to create a measure for systematically measuring the robustness of an interpretation method to adversarial model manipulations. The FSR measures on how many samples from a dataset an interpretation method $\mathcal{I}$ is fooled by a model manipulation. The higher the FSR, the more often an inetpretation method is fooled. 
 \end{itemize}
-
-
-Heo et al. \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to introduce a measure for systematically measuring the quality of a fooling method. 
 
 
 \subsectitle{Qualitative Evaluations.} 
