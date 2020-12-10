@@ -1,29 +1,58 @@
-\section{Discussion}
+\section{Introduction}
+\label{sec:introduction}
+% questioning the how
 
-\subsection{Conclusion}
-Finally, it must be noted that the suitability of a method depends on its application domain. 
+In recent years deep learning models have demonstrated superior performance in a number of tasks. While the performance is still rising and more task domains are accomplished, these models still remain black boxes often uninterpretable even by experts. 
+In many domains, neural networks currently are the state-of-the-art solution. However, their superior performance comes at the cost of complexity, as the models often employ millions to even billions of parameters in order to achieve universal function approximation. This complexity means a drawback in interpretability as the decision making process of such a network cannot be followed by humans without the help of further tools. For instance, withing object recognition one would like to assume that the presence (or absence) of an object in the image causes a model to decide for a specific object category, closely akin to how humans base their decision process. 
 
+At present, many concerns regard the coherence of automated decisions to ethical standards. Regarding the expanding number of tasks that automated computer algorithms are used for nowadays, this concern is becoming even more important, as machine learning models are moving out of the lab into the real world. The application of algorithms for prediction of recidivism rates are already applied at court \cite{chouldechova2017fair}, and the filtering of job applicants, piloting of self-driving cars, diagnoses of diseases or automated food recognition \cite{ruede2020multi} are already in use.
 
-Much critique has been applied to methods aiming at interpreting complex and potentially non-interpretable models. 
-Some researchers argue it is not worthwhile to study non interpretable systems while dismissing that using inherently interpretable models in the first place might be the better approach. 
+% sort of prove that neural networks make a safe decision without biases
 
-Adversarial attacks show that machine learning systems are still fundamentally fragile: They may be successful in a number of tasks, but fail to adapt to ood scenarios, i.e. when being applied to unfamiliar territory. 
-% Our results raise concerns on how interpretations of neural networks can be manipulated.
-% fail unpredictably
+% much broader context to create security and large scale applications 
 
- The findings about manipulating interpretations do not suggest that interpretations are completely meaningless, just as adversarial attacks on predictions models do not imply that machine learning models are useless. However, they suggest that there still are fundamental flaws in the way neural networks operate und that much caution and supervision sould be applied if they are to be deployed in the real wolrd .
+% https://dl.acm.org/doi/pdf/10.1145/3387514.3405859?casa_token=lCc16GOTZsEAAAAA:gypLNU1o2Wwl3wt_b8stRbb0mgxEomX8PWprPeciNdkhVften3-5E01RM50e0W9NGQaGd4TrLOhA
 
-
-do  notsuggest that interpretations are meaningless, just as adver-sarial  attacks  on  predictions  do  not  imply  that  neural  net-works are useless. 
-
-This paper follows the footseps of \cite{lipton2018mythos}, trying to caution against blindly putting faith into post-hoc explanation methods. 
-Moreover,
-
-% We argue checking the robustness of interpretation methods with respect to our adversarialmodel manipulation should be an indispensable criterion for the interpreters in addition to the sanitychecks proposed in [27];
+% explainability can be viewed as an active characteristic of a model, denoting any action orprocedure taken by a model with the intent of clarifying or detailing its internal functions.
 
 
-%%%%%%%%%%%%% FUTURE WORK
-\subsection{Future Work}
-We see several possible future directions of future work. 
-Firstly, for approaching the discrepency of in-lab and real-life applications of, more focus might be laid in the development better performance metrics for both measuring the performance of machine learning models as well as their interpreters. 
-More specifically, it might be fruitful to further investigate the correlation between ood samples and the performance of an interpretation method.
+Thus, automated interpretation methods are required to make sense of the reasoning process and stability of such deep learning based models and to ensure that a model makes decisions without unfair or hidden biases. 
+The research field approaching the explanation or validation of machine learning models is called explainable artificial intelligence (XAI).
+%  not knowing why models decide
+Not knowing about the biases of a network the vastly advancing technology of machine learning to be used in high-stakes and safety critical applications and prevent real-life deployment of such systems. 
+Furthermore, the rise in machine learning model deployments also caused the development of adversarial attacks. These attacks attempt to fool a machine learning model by providing deceptive input. Fooling refers to the resulting malfunction of the model. 
+% TODO first example
+
+Not knowing about attacks and data arranged to exploit specific vulnerabilities has contributed to a relatively new research field of XAI comprising topics of (1) \textit{model explanations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{adversarial manipulations of model explanations}. All of this is also known by the name of robust machine learning or even explainable artificial intelligence, as all subfields have the common goal to make models more robust and safe for deployment. 
+(1) refers to the development of techniques that can be used to understand and explain the decision making process of a machine learning model or even the development of models that are inherently interpretable. (2) is the field of detecting vulnerabilites in models that cause models to be deceived by altered input. 
+(3) is the main topic of this paper, i.e. how to fool explanation models in order to detect vulnerabilities and malfunctions in explanation methods. 
+
+Detecting such vulnerabilities in models is most crucial 
+
+Fragility limits how much wecan trust and learn from the interpretations
+
+
+
+% While most of the approaches to explainability focus on the application to computer vision tasks, other domains are seldomly chosen. 
+Most research on explainability focuses on the application of computer vision tasks. 
+% todo cite a lot here
+% https://www.bmc.com/blogs/machine-learning-interpretability-vs-explainability/ 7
+
+% Visually appealing methods and easiy visual assessment of results. 
+Most works in the field of XAI focus on image classification task, mostly because visualizations of a neural networks prediction can be easily verified by a human. The general purpose of image classification is to detect what objects are in an image. If a model works can be checked rather easily (if an image contains a cat, the prediction of a neural network should be cat and not some other object category). However, how it works (\textit{interpretability}), i.e. based on which features in the image the decision is made or which parameters in the model influence the prediction most, is an entirely different matter (\textit{explainability}).  
+
+
+More importantly, while a big motivation for the development of robust and explainable systems is to overcome biases in models, datasets with 
+direct implication of biases are seldomly used and by far not treated as benchmarking scenarios for explainability analyses.  
+
+
+% Theoretical background
+% why do adv attacks make sense? most models are trained on iid samples and thus not directly applicable to the real world, as the real world violates this statistical assumption. 
+
+
+
+
+% Outline
+The overview presented in this article examines the existing literature and contributions in the field of XAI focusing on methods to manipulate explanation methods.  
+The critical literature analysis might serve as a motivation and step towards the biggest problems in XAI: How to make sure that interpretations of models are truly valid. 
+This paper is structured as follows... 

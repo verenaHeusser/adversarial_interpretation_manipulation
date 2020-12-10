@@ -27,45 +27,45 @@ Warning--no number and no volume in spearman1961proof
 Warning--page numbers missing in both pages and numpages fields in spearman1961proof
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
-You've used 12 entries,
+You've used 13 entries,
             5959 wiz_defined-function locations,
-            1558 strings with 19506 characters,
-and the built_in function-call counts, 15214 in all, are:
-= -- 1849
-> -- 624
+            1564 strings with 19721 characters,
+and the built_in function-call counts, 16746 in all, are:
+= -- 2071
+> -- 698
 < -- 0
-+ -- 208
-- -- 208
-* -- 1114
-:= -- 1568
-add.period$ -- 60
-call.type$ -- 12
-change.case$ -- 95
-chr.to.int$ -- 12
-cite$ -- 28
-duplicate$ -- 1304
-empty$ -- 919
-format.name$ -- 244
-if$ -- 3649
++ -- 233
+- -- 232
+* -- 1236
+:= -- 1726
+add.period$ -- 65
+call.type$ -- 13
+change.case$ -- 105
+chr.to.int$ -- 13
+cite$ -- 29
+duplicate$ -- 1415
+empty$ -- 997
+format.name$ -- 272
+if$ -- 4035
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 49
-newline$ -- 140
-num.names$ -- 96
-pop$ -- 522
+missing$ -- 53
+newline$ -- 148
+num.names$ -- 104
+pop$ -- 560
 preamble$ -- 1
-purify$ -- 202
+purify$ -- 221
 quote$ -- 0
-skip$ -- 454
+skip$ -- 492
 stack$ -- 0
-substring$ -- 1096
-swap$ -- 132
+substring$ -- 1212
+swap$ -- 147
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 276
+type$ -- 292
 warning$ -- 16
-while$ -- 88
+while$ -- 95
 width$ -- 0
-write$ -- 245
+write$ -- 262
 (There were 16 warnings)

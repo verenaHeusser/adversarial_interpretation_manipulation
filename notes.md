@@ -27,6 +27,11 @@
    - Even  worse,  we  could  imagine  situations,  like  machinelearning for security, where the environment might be ac-tively  adversarial
    - transparency, i.e.,how does the model work?Thesecond  consists  ofpost-hoc  explanations,  i.e.,what  elsecan the model tell me? This division is a useful organi-zationally, but we note that it is not absolute.  For examplepost-hoc analysis techniques attempt to uncover the signif-icance of various of parameters, an aim we group under theheading of transparency
 
+4. saliency based text  https://arxiv.org/pdf/1810.03292.pdf
+   - Consequently, methods that fail the proposed tests are inadequate fortasks that are sensitive to either data or model, such as, finding outliers in the data,explaining the relationship between inputs and outputs that the model learned,and debugging the mode 
+   -  model parameter randomization test
+   - data randomization test
+
 
 keywords: 
 black box explanations, model interpretability, bias detection, ad-versarial attacks
