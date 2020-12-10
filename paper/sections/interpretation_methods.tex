@@ -2,7 +2,8 @@
 \label{sec:interpretation_methods}
 
 % All explanation methods are post hoc
-There exists a variety of definitions in the vastly expanding research field of XAI. This paper follows the terminology proposed by \cite{arrieta2020explainable} to build on the common ground of existing research. The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}: The former refers to a passive characteristic of an underlying model to be understandable by humans, which is also defined as transparency. Contrary, the latter refers to an active characteristic of a model, referring to any procedure with the aim of specifying or detailing the inner workings of a model. 
+There exists a variety of definitions in the vastly expanding research field of XAI, and the concept of \textit{interpretability} still has no formal commonly used technical meaning \cite{lipton2018mythos}. To build on the common ground of existing research, this paper follows the terminoloqy of \cite{arrieta2020explainable}.
+The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}: The former refers to a passive characteristic of an underlying model to be understandable by humans, which is also defined as transparency. Contrary, the latter refers to an active characteristic of a model, referring to any procedure with the aim of specifying or detailing the inner workings of a model. 
 
 Interpretability refers to the the extent to which cause and effect can be observed in a system.   
 and thus relates to the level at which a human can understand a machine learning algorithm.
@@ -14,15 +15,10 @@ to uncover biases in the model. Suppose a machine learning model is to be deploy
 % TODO note here that tha data from adult_income do actually not allow for these features to be more important than others. 
 If the model uses sensitive features, such as sex and race as important features, it is systematically biased thus unfair. 
 
-
-
 The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
 
 Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
 However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
-
-Thus, explainability 
-
 
 Explanation methods aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
 A frequently used type of explanation methods are feature attributions mapping each input feature to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
@@ -47,20 +43,18 @@ While black-box interpretations assume no knowledge about the underlying model, 
 
 This terminology of discriminating between bb and wb models may not be confused with the nature of the underlying models: Models still remain of black-box nature even though a white-box method may contribute to making the decision making process of such a model more insightful. % The opposite ofblack-box-nessistransparency,i.e., the search for a direct understanding of the mechanism by which a model works [5] 
 
-The following sections will detail the two categories in more detail and will give examples of the state-of-the-art interpretation methods within each group. 
+The following section details the two categories and will give examples of the state-of-the-art interpretation methods within each group. 
 
-\noindent\textbf{Black-box Methods.} Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, thy can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
-
-
-\noindent\textbf{White-box Methods.} On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
+% \noindent\textbf{Black-box Methods.} Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, thy can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
 
+% \noindent\textbf{White-box Methods.} On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
 
 
 \subsection{Black-box Methods}
 \label{subsec:bb_methods}
 
-Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, thy can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
+Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
 
 \subsectitle{LIME}
@@ -81,6 +75,7 @@ On the other side are white-box interpretations, where the model is known with a
 A white-box interpretation method, in the following named interpreter $\mathcal{I}$, generates a heatmap
  $$h_c^\mathcal{I}(\boldsymbol{\omega}) = \mathcal{I}(\mathbf{x}, c; \boldsymbol{\omega})$$
   for a neural network with parameters $\boldsymbol{\omega}$ and class $c$. The heatmap is a vector $h_c^\mathcal{I}(\boldsymbol{\omega}) \in \mathbb{R}^d$, where the $j$-th value $h_{c, j}^\mathcal{I}(\boldsymbol{\omega})$ represents the importance score of the $j-th$ input feature $x_j$ for the final score of class $c$.
+
 
 
 \subsectitle{Layer-wise Relevance Propagation (LRP)}

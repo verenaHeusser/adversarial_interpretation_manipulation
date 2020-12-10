@@ -10,6 +10,16 @@
    9. These results suggest that it is possible for malicious actorsto craft adversarial classifiers that are highly discriminatory, butcan effectively fool existing post hoc explanation techniques
 
 
+2. https://arxiv.org/pdf/1710.10547.pdf  ghorbani
+   - interpreter fooling + explanation 
+   - We systematically characterize the robustness of interpreta-tions  generated  by  several  widely-used  feature  importanceinterpretation methods
+   - In allcases, our experiments show that systematic perturbations canlead to dramatically different interpretations without chang-ing the label.
+   - . Our analysis of the ge-ometry of the Hessian matrix gives insight on why robustnessis a general challenge to current interpretation approaches 
+
+   - n  this  pa-per, we introduce the notion of adversarial perturbations toneural network interpretation.
+   - show that points near the decision line are especially susceptible to interpretability-based analysis
+   - Our goal is to devise efficientand visually imperceptible perturbations that change the in-terpretability of the test input while preserving the predictedlabel.
+
 keywords: 
 black box explanations, model interpretability, bias detection, ad-versarial attacks
 
@@ -25,3 +35,36 @@ The other way is to calculate feature importances for a given model.
 It must be noted that interpretability is mostly assumed to be given if the following holds : 
 1. a model aiming to explain a more complex model achieves lower complexity and is thereby interpretable.
 2. feature attribution is given, i.e. feature importances of single input features
+
+
+# questions: 
+- To  quantify  the  perturba-tion size: [ghorbani et al.] -> l2, linf norms --> how much the images have been perturbed (in terms of number of pixels)?
+
+
+
+# interpretation methods 
+- https://arxiv.org/pdf/1710.10547.pdf 
+1. post-hoc interpretations
+   1. Feature  importance  interpretation 
+      - explains predictions in terms of realtive importance of features of an input test sample
+   
+      1. Simple Grad: 1st order lin approx of the model to detect the sensitivity of the score to perturbing each of the input dims
+      2. Integrated Gradients: 
+      3. LRP methods: decompose the score h_i(x_i) backwards through the network  
+      4. DeepLift: Improved version of LRP
+
+   2. Sample Importance Interpret
+      - which training examples have the biggest effect on the model prediction
+      1. 
+
+# comparision of interpretations  -> metrics 
+
+(1) quantitatively
+- https://arxiv.org/pdf/1710.10547.pdf
+--> comparsion of interpretations befoe and after perturbation. 
+   1. Spearmans rank corr
+   2. top-k intersection: intersection of the k most important features
+- FSR as a general measure of 
+
+(2) qualitatively
+- by visual inspection

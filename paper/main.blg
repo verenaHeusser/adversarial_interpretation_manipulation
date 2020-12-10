@@ -13,52 +13,57 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Warning--empty publisher in dombrowski2019explanations
 Warning--empty address in dombrowski2019explanations
+Warning--empty publisher in ghorbani2019interpretation
+Warning--empty address in ghorbani2019interpretation
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
 Warning--no number and no volume in ruede2020multi
 Warning--page numbers missing in both pages and numpages fields in ruede2020multi
 Warning--empty publisher in selvaraju2017grad
 Warning--empty address in selvaraju2017grad
+Warning--no journal in spearman1961proof
+Warning--no number and no volume in spearman1961proof
+Warning--page numbers missing in both pages and numpages fields in spearman1961proof
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
-You've used 8 entries,
+You've used 11 entries,
             5959 wiz_defined-function locations,
-            1533 strings with 18825 characters,
-and the built_in function-call counts, 10639 in all, are:
-= -- 1303
-> -- 502
+            1552 strings with 19247 characters,
+and the built_in function-call counts, 13889 in all, are:
+= -- 1707
+> -- 583
 < -- 0
-+ -- 168
-- -- 168
-* -- 823
-:= -- 1132
-add.period$ -- 40
-call.type$ -- 8
-change.case$ -- 71
-chr.to.int$ -- 8
-cite$ -- 17
-duplicate$ -- 851
-empty$ -- 601
-format.name$ -- 196
-if$ -- 2535
++ -- 195
+- -- 196
+* -- 1025
+:= -- 1444
+add.period$ -- 55
+call.type$ -- 11
+change.case$ -- 88
+chr.to.int$ -- 11
+cite$ -- 25
+duplicate$ -- 1170
+empty$ -- 827
+format.name$ -- 228
+if$ -- 3331
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 31
-newline$ -- 110
-num.names$ -- 64
-pop$ -- 345
+missing$ -- 44
+newline$ -- 133
+num.names$ -- 88
+pop$ -- 467
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 186
 quote$ -- 0
-skip$ -- 297
+skip$ -- 403
 stack$ -- 0
-substring$ -- 711
-swap$ -- 85
+substring$ -- 982
+swap$ -- 116
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
-warning$ -- 9
-while$ -- 55
+type$ -- 246
+warning$ -- 14
+while$ -- 81
 width$ -- 0
-write$ -- 179
-(There were 9 warnings)
+write$ -- 229
+(There were 14 warnings)
