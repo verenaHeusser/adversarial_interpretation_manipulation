@@ -64,9 +64,12 @@ Black-box interpretations assume no knowledge about the model thus treating it a
 
 
 \subsectitle{LIME}
+LIME perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26
+to get a probability
 
-\subsectitle{SHAP}
 
+\subsectitle{SHapley Additive exPlanations). (SHAP)}
+This method calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
 
 
 \subsection{White-box Methods}
@@ -81,8 +84,9 @@ A white-box interpretation method, in the following named interpreter $\mathcal{
 
 
 \subsectitle{Layer-wise Relevance Propagation (LRP)}
+relies on a Taylor series close to the prediction point rather than partial derivatives atthe prediction point itself
 
-
-\subsectitle{Grad-CAM}
+\subsectitle{ Gradient-weighted Class Activation Mappin (Grad-CAM)} \cite{selvaraju2017grad}
+To further improve the quality of the visualization, attribution methods suchas heatmaps, saliency maps or class activation methods (GradCAM[292]) are used. Grad-CAM uses the gradients of any target concept, flowing into the final convolutional layer to produce acoarse localization map, highlighting the important regions in the image for predicting the concept
 
 \subsectitle{SimpleGrad (SimpleG)}

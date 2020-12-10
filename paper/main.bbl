@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -120,6 +120,20 @@
   Novel Large-Scale Recipe Dataset Enriched with Nutritional Information}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2011.01082}}
   (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Selvaraju, Cogswell, Das, Vedantam, Parikh,
+  and Batra}{Selvaraju et~al\mbox{.}}{2017}]%
+        {selvaraju2017grad}
+\bibfield{author}{\bibinfo{person}{Ramprasaath~R Selvaraju},
+  \bibinfo{person}{Michael Cogswell}, \bibinfo{person}{Abhishek Das},
+  \bibinfo{person}{Ramakrishna Vedantam}, \bibinfo{person}{Devi Parikh}, {and}
+  \bibinfo{person}{Dhruv Batra}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Grad-cam: Visual explanations from deep networks
+  via gradient-based localization}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the IEEE international conference on computer vision}}.
+  \bibinfo{pages}{618--626}.
 \newblock
 
 

@@ -16,47 +16,49 @@ Warning--empty address in dombrowski2019explanations
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
 Warning--no number and no volume in ruede2020multi
 Warning--page numbers missing in both pages and numpages fields in ruede2020multi
+Warning--empty publisher in selvaraju2017grad
+Warning--empty address in selvaraju2017grad
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
-You've used 7 entries,
+You've used 8 entries,
             5959 wiz_defined-function locations,
-            1528 strings with 18529 characters,
-and the built_in function-call counts, 9181 in all, are:
-= -- 1160
-> -- 428
+            1533 strings with 18825 characters,
+and the built_in function-call counts, 10639 in all, are:
+= -- 1303
+> -- 502
 < -- 0
-+ -- 143
-- -- 144
-* -- 706
-:= -- 975
-add.period$ -- 35
-call.type$ -- 7
-change.case$ -- 61
-chr.to.int$ -- 7
-cite$ -- 14
-duplicate$ -- 722
-empty$ -- 512
-format.name$ -- 168
-if$ -- 2200
++ -- 168
+- -- 168
+* -- 823
+:= -- 1132
+add.period$ -- 40
+call.type$ -- 8
+change.case$ -- 71
+chr.to.int$ -- 8
+cite$ -- 17
+duplicate$ -- 851
+empty$ -- 601
+format.name$ -- 196
+if$ -- 2535
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 26
-newline$ -- 103
-num.names$ -- 56
-pop$ -- 287
+missing$ -- 31
+newline$ -- 110
+num.names$ -- 64
+pop$ -- 345
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 142
 quote$ -- 0
-skip$ -- 249
+skip$ -- 297
 stack$ -- 0
-substring$ -- 608
-swap$ -- 71
+substring$ -- 711
+swap$ -- 85
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 7
-while$ -- 48
+type$ -- 184
+warning$ -- 9
+while$ -- 55
 width$ -- 0
-write$ -- 163
-(There were 7 warnings)
+write$ -- 179
+(There were 9 warnings)
