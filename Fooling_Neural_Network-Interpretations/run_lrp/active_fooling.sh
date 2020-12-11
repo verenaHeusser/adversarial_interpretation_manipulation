@@ -9,12 +9,12 @@ EXP_NAME=Active_
 
 CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter lrp_T --lrp_target_layer 34 --model VGG19 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
 
-CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 34 --model VGG19 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
+# CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 34 --model VGG19 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
 
-CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter lrp_T --lrp_target_layer 64 --model Densenet121 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
+# CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter lrp_T --lrp_target_layer 64 --model Densenet121 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
 
-CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 64 --model Densenet121 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
+# CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 64 --model Densenet121 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
 
-CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter lrp_T --lrp_target_layer 19 --model Resnet50 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
+# CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter lrp_T --lrp_target_layer 19 --model Resnet50 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
 
-CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 19 --model Resnet50 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION
+# CUDA_VISIBLE_DEVICES=$GPU python3 $RUN --interpreter grad_cam --lrp_target_layer 19 --model Resnet50 --lr 1e-5 --lambda_value 10 --img_name $EXP_NAME $FIXED_OPTION

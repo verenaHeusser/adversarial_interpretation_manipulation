@@ -598,7 +598,7 @@ class Module(object):
     def __call__(self, *input, **kwargs):
         for hook in self._forward_pre_hooks.values():
             hook(self, input)
-        if torch.jit._tracing:
+        if torch.jit._tracing:  # TODO
             result = self._slow_forward(*input, **kwargs)
         else:
             result = self.forward(*input, **kwargs)

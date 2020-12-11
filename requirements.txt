@@ -1,10 +1,12 @@
 # create env, e.g. via ```conde create -n foolingnns```
 # install latest python version :) 
 
-# packages for Fooling_Neural_Network-Interpretation
-# you can run ```conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch``` based suggestions on https://pytorch.org/ 
-# conda install pytorch=0.4.1 torchvision cuda92 -c pytorch
-# pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+# packages for Fooling_Neural_Network_Interpretation
+# install pytorch as specified on the pytorch website 
+# as Fooling_Neural_Network_Interpretation requires PyTorch 0.4.1: 
+# conda install pytorch=0.4.1 cuda90 -c pytorch
+# install torchvision via: 
+# conda install torchvision
 h5py
 scipy
 opencv-python
@@ -12,3 +14,5 @@ matplotlib
 scikit-image
 visdom
 pandas
+ipykernel
+ipywidgets
