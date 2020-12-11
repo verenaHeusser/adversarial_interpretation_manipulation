@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Fooling_Neural_Network_Interpretations/run_lrp/p.py",
+            "console": "integratedTerminal",
+            "pythonPath": "/home/veheu/venvs/foolingnns/bin/python",
+            "args": [
+                "--batch-size",
+                "8",
+                "--batch-size_test",
+                "16",
+                "--num_visualize_plot",
+                "16",
+                "--num_eval",
+                "3",
+                "--eval-period",
+                "1000",
+                "--imagenet_accuracy",
+                "--interpreter",
+                "lrp_T",
+                "--lrp_target_layer",
+                "64",
+                "--model ",
+                "Densenet121",
+                "--lr",
+                "1e-5",
+                "--lambda_value",
+                "10",
+                "--loss_type",
+                "location",
+                "--img_name",
+                "Passive_",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+        }
+    ]
+}

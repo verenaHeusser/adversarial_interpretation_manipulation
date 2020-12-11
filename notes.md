@@ -83,3 +83,6 @@ An  interpretation  may  prove  informative  even  withoutshedding  light  on  a
 
 (2) qualitatively
 - by visual inspection
+
+# IDAS
+* mean resulting heatmap from location fooling?
