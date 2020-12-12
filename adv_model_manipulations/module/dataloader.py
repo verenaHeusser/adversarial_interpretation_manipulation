@@ -60,10 +60,12 @@ def dataloader(args, train=False, val=False, test=False):
 
 
 def active_loader(args):
+    
+    dir = "./../../data/ILSVRC2012/targeted_dataset/"
 
     n1, n2 = args.class_c1, args.class_c2
     D_fool_data_dir = (
-        "../../../Interpretable/Data/Targeted_dataset/"
+        dir
         + str(min(n1, n2))
         + "_"
         + str(max(n1, n2))
@@ -72,8 +74,8 @@ def active_loader(args):
     # c1_dir = "./../../../Interpretable/Data/Targeted_dataset/" + str(args.class_c1)
     # c2_dir = "./../../../Interpretable/Data/Targeted_dataset/" + str(args.class_c2)
 
-    c1_dir = "./../../data/ILSVRC2012/Targeted_dataset/" + str(args.class_c1)
-    c2_dir = "./../../data/ILSVRC2012/Targeted_dataset/" + str(args.class_c2)
+    c1_dir = dir + str(args.class_c1)
+    c2_dir = dir + str(args.class_c2)
 
     normalize = transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 

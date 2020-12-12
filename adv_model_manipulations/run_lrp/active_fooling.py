@@ -150,6 +150,7 @@ def main():
                     break
                 
                 inputs_D, labels_D = train_data
+                print('LABELS: ', labels_D)
                 inputs_D = torch.tensor(inputs_D.numpy(), dtype=torch.float32)
 
                 if args.cuda:
