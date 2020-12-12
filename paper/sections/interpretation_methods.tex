@@ -52,10 +52,12 @@ The following section details the two categories and will give examples of the s
 % \noindent\textbf{White-box Methods.} On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
 
 
-\subsection{Black-box Methods}
+\subsection{Black-box Methods} % Model-agnostic methods.
 \label{subsec:bb_methods}
 
-Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
+% https://proceedings.neurips.cc//paper/2020/file/2c29d89cc56cdb191c60db2f0bae796b-Paper.pdf p. 4 
+Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. For this, the common approach is to approximate the relationship between the input samples and the corresponding prediction by tho model.
+As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
 
 \subsectitle{LIME.}
@@ -66,10 +68,11 @@ to get a probability
 \subsectitle{SHAP.} SHAP, short for SHapley Additive exPlanations, calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
 
 
-\subsection{White-box Methods}
+\subsection{White-box Methods} % Model-transparent methods. 
 \label{subsec:wb_methods}
 
-On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
+On the other side are white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Most methods in this area aim to highlight the features of the input that are important the prediction.  
+An example for model-transparent methods are gradient based and saliency map based methods. 
 
 \subsectitle{Notations.}
 A white-box interpretation method, in the following named interpreter $\mathcal{I}$, generates a heatmap
