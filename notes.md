@@ -86,3 +86,47 @@ An  interpretation  may  prove  informative  even  withoutshedding  light  on  a
 
 # IDAS
 * mean resulting heatmap from location fooling?
+
+
+# talks
+## shafi goldberg @neurips
+- in these times more important than ever to focus on what is true
+- calfornia proposition 25: replace cash bail with risk assessment system --> automatic decision if people should stay in prosion or not
+   - ! only based on past data
+   - not passed: 
+      - supporters: cash bail sys is racist, encourages the rich
+      - opponetnts: civil rights advocates: while algs can pitch you a song or sell a toaster, they shouldn't be used for release decisions
+         - the factors considered for release will still lead to people of color being held for trial at disproportionate rates. 
+         --> people don't trust the designers of the risk assessment sys
+
+- general motivation: 
+   - risk assessment (PAC learning)
+   - (formal) verification of ml algs: ideally, verifier shoudl have access to all data, mdoel, ...
+   - currenly : verification of ml algs mostly wrt accuracy and efficiency
+   - we want: robustness
+
+- adversarial ml: where clever manipulations of an input by an adversary can cause misclassifications and fool applications
+- mostly considering adversaries that input fake test samples
+
+- paper: 
+   - ==> beyond paper: consider wc adversary without restricting strategies
+   - robust learning algs for any concept class of bounded vc dimansion, for any adversarial test input distribution, when possible
+   - mosly assumption for ml: train distribution p == test dist p
+      - this is the problem with adv. examples: not same distr
+      - paper: pq learning: when p and q deviate
+
+
+# neurips papers
+List of papers: https://neurips.cc/Conferences/2020/Schedule?type=Poster 
+- Ensuring Fairness Beyond the Training Data
+
+- Causal Shapley Values: Exploiting Causal Knowledge to Explain Individual Predictions of Complex Models
+
+- How Can I Explain This to You? An Empirical Study of Deep Neural Network Explanation Methods
+   - investigation about which explanation humans prefer
+   - https://github.com/nesl/ExMatchina 
+   - explainability study involving humans 
+
+- Certifiably Adversarially Robust Detection of Out-of-Distribution Data > outlook
+
+- Adversarial robustness via robust low rank representations
