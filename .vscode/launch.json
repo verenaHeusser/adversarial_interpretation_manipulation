@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/Fooling_Neural_Network_Interpretations/run_lrp/p.py",
             "console": "integratedTerminal",
-            "pythonPath": "/home/veheu/venvs/foolingnns/bin/python",
+            "python": "/home/veheu/venvs/foolingnns/bin/python",
             "args": [
                 "--batch-size",
                 "8",
