@@ -39,13 +39,31 @@ Most approaches aim at providing a relevance measure of the input features. \\
 
 \noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb input data while observing the effect of this perturbation on the model prediction. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/input_manipulations.png}
+    \caption{Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples.}
+    \label{fig:input_manipulation}
+    \vspace{-0.3cm}
+\end{figure}
 
 \noindent\textbf{Adversarial Model Manipulation.} 
 Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
 As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2017, this line of research is comparably new. 
 Adversarial model manipulations are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ would be the standard cross-entropy classification loss. 
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/model_manipulations.png}
+    \caption{Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss.}
+    \label{fig:input_manipulation}
+    \vspace{-0.3cm}
+\end{figure}
+
 The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
+
+Creation of a fooled model by fine-tuning the model with a fooling loss. 
+% https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations/blob/master/Materials/PPT.pdf 
 
 
 
@@ -56,13 +74,13 @@ The authors find that perturbed model parameters can also make explanations wors
 %%%%%%%%%%
 \subsection{Manipulation Targets}
 \label{subsec:manipulation_targets}
-A further categorization ef interpretation methods can be made based on the target of the manipulation. 
+In addition to the categorization of manipulation methods based on the manipulation level, the methods can further be categorized based on the target of their perturbation. The first possibility is untargeted perturbation. The second is targeted perturbation. Both these styles can be applied on either model and input level. 
 
 \noindent\textbf{Untargeted Manipulations.} 
 The majority of manipulations is untargeted, meaning that the applied perturbations are mostly random and not designed to change the prediction for a specific portion of an input sample. 
 
 \noindent\textbf{Targeted Manipulations.} 
-On the contrary, targeted manipulations are designed to specificly alter the explanation of a distinct portion. This specific portion might be an object in the input image in the context of image classification. 
+On the contrary, targeted manipulations are designed to specificly alter the explanation of distinct features of an input instance. Such a specific feature might be an object in the input image in the context of image classification. 
 For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the classes elephant and school bus are swapped. 
 Manipulations on the level of the model are mostly targeted, as the explanation methods are being fooled by adapting the model parameters. 
 
