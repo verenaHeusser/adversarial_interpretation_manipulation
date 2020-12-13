@@ -490,6 +490,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxbsyc.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxbexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxbexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxbexa.tfm
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
 INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_mothods.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_mothods.tex
 INPUT /usr/share/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
@@ -515,10 +518,10 @@ INPUT /home/veheu/proj/foolingnns/paper/sections/sanity_checks_for_interpreters.
 INPUT /home/veheu/proj/foolingnns/paper/sections/sanity_checks_for_interpreters.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/experiments.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/experiments.tex
-INPUT /home/veheu/proj/foolingnns/paper/sections/conclusion.tex
-INPUT /home/veheu/proj/foolingnns/paper/sections/conclusion.tex
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinBiolinumTI-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTI-tlf-t1--base.tfm
+INPUT /home/veheu/proj/foolingnns/paper/sections/conclusion.tex
+INPUT /home/veheu/proj/foolingnns/paper/sections/conclusion.tex
 INPUT /home/veheu/proj/foolingnns/paper/main.bbl
 INPUT /home/veheu/proj/foolingnns/paper/main.bbl
 INPUT /home/veheu/proj/foolingnns/paper/main.aux
