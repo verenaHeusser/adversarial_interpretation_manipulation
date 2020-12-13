@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{13}
+\begin{thebibliography}{15}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -66,6 +66,23 @@
   Concepts, taxonomies, opportunities and challenges toward responsible AI}.
 \newblock \bibinfo{journal}{\emph{Information Fusion}}  \bibinfo{volume}{58}
   (\bibinfo{year}{2020}), \bibinfo{pages}{82--115}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Brinker, Hekler, Enk, Berking, Haferkamp,
+  Hauschild, Weichenthal, Klode, Schadendorf, Holland-Letz,
+  et~al\mbox{.}}{Brinker et~al\mbox{.}}{2019}]%
+        {brinker2019deep}
+\bibfield{author}{\bibinfo{person}{Titus~J Brinker}, \bibinfo{person}{Achim
+  Hekler}, \bibinfo{person}{Alexander~H Enk}, \bibinfo{person}{Carola Berking},
+  \bibinfo{person}{Sebastian Haferkamp}, \bibinfo{person}{Axel Hauschild},
+  \bibinfo{person}{Michael Weichenthal}, \bibinfo{person}{Joachim Klode},
+  \bibinfo{person}{Dirk Schadendorf}, \bibinfo{person}{Tim Holland-Letz},
+  {et~al\mbox{.}}} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Deep neural networks are superior to dermatologists
+  in melanoma image classification}.
+\newblock \bibinfo{journal}{\emph{European Journal of Cancer}}
+  \bibinfo{volume}{119} (\bibinfo{year}{2019}), \bibinfo{pages}{11--17}.
 \newblock
 
 
@@ -141,6 +158,19 @@
 \newblock \showarticletitle{The mythos of model interpretability}.
 \newblock \bibinfo{journal}{\emph{Queue}} \bibinfo{volume}{16},
   \bibinfo{number}{3} (\bibinfo{year}{2018}), \bibinfo{pages}{31--57}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Nguyen, Stueker, and Waibel}{Nguyen
+  et~al\mbox{.}}{2020}]%
+        {nguyen2020super}
+\bibfield{author}{\bibinfo{person}{Thai-Son Nguyen}, \bibinfo{person}{Sebastian
+  Stueker}, {and} \bibinfo{person}{Alex Waibel}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Super-Human Performance in Online Low-latency
+  Recognition of Conversational Speech}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2010.03449}}
+  (\bibinfo{year}{2020}).
 \newblock
 
 
