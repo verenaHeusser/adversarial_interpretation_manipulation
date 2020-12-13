@@ -5,8 +5,6 @@
 # install pytorch as specified on the pytorch website 
 # as Fooling_Neural_Network_Interpretation requires PyTorch 0.4.1: 
 # conda install pytorch=0.4.1 cuda90 -c pytorch
-# install torchvision via: 
-# conda install torchvision
 h5py
 scipy
 opencv-python
@@ -16,3 +14,10 @@ visdom
 pandas
 ipykernel
 ipywidgets
+
+# lime test
+lime
+tensorflow-gpu==1.0
+tf_slim
+torchsummary
+tqdm==4.43.0  # lime needs this

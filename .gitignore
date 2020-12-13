@@ -1,6 +1,11 @@
 data/*
 */img_results/*
 
+# extensions
+*.tar
+*.tar.gz
+*.ckpt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

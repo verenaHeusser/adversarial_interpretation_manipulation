@@ -158,3 +158,6 @@ List of papers: https://neurips.cc/Conferences/2020/Schedule?type=Poster
 # interpretation frameworks 
 1. https://www.pnas.org/content/pnas/116/44/22071.full.pdf pdr framework
    - In the context of ML, there are 2areas where errors can arise: when approximating the underlyingdata relationships with a model (predictive accuracy) and whenapproximating what the model has learned using an interpreta-tion method (descriptive accuracy).
+
+
+FIRST SURVEY PAPER ON FOOLING INTERPRETERS
