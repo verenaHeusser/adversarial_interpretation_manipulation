@@ -154,3 +154,7 @@ List of papers: https://neurips.cc/Conferences/2020/Schedule?type=Poster
 
 - Humans are very robust against such perturbations; one possible reason could be that humans do not learn to classify based on an error between "target label" and "predicted label" but possibly due to reinforcements that they receive on their predictions.
 - are humans also robust against perturbations of interpreters?
+
+# interpretation frameworks 
+1. https://www.pnas.org/content/pnas/116/44/22071.full.pdf pdr framework
+   - In the context of ML, there are 2areas where errors can arise: when approximating the underlyingdata relationships with a model (predictive accuracy) and whenapproximating what the model has learned using an interpreta-tion method (descriptive accuracy).

@@ -29,45 +29,47 @@ Warning--no number and no volume in spearman1961proof
 Warning--page numbers missing in both pages and numpages fields in spearman1961proof
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
-You've used 15 entries,
+Warning--no number and no volume in xiao2020noise
+Warning--page numbers missing in both pages and numpages fields in xiao2020noise
+You've used 17 entries,
             5959 wiz_defined-function locations,
-            1574 strings with 20258 characters,
-and the built_in function-call counts, 19552 in all, are:
-= -- 2458
-> -- 868
+            1586 strings with 20705 characters,
+and the built_in function-call counts, 22210 in all, are:
+= -- 2855
+> -- 983
 < -- 0
-+ -- 291
-- -- 288
-* -- 1479
-:= -- 2041
-add.period$ -- 75
-call.type$ -- 15
-change.case$ -- 126
-chr.to.int$ -- 15
-cite$ -- 33
-duplicate$ -- 1601
-empty$ -- 1131
-format.name$ -- 336
-if$ -- 4729
++ -- 329
+- -- 324
+* -- 1682
+:= -- 2305
+add.period$ -- 85
+call.type$ -- 17
+change.case$ -- 143
+chr.to.int$ -- 17
+cite$ -- 37
+duplicate$ -- 1802
+empty$ -- 1274
+format.name$ -- 380
+if$ -- 5412
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 61
-newline$ -- 164
-num.names$ -- 120
-pop$ -- 639
+missing$ -- 69
+newline$ -- 180
+num.names$ -- 136
+pop$ -- 713
 preamble$ -- 1
-purify$ -- 260
+purify$ -- 295
 quote$ -- 0
-skip$ -- 548
+skip$ -- 612
 stack$ -- 0
-substring$ -- 1364
-swap$ -- 163
+substring$ -- 1550
+swap$ -- 185
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 324
-warning$ -- 18
-while$ -- 106
+type$ -- 356
+warning$ -- 20
+while$ -- 117
 width$ -- 0
-write$ -- 295
-(There were 18 warnings)
+write$ -- 328
+(There were 20 warnings)

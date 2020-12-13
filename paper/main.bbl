@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -161,6 +161,20 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Murdoch, Singh, Kumbier, Abbasi-Asl, and
+  Yu}{Murdoch et~al\mbox{.}}{2019}]%
+        {murdoch2019definitions}
+\bibfield{author}{\bibinfo{person}{W~James Murdoch}, \bibinfo{person}{Chandan
+  Singh}, \bibinfo{person}{Karl Kumbier}, \bibinfo{person}{Reza Abbasi-Asl},
+  {and} \bibinfo{person}{Bin Yu}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Definitions, methods, and applications in
+  interpretable machine learning}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
+  Sciences}} \bibinfo{volume}{116}, \bibinfo{number}{44}
+  (\bibinfo{year}{2019}), \bibinfo{pages}{22071--22080}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Nguyen, Stueker, and Waibel}{Nguyen
   et~al\mbox{.}}{2020}]%
         {nguyen2020super}
@@ -234,6 +248,19 @@
 \newblock \showarticletitle{Evaluating explanation methods for deep learning in
   security}. In \bibinfo{booktitle}{\emph{2020 IEEE European Symposium on
   Security and Privacy (EuroS\&P)}}. IEEE, \bibinfo{pages}{158--174}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Xiao, Engstrom, Ilyas, and Madry}{Xiao
+  et~al\mbox{.}}{2020}]%
+        {xiao2020noise}
+\bibfield{author}{\bibinfo{person}{Kai Xiao}, \bibinfo{person}{Logan Engstrom},
+  \bibinfo{person}{Andrew Ilyas}, {and} \bibinfo{person}{Aleksander Madry}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Noise or signal: The role of image backgrounds in
+  object recognition}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2006.09994}}
+  (\bibinfo{year}{2020}).
 \newblock
 
 

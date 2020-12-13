@@ -414,9 +414,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTBI-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinBiolinumTB-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTB-tlf-t1--base.tfm

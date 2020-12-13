@@ -14,7 +14,7 @@ For instance, withing object recognition one would likely assume that the presen
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\linewidth]{figures/bb.png}
+    \includegraphics[width=\linewidth]{figures/bb_cat.png}
     \caption{Prediction pipeline using a machine learning model, depicted as blach box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessmant of the model's accuracy. Additionally answering the question \textit{why}, i.e. making the model interpretable for a human, requires additional methods.}
     \label{fig:bb}
     \vspace{-0.3cm}
@@ -45,6 +45,8 @@ Furthermore, the rise in machine learning model deployments also caused the deve
 
 % Outline of paper
 
+% https://towardsdatascience.com/interpretability-in-machine-learning-70c30694a05f 
+% biases in ml models - boils down to data
 
 
 % For instance, withing object recognition one would like to assume that the presence (or absence) of an object in the image causes a model to decide for a specific object category, closely akin to how humans base their decision process. 
@@ -61,6 +63,9 @@ Furthermore, the rise in machine learning model deployments also caused the deve
 
 % explainability can be viewed as an active characteristic of a model, denoting any action orprocedure taken by a model with the intent of clarifying or detailing its internal functions.
 
+
+In particular, it is unclear how the variety of proposed model interpretation methods are related and what common concepts can be used to evaluate and compare them. 
+Many works are dedicated to establish a formal definition of what it means to be interpretable, and how to select, evaluate and compare methods for generating explanations of machine learning models. \cite{murdoch2019definitions, lipton2018mythos}.
 
 
 

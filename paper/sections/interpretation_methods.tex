@@ -3,22 +3,20 @@
 
 % All explanation methods are post hoc
 There exists a variety of definitions in the vastly expanding research field of XAI, and the concept of \textit{interpretability} still has no formal commonly used technical meaning \cite{lipton2018mythos}. To build on the common ground of existing research, this paper follows the terminoloqy of \cite{arrieta2020explainable}.
-The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}: The former refers to a passive characteristic of an underlying model to be understandable by humans, which is also defined as transparency. Contrary, the latter refers to an active characteristic of a model, referring to any procedure with the aim of specifying or detailing the inner workings of a model. 
+The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}.
 
-Interpretability refers to the the extent to which cause and effect can be observed in a system.   
-and thus relates to the level at which a human can understand a machine learning algorithm.
+\mypar{Interpretability} refers to the the extent to which cause and effect can be observed in a model, which can be translated to uncovering \textit{why} a model made prediction $y$ to an input $\mathbf{x}$. Consider the example of image classification from \autoref{fig:bb}. Here, interpretability would mean that if a cat is present in the image (the cause), the model classifies it to the category 'cat' (the effect). Now imagine we find that the model takes the green meadow in the image as evidence to predict 'cat', and not the cat itself, there is a lack of interpretability, as other features are learned as important than the features that are truly important. This toy example is in fact a common problem in image classification: the over-reliance of models on image background, rather than on objects in the foreground, has been observed for the task of image classification \cite{xiao2020noise}.% Note that interpretabe AI cannot verify if the learned relationships between features and outputs is truly causal (tha meadow in tha image can be correlated to the image category, e.g. when most images depictiong a cat shows cats on green meadows. This is a correlation of features but not necessarily a causilaty in tha sense of 'meadow --> cat'. ) https://www.pnas.org/content/pnas/116/44/22071.full.pdf causal inference
 
-Explainability refers to the extent to which a machine learning model can be explained in human terms. So to say, explaining a model means to literally explain what is happening. 
+\mypar{Explainibility} on the other hand spans methods to uncover \textit{how} a model makes predictions, meaning to observe the inner workings of a model and to literally explain what is happening.
 
-High interpretability is desired as it can help 
-to uncover biases in the model. Suppose a machine learning model is to be deployed for the task of income prediction based on features such as age, race, gender, education and hours of work per week. The performance of the system would mainly be evaluated in terms oft the predictive accuracy and the fairness of the system. The former can be evaluated with metrics, such as accuracy on a held-out test set. For the latter, interpretability methods might be applied to observe which input features are used by the model to predict the income. 
+% The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
+% Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
+% However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
+
+While both concepts seem to be important for the general objective of explainable artificial intelligence, this paper focuses on interpretability. 
+High interpretability is desired as it can help to to uncover biases in the model. Suppose a machine learning model is to be deployed for the task of income prediction based on features such as age, race, gender, education and hours of work per week. The performance of the system would mainly be evaluated in terms oft the predictive accuracy and the fairness of the system. The former can be evaluated with metrics, such as accuracy on a held-out test set. For the latter, interpretability methods might be applied to observe which input features are used by the model to predict the income. 
 % TODO note here that tha data from adult_income do actually not allow for these features to be more important than others. 
-If the model uses sensitive features, such as sex and race as important features, it is systematically biased thus unfair. 
-
-The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
-
-Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
-However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
+If the model uses sensitive features, such as sex and race as important features, it is systematically biased and thus unfair. 
 
 Explanation methods aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
 A frequently used type of explanation methods are feature attributions mapping each input feature to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
@@ -60,12 +58,12 @@ Black-box interpretations assume no knowledge about the model thus treating it a
 As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
 
-\subsectitle{LIME.}
+\mypar{LIME.}
 Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro2016should} perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26
 to get a probability
 
 
-\subsectitle{SHAP.} SHAP, short for SHapley Additive exPlanations, calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
+\mypar{SHAP.} SHAP, short for SHapley Additive exPlanations, calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 
 
 
 \subsection{White-box Methods} % Model-transparent methods. 
@@ -74,16 +72,15 @@ to get a probability
 On the other side are white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Most methods in this area aim to highlight the features of the input that are important the prediction.  
 An example for model-transparent methods are gradient based and saliency map based methods. 
 
-\subsectitle{Notations.}
+\mypar{Notations.}
 A white-box interpretation method, in the following named interpreter $\mathcal{I}$, generates a heatmap
  $$h_c^\mathcal{I}(\boldsymbol{\omega}) = \mathcal{I}(\mathbf{x}, c; \boldsymbol{\omega})$$
   for a neural network with parameters $\boldsymbol{\omega}$ and class $c$. The heatmap is a vector $h_c^\mathcal{I}(\boldsymbol{\omega}) \in \mathbb{R}^d$, where the $j$-th value $h_{c, j}^\mathcal{I}(\boldsymbol{\omega})$ represents the importance score of the $j-th$ input feature $x_j$ for the final score of class $c$.
 
-\subsectitle{Layer-wise Relevance Propagation (LRP)}
+\mypar{Layer-wise Relevance Propagation (LRP)}
 relies on a Taylor series close to the prediction point rather than partial derivatives atthe prediction point itself
 
-\subsectitle{ Gradient-weighted Class Activation Mapping (Grad-CAM)} \cite{selvaraju2017grad}
+\mypar{ Gradient-weighted Class Activation Mapping (Grad-CAM)} \cite{selvaraju2017grad}
 To further improve the quality of the visualization, attribution methods suchas heatmaps, saliency maps or class activation methods (GradCAM[292]) are used. Grad-CAM uses the gradients of any target concept, flowing into the final convolutional layer to produce acoarse localization map, highlighting the important regions in the image for predicting the concept
 
-\subsectitle{SimpleGrad (SimpleG)}
-
+\mypar{SimpleGrad (SimpleG)}
