@@ -57,10 +57,53 @@ The following section details the two categories and will give examples of the s
 Black-box interpretations assume no knowledge about the model thus treating it as a black-box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. For this, the common approach is to approximate the relationship between the input samples and the corresponding prediction by tho model.
 As the model itself does not need to be known for using such a model-agnostic approach, these approaches can be used in scenarios where the model itself is not directly accessible. A black-box interpretation offers the big advantage to be applicable to any model.
 
-
 \mypar{LIME.}
 Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro2016should} perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26
-to get a probability
+to get a probability.
+
+\autoref{fig:lime_cat} shows an example of LIME applied to an image and the neural network model Inception-v3 \cite{szegedy2016rethinking}. 
+
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{figures/lime_orig.png}
+    \caption{Original}
+    \label{fig:bird-a}
+  \end{subfigure}
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{figures/lime_cat_mask.png}
+    \caption{Mask}
+    \label{fig:bird-a}
+  \end{subfigure}
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{figures/lime_cat_map.png}
+    \caption{Saliency Map}
+    \label{fig:bird-a}
+  \end{subfigure}
+  
+  % \minipage{0.32\linewidth}
+  %   \includegraphics[width=\linewidth]{figures/lime_orig.png}
+  %   \caption{Original}
+  % \endminipage\hfill
+  % \minipage{0.32\linewidth}
+  %   \includegraphics[width=\linewidth]{figures/lime_cat_mask.png}
+  %   \caption{Mask}
+  % \endminipage\hfill
+  % \minipage{0.32\linewidth}%
+  %   \includegraphics[width=\linewidth]{figures/lime_cat_map.png}
+  %   \caption{Saliency Map}
+  % \endminipage
+  \caption{Visualization of LIME.}\label{fig:lime_cat}
+  % \centering
+  % \includegraphics[width=\linewidth]{figures/bb_cat.png}
+  % \caption{Prediction pipeline using a machine learning model, depicted as blach box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessmant of the model's accuracy. Additionally answering the question \textit{why}, i.e. making the model interpretable for a human, requires additional methods.}
+  % \label{fig:bb}
+  % \vspace{-0.3cm}
+\end{figure}
+
+% https://github.com/marcotcr/lime
+% While the model may be very complex globally, it is easier to approximate it around the vicinity of a particular instance. While treating the model as a black box, we perturb the instance we want to explain and learn a sparse linear model around it, as an explanation. The figure below illustrates the intuition for this procedure. The model's decision function is represented by the blue/pink background, and is clearly nonlinear. The bright red cross is the instance being explained (let's call it X). We sample instances around X, and weight them according to their proximity to X (weight here is indicated by size). We then learn a linear model (dashed line) that approximates the model well in the vicinity of X, but not necessarily globally.
 
 
 \mypar{SHAP.} SHAP, short for SHapley Additive exPlanations, calculates an additive feature importance score for each prediction with a set of desirable properties, such as local accuracy or consistency that its antecendants lacked. 

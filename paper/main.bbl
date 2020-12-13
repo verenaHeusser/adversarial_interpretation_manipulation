@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -236,6 +236,18 @@
 \newblock \showarticletitle{The proof and measurement of association between
   two things.}
 \newblock  (\bibinfo{year}{1961}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Szegedy, Vanhoucke, Ioffe, Shlens, and
+  Wojna}{Szegedy et~al\mbox{.}}{2016}]%
+        {szegedy2016rethinking}
+\bibfield{author}{\bibinfo{person}{Christian Szegedy}, \bibinfo{person}{Vincent
+  Vanhoucke}, \bibinfo{person}{Sergey Ioffe}, \bibinfo{person}{Jon Shlens},
+  {and} \bibinfo{person}{Zbigniew Wojna}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Rethinking the inception architecture for computer
+  vision}. In \bibinfo{booktitle}{\emph{Proceedings of the IEEE conference on
+  computer vision and pattern recognition}}. \bibinfo{pages}{2818--2826}.
 \newblock
 
 

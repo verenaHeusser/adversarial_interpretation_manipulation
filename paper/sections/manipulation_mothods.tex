@@ -1,9 +1,7 @@
 \section{Manipulation Methods}
 \label{sec:manipulation_methods}
 
-
 The focus of most works is on adversarial attacks against the prediction of a machine learning model. Contrary, the focus of this paper is on the attacks on the interpretation without changing the prediction.
-
 
 A manipulation method refers to a method influencing an interpretation method $\mathcal{I}$ to yield a wrong interpretation. This influence on the interpretation method is also called \textit{fooling} or an \textit{attack}. 
 
@@ -39,13 +37,13 @@ Most approaches aim at providing a relevance measure of the input features. \\
 \subsection{Manipulation Levels}
 \label{subsec:manipulation_levels}
 
-\noindent\textbf{Adversarial Input Manipulations.} The general approach is to perturb input data while observing the effect of this perturbation. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
+\noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb input data while observing the effect of this perturbation on the model prediction. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
 
 
-\noindent\textbf{Adversarial Model Manipulations.} 
+\noindent\textbf{Adversarial Model Manipulation.} 
 Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
 As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2017, this line of research is comparably new. 
-Adversarial model manipulations are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ would be the regular cross-entropy classification loss. 
+Adversarial model manipulations are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ would be the standard cross-entropy classification loss. 
 
 The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
 
