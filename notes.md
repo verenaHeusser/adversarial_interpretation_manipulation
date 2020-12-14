@@ -114,8 +114,8 @@ An interpretation may prove informative even withoutshedding light on a model’
   - currenly : verification of ml algs mostly wrt accuracy and efficiency
   - we want: robustness
 
-- adversarial ml: where clever manipulations of an input by an adversary can cause misclassifications and fool applications
-- mostly considering adversaries that input fake test samples
+-[x] adversarial ml: where clever manipulations of an input by an adversary can cause misclassifications and fool applications
+-[x] mostly considering adversaries that input fake test samples
 
 - paper:
   - ==> beyond paper: consider wc adversary without restricting strategies

@@ -49,10 +49,13 @@ December 16--20, 2020, Karlsruhe, DE}
 % imports
 \usepackage{todonotes}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % macros etc
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\mypar}[1]{\noindent\textbf{#1}}
+\newcommand{\mypar}[1]{\vspace{0.3cm}\noindent\textbf{#1}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 
 \begin{document}
@@ -74,8 +77,10 @@ December 16--20, 2020, Karlsruhe, DE}
 
 
 \begin{abstract}
+
+  
   This paper reviews state-of-the-art approaches to model explanations with a focus on those techniques that try to 
-  fool these methods. 
+  fool these methods. Based on the findings in the reviewed studies, we conclude that knowledge of the defectiveness of neural networks and their highly sought explanations should be taken with caution. Therefore, the main purpose of this review is to raise awareness that explanations, while helpful, can can be fundamentally flawed.
 
   We don't only want the model to be good. We want it to be safe and interpretable. 
   As machine learning models enter critical areas in human lives such as the criminal justice system, medicine or financial systems, the inability for humans to understand these models is dangerous and problematic. Advances in the rising research area of explainable AI seems to be a remedy. However, there is not yet a consensus about the validity and robustness of explanations methods themselves. The main suggestion of this paper is to be cautious about results of explanation methods. Explanations can be fooled just as the underlying machine learning models. So. in the end the question must be posed whether inexplainable mdoels should be used at all if we need other models to explain these models but are not valid themselves .. % TODO loop structire aufbauen
@@ -122,18 +127,25 @@ December 16--20, 2020, Karlsruhe, DE}
 
 % TODO add methods to reverse / disclose manipulations
 
-\input{sections/robustness}
-
 \input{sections/transferability}
+
+\input{sections/manipulations}
 
 \input{sections/explaining_manipulations}
 
-\input{sanity_checks_for_interpreters}
+\input{sections/uncovering_manipulations}
 
-\input{sections/experiments}
+\input{sections/sanity_checks_for_interpreters}
 
-\input{sections/conclusion}
+\input{sections/benchmarking_interpretations}
 
+% \input{sections/experiments}
+
+\input{sections/discussion}
+
+% TODO add code link
+% TODO add author notes? 
+% N neural network chengen to mathcal oder so
 
 % \balance
 \bibliography{mybib}{}

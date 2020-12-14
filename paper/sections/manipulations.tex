@@ -1,13 +1,31 @@
 \section{Manipulation Method Examples}
-After having introduced the terminology of model interpreters and manipulation methods in the previous chapters, this chapter will give detailed information about recent manipulation methods. 
+\label{sec:manipulations}
 
-\supsection{Input Manipulations}
+After having introduced the terminology of model interpreters and manipulation methods in the previous chapters, this chapter will give detailed information about recent manipulation methods. This section also provides insight into major findings in the field of manipulating model interpretations.  
+
+\subsection{Input Manipulations}
 % https://arxiv.org/pdf/1911.02508.pdf 
 \cite{advlime_aies20} propose a framework for fooling the model-agnostic interpreters LIME and SHAP. Their method successfully hides the biases of models trained on adversarial examples by... 
 
+\subsection{Model Manipulations}
 
-% 
+% HEO: The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
+% \subsubsection{Transferability of Manipulations}
+% \cite{fooling_nn_interpreters} find that fooling one explanation method with a fooling scheme transfers to other methods. 
 
 
-\supsection{Model Manipulations}
+%%%%%%  %%%%%%%%
+\cite{dimanov2020you} examine the relation of interpretation methods and the concept of fairness. They propose to learn a modified model with concealed unfairness. This is done by fine-tuning a classification model with a loss function extended by an explanation loss. 
 
+
+Their approach differs methodologically to \cite{fooling_nn_interpreters} as follows: 
+\cite{fooling_nn_interpreters} adapt the standard cross entropy loss function by taking the gradient of the correct label ellement from the logits layer, while \cite{dimanov2020you} use the gradient of the cross-entopy loss. 
+Taking the gradient of the cross-entropy loss conveys more information about other classes, which may contribute to an improved generalization across different interpretation methods and first of all across different test samples. 
+
+While their approach takes the gradient of the onecorrect label element from the logits layer just before thesoftmax output, we take the gradient of the cross-entropyloss. 
+
+They define adversarial models that focus only on sensitive features which are not informative for the ground truth decision. 
+
+
+%%%%%%%%%%%%%%
+% Conclusions based on the presented studies

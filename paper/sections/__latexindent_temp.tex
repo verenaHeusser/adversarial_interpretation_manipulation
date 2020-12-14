@@ -1,0 +1,153 @@
+\section{Manipulation Methods}
+\label{sec:manipulation_methods}
+
+As outlined in \autoref{sec:interpretation_methods}, there are a variety of explanation methods readily available as frameworks and open source implementations. However, there is still little analysis on the robustness and reliability of such methods. 
+While it is already common practice to test machine learning models against adversarial attacks in a number of domains \cite{gao2019universal, kereliuk2015deep}, the same is not yet the standard for interpretation methods. We argue that interpretation techniques should not be used in critical applications without basic testing of interpretation techniques against adversarial settings.
+
+\subsection{Adversarial Setting}
+\label{subsec:adversarial_setting}
+\mypar{Adversarial Attacks on Models. }
+Adversarial examples, as first introduced by \cite{szegedy_intriguing}, are clever manipulations of an input by an adversary which aims at causing misclassification and fooling of applications. They are mostly used to fool or attack machine learning models. We formally define adversarial attacks by the following properties: 
+\par\smallskip
+\textbf{Definition 2: Model Manipulation Method}
+\begin{enumerate}
+    \item[1.] \textit{Impercpetibility of Perturbation}: The adversal example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
+    \item[2.] \textit{Prediction dissimilarity}: The prediction of the model is significantly different to the prediction on the non-adversarial example: $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x})$$
+\end{enumerate}
+Note, that within adversarial foolings of models, the perturbation is mostly applied to the input data, and not to the model itself.
+
+% TODO cite
+Evicendce from many studios shows that deep learning models can be easily tricked by adversarial exapmles. 
+Albeit there are not yet as many studies, there also exists evidence that many interpratation methods are aslo fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards}. This fooling of interpretation methods is outlined below. 
+
+
+\mypar{Adversarial Attacks on Model Interpreters. } 
+Contrary to adversarial attacks on machine learning models, the focus of this paper is on the attacks on interpretation techniques without changing the prediction of the model. 
+An adversarial attack on a model interpretation is in the following also called a \textit{manipulation} method. 
+The goal is to apply perturbations to either an input sample or the model to change the output of an interpretation technique while leaving the model prediction unchanged. The last condition is important because adversarial interpreter manipulations aim to fool the interpretation method and essentially not the model itself. 
+Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability of the interpretation method. 
+Again, the problem can be formally defined as:
+
+% A manipulation method refers to a method influencing an interpretation method $\mathcal{I}$ to yield a wrong interpretation. This influence on the interpretation method is also called \textit{fooling} or an \textit{attack}. 
+\par\smallskip
+\textbf{Definition 3: Interpretation Manipulation Method} 
+
+\setlength{\leftskip}{0.39cm}
+% as it is the goal to disclose the vulnerability of the explanation method and not the vulnerability of the model.
+\noindent A manipulation method $\mathcal{F}$ is defined as a method for altering the output of an explanation method $\mathcal{I}$ while leaving the model performance of the neural network $N$ roughly unchanged. 
+As manipulations can be applied on the input or the model level (see \autoref{subsec:manipulation_levels}), $\mathbf{x}+\delta$ denotes a perturbed input sample regarding the input level manipulation, while $N+\delta$ denotes a model with altered parameters, referring to the model level manipulation.
+
+A manipulation method is successful in fooling an interpreter, if the following properties hold: 
+\begin{enumerate}
+    % TODO for all i, as in http://lcfi.ac.uk/media/uploads/files/DimanovBhattJamnikWeller_YouShouldntTrustMe.pdf 
+    \item[1.] \textit{Prediction similarity}: The model prediction stays approximately the same, i.e. $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x}) \text{, or } f_{N+\delta}(\mathbf{x}) \approx f_N(\mathbf{x})$$
+    \item[2.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} = \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega})$$
+    \item[3.] \textit{Impercpetibility of Perturbation}: In case the attack is in the input domain of the model, the perturbation of input samples must be imperceptible by humans. According to \cite{dombrowski2019explanations}, the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$ % https://arxiv.org/pdf/1710.10547.pdf 
+\end{enumerate}
+\setlength{\leftskip}{0cm}
+
+These measures are to be seen as comparison between a baseline model $N$ and a model that is applied an the adversarial setting (i.e. either $N$ is not changed but applied to adversarially altered data $x+\delta$, or $N$ is adversarially trained thus becoming $N+\delta$). 
+
+\cite{dimanov2020you} extend these properties to include the so called \textit{model similarity}. This measure extends the \textit{prediction accuracy} to span the accuracy difference in between the baseline model and the new model, and also the mismatch of data points where the predictions of both models differ. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Taxonomy of Manipulation Methods}
+\label{subsec:taxonomy_manipulations}
+
+%%%%%%%%%%
+\subsubsection{Manipulation Levels}
+\label{subsubsec:manipulation_levels}
+TODO 
+
+\par\smallskip
+\noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb or alter input data while observing the effect of this perturbation on the model prediction. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
+This concept is visualized in \autoref{fig:input_manipulation}. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{figures/input_manipulations.png}
+    \caption{Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples, which are indicated by $\mathbf{x}+\delta$.}
+    \label{fig:input_manipulation}
+    \vspace{-0.3cm}
+\end{figure}
+
+\par\smallskip
+\noindent\textbf{Adversarial Model Manipulation.} 
+Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
+As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2019, this line of research is comparably new. 
+Adversarial model manipulations are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function for the task of image classification of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ would be the standard cross-entropy classification loss. 
+Adversarial model manipulation is depicted in \autoref{fig:input_manipulation} where the altered model is indicated by $N+\delta$.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{figures/model_manipulations.png}
+    \caption{Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta$.}
+    \label{fig:input_manipulation}
+    \vspace{-0.3cm}
+\end{figure}
+
+%%%%%%%%%%
+\subsubsection{Manipulation Targets}
+\label{subsubsec:manipulation_targets}
+In addition to the categorization of manipulation methods based on the manipulation level, the methods can further be categorized based on the target of their perturbation. The first possibility is \textit{untargeted} perturbation, the second is \textit{targeted} perturbation. Both these styles can be applied on either model and input level. 
+
+\par\smallskip
+\noindent\textbf{Untargeted Manipulations.} 
+The majority of manipulations is untargeted, meaning that the applied perturbations are mostly random and not designed to change the prediction for a specific portion of an input sample. 
+
+\par\smallskip
+\noindent\textbf{Targeted Manipulations.} 
+On the contrary, targeted manipulations are designed to specificly alter the explanation of distinct features of an input instance. Such a specific feature might be an object in the input image in the context of image classification. 
+For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the classes elephant and school bus are swapped. 
+Manipulations on the level of the model are mostly targeted, as the explanation methods are being fooled by adapting the model parameters. 
+
+% Model manipulations pose a much higher threat for deploying the models: If a model itself is changed to explicitly, systemactically fool an explanation method, the bias of the model is internal and much harder to reveal than just a different sort of input into the model. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Evaluation Criteria}
+\label{subsec:eval_criteria_manipulations}
+Basides the necessary properties of a successful interpretation manipulation method, other evaluation criteria are importent to access the successfulness of a fooling method and to enable the comparison between different fooling methods. These criteria are infermally defined in the following.
+
+\mypar{Effectiveness.} The manipulation scheme is inexpensive to conduct. Input manipulations are by definition inexpensive, as the perturbation can be applied to single input samples. Model manipulations are more expensive as they require tho model parameters to be adapted. However, an adversarial model can be obtained by fine-tuning the model with an adapted objective function. This fine-tuning also has the advantage that the model is adapted to include a systematic bias and can thus be applied to fool explanation methods without further adapting the model or input samples after the fine-tuning step. Furthermore, this systematic bias is hidden in the model, and is hard to uncover. Input manipulations can only fool the model when the inputs are always manipulated. 
+
+\mypar{Transferability.} The manipulation does not only fool one type of interpretation method, but it's effect transfers to other interpretation techniques. 
+% This property is naturally given for the class of model manipulations
+
+\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing trainang instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space, should be affected, 
+% TODO iid ood?
+% The  generalisation  of  the  attack  to  testpoints  is  noteworthy  since  we  might  expect  that  the  deci-sion boundary would be perturbed locally around the train-ing points to affect only their explanations, without signifi-cant change for test points, especially if far away in featurespace (see Appendix for more)
+
+TODO \\
+Most of the explanation methods outlined in sec. \autoref{sec:interpretation_methods} have been shown to be vulnerable to adversarial perturbations. 
+Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
+Most approaches aim at providing a relevance measure of the input features. \\
+
+
+
+Creation of a fooled model by fine-tuning the model with a fooling loss. 
+% https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations/blob/master/Materials/PPT.pdf 
+
+
+
+
+\subsection{Evaluation Criteria}
+\label{subsec:evaluation_criteria}
+As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretations methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for chosing an appropriate and robust intarpretation method.  
+Evaluations of the quality of an explanation method can be separated into qualitative and quantitative evaluations. 
+% \cite{fooling_nn_interpreters} propose to measure the quality of an explanation method by their stability with respect to adversarial model manipulations. 
+
+\par\smallskip
+\mypar{Quantitative Evaluations.} 
+As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations before and after perturbation \cite{ghorbani2019interpretation}.
+Common metrics for quantitatively measuring this similarity between interpretations are the following: 
+\begin{itemize}
+    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
+    \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
+    \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to create a measure for systematically measuring the robustness of an interpretation method to adversarial model manipulations. The FSR measures on how many samples from a dataset an interpretation method $\mathcal{I}$ is fooled by a model manipulation. The higher the FSR, the more often an inetpretation method is fooled. 
+\end{itemize}
+
+\par\smallskip
+\mypar{Qualitative Evaluations.} 
+As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $x$.
+Looking at these evaluations for specific samples is informative albeit not usable to obtain a general statistic about the explanation methods quality.

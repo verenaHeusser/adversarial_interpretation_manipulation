@@ -11,8 +11,12 @@ Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
+Warning--empty publisher in dimanov2020you
+Warning--empty address in dimanov2020you
 Warning--empty publisher in dombrowski2019explanations
 Warning--empty address in dombrowski2019explanations
+Warning--no number and no volume in gao2019universal
+Warning--page numbers missing in both pages and numpages fields in gao2019universal
 Warning--empty publisher in ghorbani2019interpretation
 Warning--empty address in ghorbani2019interpretation
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
@@ -28,13 +32,20 @@ Warning--empty publisher in ribeiro2016should
 Warning--empty address in ribeiro2016should
 Warning--no number and no volume in ruede2020multi
 Warning--page numbers missing in both pages and numpages fields in ruede2020multi
+Warning--empty address in samek2019explainable
 Warning--empty publisher in selvaraju2017grad
 Warning--empty address in selvaraju2017grad
+Warning--empty publisher in advlime_aies20
+Warning--empty address in advlime_aies20
+Warning--page numbers missing in both pages and numpages fields in advlime_aies20
 Warning--no journal in spearman1961proof
 Warning--no number and no volume in spearman1961proof
 Warning--page numbers missing in both pages and numpages fields in spearman1961proof
 Warning--empty publisher in szegedy2016rethinking
 Warning--empty address in szegedy2016rethinking
+Warning--empty publisher in szegedy_intriguing
+Warning--empty address in szegedy_intriguing
+Warning--page numbers missing in both pages and numpages fields in szegedy_intriguing
 Warning--empty publisher in evaluating_explanations_security
 Warning--empty address in evaluating_explanations_security
 Warning--no number and no volume in whitmore2016mapping
@@ -43,45 +54,45 @@ Warning--no number and no volume in xiao2020noise
 Warning--page numbers missing in both pages and numpages fields in xiao2020noise
 Warning--no number and no volume in yosinski2015understanding
 Warning--page numbers missing in both pages and numpages fields in yosinski2015understanding
-You've used 24 entries,
+You've used 30 entries,
             5959 wiz_defined-function locations,
-            1622 strings with 22279 characters,
-and the built_in function-call counts, 31445 in all, are:
-= -- 3975
-> -- 1377
+            1652 strings with 23425 characters,
+and the built_in function-call counts, 39114 in all, are:
+= -- 4909
+> -- 1719
 < -- 0
-+ -- 462
-- -- 452
-* -- 2366
-:= -- 3241
-add.period$ -- 120
-call.type$ -- 24
-change.case$ -- 200
-chr.to.int$ -- 24
-cite$ -- 56
-duplicate$ -- 2603
-empty$ -- 1832
-format.name$ -- 536
-if$ -- 7662
++ -- 576
+- -- 564
+* -- 2961
+:= -- 4031
+add.period$ -- 150
+call.type$ -- 30
+change.case$ -- 250
+chr.to.int$ -- 30
+cite$ -- 73
+duplicate$ -- 3257
+empty$ -- 2292
+format.name$ -- 672
+if$ -- 9529
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 101
-newline$ -- 232
-num.names$ -- 192
-pop$ -- 1048
+missing$ -- 130
+newline$ -- 277
+num.names$ -- 240
+pop$ -- 1333
 preamble$ -- 1
-purify$ -- 415
+purify$ -- 519
 quote$ -- 0
-skip$ -- 897
+skip$ -- 1113
 stack$ -- 0
-substring$ -- 2196
-swap$ -- 270
+substring$ -- 2695
+swap$ -- 331
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 524
-warning$ -- 32
-while$ -- 162
+type$ -- 647
+warning$ -- 43
+while$ -- 199
 width$ -- 0
-write$ -- 442
-(There were 32 warnings)
+write$ -- 540
+(There were 43 warnings)

@@ -32,6 +32,7 @@ Not knowing about the biases of a network the vastly advancing technology of mac
 Furthermore, the rise in machine learning model deployments also caused the development of adversarial attacks. These attacks attempt to fool a machine learning model by providing deceptive input. Fooling refers to the resulting malfunction of the model. 
 % TODO first example
 
+In many areas, prediction accuracy alone is not enough, as users also require to be able to rely on the interpretation (e.g. in financial and medical settings).
 
 
 % security aspect of nns
@@ -97,7 +98,15 @@ More importantly, while a big motivation for the development of robust and expla
 
 
 
-% Outline
+%%%%%%%%%%%%%%%%%%%%%%%% Outline
+This article examines a topic at the intersection of explainable and adversarial machine learning research. 
 The overview presented in this article examines the existing literature and contributions in the field of XAI focusing on methods to manipulate explanation methods.  
 The critical literature analysis might serve as a motivation and step towards the biggest problems in XAI: How to make sure that interpretations of models are truly valid. 
-This paper is structured as follows... 
+This paper is structured as follows.
+
+% TODO 
+\autoref{sec:interpretation_methods} intruduces common interpretation methods for machine learning models. A taxonomy of the variety of techniques and a brief outline of popular interpretation methods is given. 
+
+In \autoref{sec:manipulation_methods}, the main topic of this paper, namely manipulation methods for deceiving interpretive techniques, is outlined. A taxonomy of methods is proposed and possible evaluation criteria are listed.
+
+\autoref{sec:manipulations} provides a detailed review of important studies in the field of manipulation methods. The implacations of the current state-of-the-art in axplainable AI are discussed in section \autoref{sec:discussion}.

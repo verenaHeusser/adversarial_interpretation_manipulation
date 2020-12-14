@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{24}
+\begin{thebibliography}{30}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -48,6 +48,19 @@
 \newblock \bibinfo{journal}{\emph{Advances in neural information processing
   systems}}  \bibinfo{volume}{31} (\bibinfo{year}{2018}),
   \bibinfo{pages}{9505--9515}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Alvarez~Melis and Jaakkola}{Alvarez~Melis and
+  Jaakkola}{2018}]%
+        {alvarez2018towards}
+\bibfield{author}{\bibinfo{person}{David Alvarez~Melis} {and}
+  \bibinfo{person}{Tommi Jaakkola}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Towards robust interpretability with
+  self-explaining neural networks}.
+\newblock \bibinfo{journal}{\emph{Advances in Neural Information Processing
+  Systems}}  \bibinfo{volume}{31} (\bibinfo{year}{2018}),
+  \bibinfo{pages}{7775--7784}.
 \newblock
 
 
@@ -97,6 +110,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Dimanov, Bhatt, Jamnik, and Weller}{Dimanov
+  et~al\mbox{.}}{2020}]%
+        {dimanov2020you}
+\bibfield{author}{\bibinfo{person}{Botty Dimanov}, \bibinfo{person}{Umang
+  Bhatt}, \bibinfo{person}{Mateja Jamnik}, {and} \bibinfo{person}{Adrian
+  Weller}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{You Shouldn't Trust Me: Learning Models Which
+  Conceal Unfairness From Multiple Explanation Methods.}. In
+  \bibinfo{booktitle}{\emph{SafeAI@ AAAI}}. \bibinfo{pages}{63--73}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Dombrowski, Alber, Anders, Ackermann,
   M{\"u}ller, and Kessel}{Dombrowski et~al\mbox{.}}{2019}]%
         {dombrowski2019explanations}
@@ -111,19 +136,6 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Dua and Graff}{Dua and Graff}{2017}]%
-        {adult_income}
-\bibfield{author}{\bibinfo{person}{Dheeru Dua} {and} \bibinfo{person}{Casey
-  Graff}.} \bibinfo{year}{2017}\natexlab{}.
-\newblock \bibinfo{title}{{UCI} Machine Learning Repository}.
-\newblock
-\newblock
-\urldef\tempurl%
-\url{http://archive.ics.uci.edu/ml}
-\showURL{%
-\tempurl}
-
-
 \bibitem[\protect\citeauthoryear{Elshawi, Al-Mallah, and Sakr}{Elshawi
   et~al\mbox{.}}{2019}]%
         {elshawi2019interpretability}
@@ -135,6 +147,17 @@
 \newblock \bibinfo{journal}{\emph{BMC medical informatics and decision making}}
   \bibinfo{volume}{19}, \bibinfo{number}{1} (\bibinfo{year}{2019}),
   \bibinfo{pages}{146}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gao and Oates}{Gao and Oates}{2019}]%
+        {gao2019universal}
+\bibfield{author}{\bibinfo{person}{Hang Gao} {and} \bibinfo{person}{Tim
+  Oates}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Universal Adversarial Perturbation for Text
+  Classification}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1910.04618}}
+  (\bibinfo{year}{2019}).
 \newblock
 
 
@@ -163,6 +186,18 @@
 \url{http://arxiv.org/abs/1902.02041}
 \showURL{%
 \tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kereliuk, Sturm, and Larsen}{Kereliuk
+  et~al\mbox{.}}{2015}]%
+        {kereliuk2015deep}
+\bibfield{author}{\bibinfo{person}{Corey Kereliuk}, \bibinfo{person}{Bob~L
+  Sturm}, {and} \bibinfo{person}{Jan Larsen}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Deep learning and music adversaries}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Multimedia}}
+  \bibinfo{volume}{17}, \bibinfo{number}{11} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{2059--2071}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Kim, Wattenberg, Gilmer, Cai, Wexler, Viegas,
@@ -266,6 +301,19 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Samek, Montavon, Vedaldi, Hansen, and
+  M{\"u}ller}{Samek et~al\mbox{.}}{2019}]%
+        {samek2019explainable}
+\bibfield{author}{\bibinfo{person}{Wojciech Samek},
+  \bibinfo{person}{Gr{\'e}goire Montavon}, \bibinfo{person}{Andrea Vedaldi},
+  \bibinfo{person}{Lars~Kai Hansen}, {and} \bibinfo{person}{Klaus-Robert
+  M{\"u}ller}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Explainable AI: interpreting, explaining
+  and visualizing deep learning}}. Vol.~\bibinfo{volume}{11700}.
+\newblock \bibinfo{publisher}{Springer Nature}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Selvaraju, Cogswell, Das, Vedantam, Parikh,
   and Batra}{Selvaraju et~al\mbox{.}}{2017}]%
         {selvaraju2017grad}
@@ -277,6 +325,18 @@
   via gradient-based localization}. In \bibinfo{booktitle}{\emph{Proceedings of
   the IEEE international conference on computer vision}}.
   \bibinfo{pages}{618--626}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Slack, Hilgard, Jia, Singh, and
+  Lakkaraju}{Slack et~al\mbox{.}}{2020}]%
+        {advlime_aies20}
+\bibfield{author}{\bibinfo{person}{Dylan Slack}, \bibinfo{person}{Sophie
+  Hilgard}, \bibinfo{person}{Emily Jia}, \bibinfo{person}{Sameer Singh}, {and}
+  \bibinfo{person}{Himabindu Lakkaraju}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Fooling LIME and SHAP: Adversarial Attacks on Post
+  hoc Explanation Methods}. In \bibinfo{booktitle}{\emph{AAAI/ACM Conference on
+  AI, Ethics, and Society (AIES)}}.
 \newblock
 
 
@@ -300,6 +360,24 @@
   vision}. In \bibinfo{booktitle}{\emph{Proceedings of the IEEE conference on
   computer vision and pattern recognition}}. \bibinfo{pages}{2818--2826}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Szegedy, Zaremba, Sutskever, Bruna, Erhan,
+  Goodfellow, and Fergus}{Szegedy et~al\mbox{.}}{2014}]%
+        {szegedy_intriguing}
+\bibfield{author}{\bibinfo{person}{Christian Szegedy},
+  \bibinfo{person}{Wojciech Zaremba}, \bibinfo{person}{Ilya Sutskever},
+  \bibinfo{person}{Joan Bruna}, \bibinfo{person}{Dumitru Erhan},
+  \bibinfo{person}{Ian Goodfellow}, {and} \bibinfo{person}{Rob Fergus}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Intriguing properties of neural networks}. In
+  \bibinfo{booktitle}{\emph{International Conference on Learning
+  Representations}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/1312.6199}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Warnecke, Arp, Wressnegger, and
