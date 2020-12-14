@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{30}
+\begin{thebibliography}{32}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -79,6 +79,20 @@
   Concepts, taxonomies, opportunities and challenges toward responsible AI}.
 \newblock \bibinfo{journal}{\emph{Information Fusion}}  \bibinfo{volume}{58}
   (\bibinfo{year}{2020}), \bibinfo{pages}{82--115}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bach, Binder, Montavon, Klauschen, M{\"u}ller,
+  and Samek}{Bach et~al\mbox{.}}{2015}]%
+        {bach2015pixel}
+\bibfield{author}{\bibinfo{person}{Sebastian Bach}, \bibinfo{person}{Alexander
+  Binder}, \bibinfo{person}{Gr{\'e}goire Montavon}, \bibinfo{person}{Frederick
+  Klauschen}, \bibinfo{person}{Klaus-Robert M{\"u}ller}, {and}
+  \bibinfo{person}{Wojciech Samek}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{On pixel-wise explanations for non-linear
+  classifier decisions by layer-wise relevance propagation}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{10},
+  \bibinfo{number}{7} (\bibinfo{year}{2015}), \bibinfo{pages}{e0130140}.
 \newblock
 
 
@@ -299,6 +313,28 @@
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2011.01082}}
   (\bibinfo{year}{2020}).
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Russakovsky, Deng, Su, Krause, Satheesh, Ma,
+  Huang, Karpathy, Khosla, Bernstein, Berg, and Fei-Fei}{Russakovsky
+  et~al\mbox{.}}{2015}]%
+        {ILSVRC15}
+\bibfield{author}{\bibinfo{person}{Olga Russakovsky}, \bibinfo{person}{Jia
+  Deng}, \bibinfo{person}{Hao Su}, \bibinfo{person}{Jonathan Krause},
+  \bibinfo{person}{Sanjeev Satheesh}, \bibinfo{person}{Sean Ma},
+  \bibinfo{person}{Zhiheng Huang}, \bibinfo{person}{Andrej Karpathy},
+  \bibinfo{person}{Aditya Khosla}, \bibinfo{person}{Michael Bernstein},
+  \bibinfo{person}{Alexander~C. Berg}, {and} \bibinfo{person}{Li Fei-Fei}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{ImageNet Large Scale Visual Recognition
+  Challenge}}.
+\newblock \bibinfo{journal}{\emph{International Journal of Computer Vision
+  (IJCV)}} \bibinfo{volume}{115}, \bibinfo{number}{3} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{211--252}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s11263-015-0816-y}
+\showDOI{\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Samek, Montavon, Vedaldi, Hansen, and

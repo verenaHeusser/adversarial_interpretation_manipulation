@@ -52,11 +52,16 @@ December 16--20, 2020, Karlsruhe, DE}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{titlesec}
 
 % macros etc
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\mypar}[1]{\vspace{0.3cm}\noindent\textbf{#1}}
 \DeclareMathOperator*{\argmax}{arg\,max}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0ex plus .2ex}
 
 \begin{document}
 
@@ -125,14 +130,12 @@ December 16--20, 2020, Karlsruhe, DE}
 
 \input{sections/manipulation_mothods}
 
-% TODO add methods to reverse / disclose manipulations
-
-\input{sections/transferability}
 
 \input{sections/manipulations}
 
 \input{sections/explaining_manipulations}
 
+% TODO add methods to reverse / disclose manipulations
 \input{sections/uncovering_manipulations}
 
 \input{sections/sanity_checks_for_interpreters}
@@ -144,9 +147,10 @@ December 16--20, 2020, Karlsruhe, DE}
 \input{sections/discussion}
 
 % TODO add code link
-% TODO add author notes? 
-% N neural network chengen to mathcal oder so
-% paper for iid assumption of nns?
+% TODO add author notes? -> replcation studies?
+% TODO N neural network chengen to mathcal oder so
+% TODO paper for iid assumption of nns?
+% TODO x anpassen zu bf
 
 % \balance
 \bibliography{mybib}{}

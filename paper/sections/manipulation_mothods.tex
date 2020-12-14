@@ -58,7 +58,9 @@ These measures are to be seen as comparison between a baseline model $N$ and a m
 %%%%%%%%%%
 \subsubsection{Manipulation Levels}
 \label{subsubsec:manipulation_levels}
-TODO 
+\par\smallskip
+\noindent 
+TODO
 
 \par\smallskip
 \noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb or alter input data while observing the effect of this perturbation on the model prediction. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
@@ -90,6 +92,9 @@ Adversarial model manipulation is depicted in \autoref{fig:input_manipulation} w
 %%%%%%%%%%
 \subsubsection{Manipulation Targets}
 \label{subsubsec:manipulation_targets}
+
+\par\smallskip
+\noindent
 In addition to the categorization of manipulation methods based on the manipulation level, the methods can further be categorized based on the target of their perturbation. The first possibility is \textit{untargeted} perturbation, the second is \textit{targeted} perturbation. Both these styles can be applied on either model and input level. 
 
 \mypar{Untargeted Manipulations.} 
@@ -112,7 +117,10 @@ Basides the necessary properties of a successful interpretation manipulation met
 \mypar{Transferability.} The manipulation does not only fool one type of interpretation method, but it's effect transfers to other interpretation techniques. 
 % This property is naturally given for the class of model manipulations
 
-\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing trainang instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space, should be affected, 
+
+\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing trainang instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space, should be affected,
+% On the contrary, model manipulations are non-local perturbations, meaning that they do not merely perturb an input sample
+% but rather effect all samples in the way that the model itself is changed. 
 % TODO iid ood?
 % The  generalisation  of  the  attack  to  testpoints  is  noteworthy  since  we  might  expect  that  the  deci-sion boundary would be perturbed locally around the train-ing points to affect only their explanations, without signifi-cant change for test points, especially if far away in featurespace (see Appendix for more)
 
@@ -131,15 +139,21 @@ As outlined in section \autoref{sec:manipulation_methods}, there exists a pletho
 Evaluations of the quality of an explanation method are separated into qualitative and quantitative evaluations. 
 % \cite{fooling_nn_interpreters} propose to measure the quality of an explanation method by their stability with respect to adversarial model manipulations. 
 
-\mypar{Quantitative Evaluations.} 
-As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations before and after perturbation \cite{ghorbani2019interpretation}.
+\mypar{Qualitative Evaluation.} 
+Inspection and ramdom sampling are commonly used techniques to obtain an intuition about the effect of manipulations. 
+As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $\mathbf{x}$. Visual inspection of these evaluations for specific samples is informative, but does not allow for general statistics and validation of manipulation effects. Thus, quantitative evaluations are required. 
+
+\mypar{Quantitative Evaluation.} 
+As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations and data samples before and after perturbation \cite{ghorbani2019interpretation}.
 Common metrics for quantitatively measuring similarities are the following: 
 \begin{itemize}
     \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
     \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
     \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to create a measure for systematically measuring the robustness of an interpretation method to adversarial model manipulations. The FSR measures on how many samples from a dataset an interpretation method $\mathcal{I}$ is fooled by a model manipulation. The higher the FSR, the more often an inetpretation method is fooled. 
+    \item \textbf{Structural Similarity Index (SSIM).} SSIM values are relative similarity measure in the range $\left[0, 1\right]$, where larger values indicate higher similarity.
+    \item \textbf{Pearson Correlation Coefficien (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
+    \item \textbf{Mean Squared Error (MSE).} As an absolute error measure, values close to zero indicate high similarity. 
+    \item \textbf{AOPC} TODO
 \end{itemize}
-
-\mypar{Qualitative Evaluations.} 
-As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $x$.
-Looking at these evaluations for specific samples is informative albeit not usable to obtain a general statistic about the explanation methods quality.
+\noindent Note that these are only examples without demand for completeness. For further information see \cite{adebayo2018sanity}.
+Normalizing these measures to yield values in $\left[0, 1\right]$ with a sum of one is good practice. 
