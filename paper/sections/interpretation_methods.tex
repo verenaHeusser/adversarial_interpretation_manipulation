@@ -18,6 +18,15 @@ High interpretability is desired as it can help to to uncover biases in the mode
 % TODO note here that tha data from adult_income do actually not allow for these features to be more important than others. 
 If the model uses sensitive features, such as sex and race as important features, it is systematically biased and thus unfair. 
 
+
+%%%%% TAXONOMY
+This section offers a taxonomy for machine learning interpretation methods.
+
+There are essentially two ways to achieve interpretability: (1) to use inherently interpretable models or (2) to post-process a model in a fashion that allows to yield insights. The former is known as the development of \textit{surrogate} models and more generally described as \textit{model-agnostic} methods. Option (2) is known as \textit{model-transparent} methods. 
+
+A further categorization can be made based on the scope of interpretations: \textit{Local} methods aim at interpretations that are true for a single data points and its neighbors. 
+\textit{Global} methods aim at gaining interpretations that are valid for most data points in a class \cite{kim2018interpretability, nguyen2017plug, yosinski2015understanding}. The interpretation methods discussed within this paper mostly fall into the class of local explanation methods \cite{ribeiro2016should, lundberg2017unified}. % TODO cite lrp, ...
+
 Explanation methods aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
 A frequently used type of explanation methods are feature attributions mapping each input feature to a numeric score. This score should quantify the importance of the feature relative to the model output. The resulting attribution map is then visualized as a heatmap projected onto the input sample to interpret the input attributes regarding which ones are the most helpful for forming the final prediction. 
 
@@ -54,8 +63,14 @@ The following section details the two categories and will give examples of the s
 \label{subsec:bb_methods}
 
 % https://proceedings.neurips.cc//paper/2020/file/2c29d89cc56cdb191c60db2f0bae796b-Paper.pdf p. 4 
-Model-agnostic interpretations assume no knowledge about the model thus treating it as a black box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. For this, the common approach is to approximate the relationship between the input samples and the corresponding prediction by tho model.
-As the model itself does not need to be known, these approaches can be used in scenarios where the model itself is not directly accessible. A black box interpretation offers the big advantage to be applicable to any model.
+Model-agnostic interpretations assume no knowledge about the model thus treating it as a black box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. The interpretable model is also dubbed the 'surogate' model. The common approach for learning the surrogate is to approximate the relationship between the input samples and the corresponding prediction by tho model.
+As the model itself does not need to be known, these approaches can be used in scenarios where the model itself is not directly accessible. Model-agnostic interpretations are fairly popular and are used in a wide range of applications, ranging from finance and law to medicine and chemistry \cite{elshawi2019interpretability, whitmore2016mapping}. 
+
+A black-box interpretation offers the great advantage of being applicable to any model and offers simplicity because the interpretation is embedded in the model. However, this option of gaining interpretability might be costly for users that already have a high performing model. For this reason, growing need for methods exists that can be applied without retraining or modifying the underlying model.
+
+% https://arxiv.org/pdf/1911.02508.pdf
+% Due to their generality, thesemethods have been used to explain a number of classifiers, suchas neural networks and complex ensemble models, and in variousdomains ranging from law, medicine, finance, and science [7,10,25]
+
 
 \mypar{LIME.}
 Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro2016should} perturbs the input and observes how the predictions change. In image classification,  LIME creates a set of perturbed instances by dividing the input image into interpretable components (contiguous superpixels), and runs each perturbed instance through the model26

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{24}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -124,6 +124,20 @@
 \tempurl}
 
 
+\bibitem[\protect\citeauthoryear{Elshawi, Al-Mallah, and Sakr}{Elshawi
+  et~al\mbox{.}}{2019}]%
+        {elshawi2019interpretability}
+\bibfield{author}{\bibinfo{person}{Radwa Elshawi}, \bibinfo{person}{Mouaz~H
+  Al-Mallah}, {and} \bibinfo{person}{Sherif Sakr}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{On the interpretability of machine learning-based
+  model for predicting hypertension}.
+\newblock \bibinfo{journal}{\emph{BMC medical informatics and decision making}}
+  \bibinfo{volume}{19}, \bibinfo{number}{1} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{146}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Ghorbani, Abid, and Zou}{Ghorbani
   et~al\mbox{.}}{2019}]%
         {ghorbani2019interpretation}
@@ -149,6 +163,20 @@
 \url{http://arxiv.org/abs/1902.02041}
 \showURL{%
 \tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kim, Wattenberg, Gilmer, Cai, Wexler, Viegas,
+  et~al\mbox{.}}{Kim et~al\mbox{.}}{2018}]%
+        {kim2018interpretability}
+\bibfield{author}{\bibinfo{person}{Been Kim}, \bibinfo{person}{Martin
+  Wattenberg}, \bibinfo{person}{Justin Gilmer}, \bibinfo{person}{Carrie Cai},
+  \bibinfo{person}{James Wexler}, \bibinfo{person}{Fernanda Viegas},
+  {et~al\mbox{.}}} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Interpretability beyond feature attribution:
+  Quantitative testing with concept activation vectors (tcav)}. In
+  \bibinfo{booktitle}{\emph{International conference on machine learning}}.
+  PMLR, \bibinfo{pages}{2668--2677}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Lipton}{Lipton}{2018}]%
@@ -182,6 +210,19 @@
 \newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
   Sciences}} \bibinfo{volume}{116}, \bibinfo{number}{44}
   (\bibinfo{year}{2019}), \bibinfo{pages}{22071--22080}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Nguyen, Clune, Bengio, Dosovitskiy, and
+  Yosinski}{Nguyen et~al\mbox{.}}{2017}]%
+        {nguyen2017plug}
+\bibfield{author}{\bibinfo{person}{Anh Nguyen}, \bibinfo{person}{Jeff Clune},
+  \bibinfo{person}{Yoshua Bengio}, \bibinfo{person}{Alexey Dosovitskiy}, {and}
+  \bibinfo{person}{Jason Yosinski}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Plug \& play generative networks: Conditional
+  iterative generation of images in latent space}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the IEEE Conference on Computer
+  Vision and Pattern Recognition}}. \bibinfo{pages}{4467--4477}.
 \newblock
 
 
@@ -273,6 +314,19 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Whitmore, George, and Hudson}{Whitmore
+  et~al\mbox{.}}{2016}]%
+        {whitmore2016mapping}
+\bibfield{author}{\bibinfo{person}{Leanne~S Whitmore}, \bibinfo{person}{Anthe
+  George}, {and} \bibinfo{person}{Corey~M Hudson}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Mapping chemical performance on molecular
+  structures using locally interpretable explanations}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1611.07443}}
+  (\bibinfo{year}{2016}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Xiao, Engstrom, Ilyas, and Madry}{Xiao
   et~al\mbox{.}}{2020}]%
         {xiao2020noise}
@@ -283,6 +337,19 @@
   object recognition}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2006.09994}}
   (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Yosinski, Clune, Nguyen, Fuchs, and
+  Lipson}{Yosinski et~al\mbox{.}}{2015}]%
+        {yosinski2015understanding}
+\bibfield{author}{\bibinfo{person}{Jason Yosinski}, \bibinfo{person}{Jeff
+  Clune}, \bibinfo{person}{Anh Nguyen}, \bibinfo{person}{Thomas Fuchs}, {and}
+  \bibinfo{person}{Hod Lipson}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Understanding neural networks through deep
+  visualization}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1506.06579}}
+  (\bibinfo{year}{2015}).
 \newblock
 
 
