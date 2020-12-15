@@ -37,7 +37,6 @@ except OSError:
     for f in files:
         os.remove(f)
 
-
 def init_weights(m):
     m.reset_parameters()
 
