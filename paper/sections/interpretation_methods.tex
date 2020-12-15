@@ -139,16 +139,15 @@ LIME \cite{ribeiro2016should} perturbs the input and observes how the prediction
 The other group of interpretations are model-transparent, or white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Methods within this group are for example propagation-based and gradient-based approaches. The former propagate back the model's prediction back through the model. The latter make use of the information provided by the gradients of the loss function, which contain sensitive information about the prediction and tha features. 
 A few example methods within this group are listed below. 
 
-\mypar{Layer-wise Relevance Propagation (LRP).} 
-While many approaches in the group of model-transparent interpretations are designed only for image classification, or convolutional neural networks, this method \cite{bach2015pixel} is an exception. 
-This method \cite{bach2015pixel} propagates relevance values backwards through the network. It relies on a Taylor series close to the prediction point rather than partial derivatives at the prediction point itself. An example of LRP applied to the cat image example is in \auteref{fig:lrp_cat_lrp}.
+\mypar{Layer-wise Relevance Propagation (LRP).} While many approaches in the group of model-transparent interpretations are designed only for image classification, or convolutional neural networks, this method \cite{bach2015pixel} is an exception. LRP propagates relevance values backwards through the network. It relies on a Taylor series close to the prediction point rather than partial derivatives at the prediction point itself. An example for a feature map produced by LRP can be found in \autoref{fig:lrp_cat_lrp}.
 %The output is a heatmap of relevance values, depicting for each feature how helpful or harmful the feature is for predicting the target class. 
 
-\mypar{Gradient-weighted Class Activation Mapping (Grad-CAM)} \cite{selvaraju2017grad}
-To further improve the quality of the visualization, attribution methods suchas heatmaps, saliency maps or class activation methods (GradCAM[292]) are used. Grad-CAM uses the gradients of any target concept, flowing into the final convolutional layer to produce acoarse localization map, highlighting the important regions in the image for predicting the concept.
+Methods developed for convolutional neural networks are for instace Grad-CAM \cite{selvaraju2017grad}, SimleGrad TODOcite, or Smooth Grad. 
+% \mypar{Gradient-weighted Class Activation Mapping (Grad-CAM)}
+% Grad-CAM \cite{selvaraju2017grad} uses the gradients of any target concept, flowing into the final convolutional layer to produce a coarse localization map, highlighting the important regions in the image for predicting the concept.
 
-\mypar{SimpleGrad (SimpleG)}
+% \mypar{SimpleGrad (SimpleG)}
 
-\mypar{Smooth Grad}
+% \mypar{Smooth Grad}
 
-Please see the original publications for more detailed information. 
+% Please see the original publications for more detailed information. 

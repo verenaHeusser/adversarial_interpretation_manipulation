@@ -17,9 +17,8 @@ Adversarial examples, as first introduced by \cite{szegedy_intriguing}, are clev
 Note, that within adversarial foolings of models, the perturbation is mostly applied to the input data, and not to the model itself.
 
 % TODO cite
-Evicendce from many studios shows that deep learning models can be easily tricked by adversarial exapmles. 
-Albeit there are not yet as many studies, there also exists evidence that many interpratation methods are aslo fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards}. This fooling of interpretation methods is outlined below. 
-
+Evidence from many studios shows that deep learning models can be easily tricked by adversarial examples. 
+Albeit there are not yet as many studies, there also exists evidence that many interpretation methods are also fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards} as well as to the model itself \cite{fooling_nn_interpreters,dimanov2020you}. This fooling of interpretation methods is outlined below. 
 
 \mypar{Adversarial Attacks on Model Interpreters. } 
 Contrary to adversarial attacks on machine learning models, the focus of this paper is on the attacks on interpretation techniques without changing the prediction of the model. 
@@ -52,19 +51,20 @@ These measures are to be seen as comparison between a baseline model $N$ and a m
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Taxonomy of Manipulation Methods}
+\subsection{Taxonomy of Interpretation Manipulation Methods}
 \label{subsec:taxonomy_manipulations}
+There are two important categories of Manipulation Methods that aim at attacking model interpretation methods. The first category is based on the level these manipulations operate on, i.e. input space level or model / paramater level. 
+The second categorization is based on the target of the manipulations. While untargeted manipulations are mostly random perturbations, targeted manipulations aim to perturb the interpretation of specific input features. 
 
 %%%%%%%%%%
 \subsubsection{Manipulation Levels}
 \label{subsubsec:manipulation_levels}
 \par\smallskip
 \noindent 
-TODO
 
 \par\smallskip
-\noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb or alter input data while observing the effect of this perturbation on the model prediction. As found in TODO, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
-This concept is visualized in \autoref{fig:input_manipulation}. 
+\noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb or alter input data while observing the effect of this perturbation on the model prediction. This concept is visualized in \autoref{fig:input_manipulation}. 
+As found in \cite{advlime_aies20}, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
 
 \begin{figure}[ht]
     \centering
@@ -102,7 +102,7 @@ The majority of manipulations is untargeted, meaning that the applied perturbati
 
 \mypar{Targeted Manipulations.} 
 On the contrary, targeted manipulations are designed to specificly alter the explanation of distinct features of an input instance. Such a specific feature might be an object in the input image in the context of image classification. 
-For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the classes elephant and school bus are swapped. 
+For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the target classes elephant and school bus are swapped. 
 Manipulations on the level of the model are mostly targeted, as the explanation methods are being fooled by adapting the model parameters. 
 
 % Model manipulations pose a much higher threat for deploying the models: If a model itself is changed to explicitly, systemactically fool an explanation method, the bias of the model is internal and much harder to reveal than just a different sort of input into the model. 
