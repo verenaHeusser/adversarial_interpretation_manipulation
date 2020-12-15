@@ -26,3 +26,7 @@ tqdm==4.43.0  # lime needs this
 sklearn
 graphviz
 python-mnist
+
+# shap test
+shap
+keras
