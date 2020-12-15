@@ -1,24 +1,52 @@
 \section{Interpretation Methods}
 \label{sec:interpretation_methods}
 
-% All explanation methods are post hoc
-There exists a variety of definitions in the vastly expanding research field of XAI, and the concept of \textit{interpretability} still has no formal commonly used technical meaning \cite{lipton2018mythos}. To build on the common ground of existing research, this paper follows the terminoloqy of \cite{arrieta2020explainable}.
-The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}.
+There exists a variety of definitions in the vastly expanding research field of XAI, and the concept of \textit{interpretability} still has no formal commonly used technical meaning \cite{lipton2018mythos}. To build on the common ground of existing research, this work follows the terminology of Lipton et al. \cite{lipton2018mythos} and Arrieta et al. \cite{arrieta2020explainable}.
 
-\mypar{Interpretability} refers to the the extent to which cause and effect can be observed in a model, which can be translated to uncovering \textit{why} a model made prediction $y$ to an input $\mathbf{x}$. Consider the example of image classification from \autoref{fig:bb}. Here, interpretability would mean that if a cat is present in the image (the cause), the model classifies it to the category 'cat' (the effect). Now imagine we find that the model takes the green meadow in the image as evidence to predict 'cat', and not the cat itself, there is a lack of interpretability, as other features are learned as important than the features that are truly important. This toy example is in fact a common problem in image classification: the over-reliance of models on image background, rather than on objects in the foreground, has been observed for the task of image classification \cite{xiao2020noise}.% Note that interpretabe AI cannot verify if the learned relationships between features and outputs is truly causal (tha meadow in tha image can be correlated to the image category, e.g. when most images depictiong a cat shows cats on green meadows. This is a correlation of features but not necessarily a causilaty in tha sense of 'meadow --> cat'. ) https://www.pnas.org/content/pnas/116/44/22071.full.pdf causal inference
+Broadly, interpretabiity focuses on \textit{how} and \textit{why} a machine learning model makes predictions.
 Simply put, interpretability is focused on getting some notion of an explanation for the decisions made by a machine learning model.
 
-\mypar{Explainibility} on the other hand spans methods to uncover \textit{how} a model makes predictions, meaning to observe the inner workings of a model and to literally explain what is happening.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Why is Interpretability Important?}
+\label{subsec:importance_of_interpretability}
+Before defining interpretability, we will discuss why interpretability is crucial. 
 
-\par\smallskip
-% The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
-% Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
-% However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
+First, interpretability is helpful as it can help to build trust in a machine learning application. Suppose a neural network predicts the risk for cancer from a mammogram, which is an image of breast tissue. A doctor would only use the algorithm if there is a way to validate that (1) tha algorithm is accurate (which can be measured in terms of the predictive accuracy), and (2) if the model is also using the correct indications in the data for predicting the risk of cancer. (1) is the standard approach for validating the performance of machine learning models, but in this example, one can clearly see why predictive accuracy might not be enough. For approaching (2), i.e. uncovering \textit{why} a model predicts a low / high risk of cancer, a variety of interpretation methods are proposed.  
+Ideally, an interpretation, or explanation method should indicate which pixels in the original image contribute to the prediction and also to what extent each pixel contributes. The extent to which each pixel contributes to a prediction is often called the \textit{importance} score of a feature. 
 
-While both concepts seem to be important for the general objective of explainable artificial intelligence, this paper focuses on interpretability. 
+The advantage of post-hoc interpretations is that they do not interfere with the training process of the model, and thus do not change the model. As the name says, post-hoc means that the techniques can be easily applied to an already trained model without much further computational overhead. 
+
+% https://thegradient.pub/interpretability-in-ml-a-broad-overview/ intro motvation
+% https://towardsdatascience.com/why-how-interpretable-ml-7288c5aa55e4 also
+
+
 High interpretability is desired as it can help to to uncover biases in the model. Suppose a machine learning model is to be deployed for the task of income prediction based on features such as age, race, gender, education and hours of work per week. The performance of the system would mainly be evaluated in terms oft the predictive accuracy and the fairness of the system. The former can be evaluated with metrics, such as accuracy on a held-out test set. For the latter, interpretability methods might be applied to observe which input features are used by the model to predict the income. 
 % TODO note here that tha data from adult_income do actually not allow for these features to be more important than others. 
 If the model uses sensitive features, such as sex and race as important features, it is systematically biased and thus unfair. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Terminology}
+\label{subsec:interpretation_methods_terminology}
+
+The authors make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}. 
+
+Lipton \cite{lipton2018mythos} further breaks down interpretability into \textit{transparency} and \textit{post-hoc} interpretability. The notion of \textit{explainibility} from \cite{arrieta2020explainable} can be related to Liptons's \textit{transparency}, while Lipton's \textit{post-hoc} interpretability is essentially \textit{interpretability} as defined by Arrieta et al. 
+
+
+\mypar{Post-hoc Interpretability} refers to the the extent to which cause and effect can be observed in a model, which can be translated to uncovering \textit{why} a model made prediction $y$ to an input $\mathbf{x}$. Consider the example of image classification from \autoref{fig:bb}. Here, interpretability would mean that if a cat is present in the image (the cause), the model classifies it to the category 'cat' (the effect). Now imagine we find that the model takes the green meadow in the image as evidence to predict 'cat', and not the cat itself. 
+This would imply a lack of interpretability, as the model learns to assign features to the concept 'cat' other than those related to 'cat' in the correct sense. This toy example is in fact a common problem in image classification: \cite{xiao2020noise} observe the over-reliance of models on image background, rather than on objects in the foreground. % Note that interpretabe AI cannot verify if the learned relationships between features and outputs is truly causal (tha meadow in tha image can be correlated to the image category, e.g. when most images depictiong a cat shows cats on green meadows. This is a correlation of features but not necessarily a causilaty in tha sense of 'meadow --> cat'. ) https://www.pnas.org/content/pnas/116/44/22071.full.pdf causal inference
+Simply put, interpretability is focused on getting some notion of an explanation for the decisions made by a machine learning model.
+
+\mypar{Explainibility or Transparency as Interpretability} on the other hand spans methods to uncover \textit{how} a model makes predictions, meaning to observe the inner workings of a model and to literally explain what is happening. Thus, tansparency refers to the model's inherent properties that can be known before the training process and that are helpful to understand the model.
+
+\par\smallskip
+While both concepts seem to be important for the general objective of explainable artificial intelligence, this paper focuses on post-hoc interpretability. 
+
+
+% The notion of these two concepts can be nicely explained by the comparison between deep neural networks and (shallow) decision trees. 
+% Within a decision tree, there exists a distinct set of rules. The date will be split at each node into subsets and the leaf node hold the predicted outcome. All edges are connected by a logical 'AND'. Thus, cause and effect in a shallow decision tree are easy to observe and visualize, and thus the model is interpretable. 
+% However, a deep neural network, holding millions to billions of parameters in several layers, there are many neurons impacting the prediction to in order to directly attribute the impact of individual input features.  
 
 
 %%%%% TAXONOMY
