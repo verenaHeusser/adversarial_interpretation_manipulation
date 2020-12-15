@@ -82,7 +82,6 @@ The following section details the two categories and will give examples of the s
 
 % \noindent\textbf{White-box Methods.} On the other side are white-box interpretations, where the model is known with all its parameters. Thus, the explanations can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box models. As within these white-box models, tha model parameters can be used for calculating the interpretations, these methods are also named gradient or saliency map based methods. 
 
-
 \subsection{Model-agnostic methods.}
 \label{subsec:bb_methods}
 
@@ -136,11 +135,13 @@ LIME \cite{ribeiro2016should} perturbs the input and observes how the prediction
 \subsection{Model-transparent methods.}
 \label{subsec:wb_methods}
 
-The other group of interpretations are model-transparent, or white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Methods within this group are for example propagation-based and gradient-based approaches. The former propagate back the model's prediction back through the model. The latter make use of the information provided by the gradients of the loss function, which contain sensitive information about the prediction and tha features. 
+The other group of interpretations are model-transparent, or white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Methods within this group are for example propagation-based and gradient-based approaches. The former propagate back the model's prediction back through the model. The latter make use of the information provided by the gradients of the loss function, which contain sensitive information about the prediction and the features. Using the backpropagation method, features in the input can be highlighted based on the amount of gradient they receive. This shows their contribution to the final score. 
 A few example methods within this group are listed below. 
 
-\mypar{Layer-wise Relevance Propagation (LRP).} While many approaches in the group of model-transparent interpretations are designed only for image classification, or convolutional neural networks, this method \cite{bach2015pixel} is an exception. LRP propagates relevance values backwards through the network. It relies on a Taylor series close to the prediction point rather than partial derivatives at the prediction point itself. An example for a feature map produced by LRP can be found in \autoref{fig:lrp_cat_lrp}.
+\mypar{Layer-wise Relevance Propagation (LRP).} While many approaches in the group of model-transparent interpretations are designed only for image classification, or convolutional neural networks, this method \cite{bach2015pixel} is an exception. LRP propagates relevance values backwards through the network and decomposes the score of a predicted class backwards through the network. It relies on a Taylor series close to the prediction point rather than partial derivatives at the prediction point itself. An example for a feature map produced by LRP can be found in \autoref{fig:lrp_cat_lrp}.
 %The output is a heatmap of relevance values, depicting for each feature how helpful or harmful the feature is for predicting the target class. 
+
+\mypar{DeepLIFT} \cite{} is an improved version of LRP, where a reference point in the input feature space is defined. Relevance scores are propagated proportionally to the changes of neuronal activations from the reference. % https://arxiv.org/pdf/1710.10547.pdf
 
 Methods developed for convolutional neural networks are for instace Grad-CAM \cite{selvaraju2017grad}, SimleGrad TODOcite, or Smooth Grad. 
 % \mypar{Gradient-weighted Class Activation Mapping (Grad-CAM)}

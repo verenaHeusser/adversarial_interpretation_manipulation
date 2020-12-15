@@ -5,6 +5,7 @@ After introducing the terminology of model interpreters and manipulation methods
 
 \subsection{Input Level Manipulations}
 
+\mypar{Model-agnostic Interpreters can be gamed.}\newline
 %%%%%%%%  %%%%%%%% Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods
 % https://arxiv.org/pdf/1911.02508.pdf 
 \cite{advlime_aies20} propose a framework for fooling the model-agnostic interpreters LIME and SHAP. Their method successfully hides the biases of models trained on adversarial examples by... 
@@ -20,24 +21,25 @@ The authors take a statistical approach model-agnostic interpretation methods. T
     \vspace{-0.3cm}
 \end{figure}
 
-
+\mypar{Saliency Maps are vulnerable to Adversarial Attacks.}
+\cite{ghorbani2019interpretation} showed that importance scores produced by the popular interpretation methods Simple Grad, DeepLIFT and TODO. 
 
 
 
 \subsection{Model Level Manipulations}
 
+\mypar{Adversarial Model Manipulations can fool a wide range of interpreters.}
 \cite{fooling_nn_interpreters} were the first to introduce adversarial model manipulations for fooling interpretation methods. 
-Their research quesiton is if state-of-the-art interpretation methods be fooled with adversarial model manipulations. For this, adapted the fine-tuning of image-classification models by using an altered loss function. 
+Their research question is if state-of-the-art interpretation methods be fooled with adversarial model manipulations. For this, the authors adapted the fine-tuning of image-classification models by using an altered loss function. 
 After fine-tuning the model with the regular classification loss combined with an adversarial loss, they investigated if the interpreter results change as a function of model parameters. 
-Two types of fooling methods were introduced, namely \textit{active} and \textit{passile} fooling. 
-
-
+Two types of fooling methods were introduced, namely \textit{active} and \textit{passive} fooling. 
 
 % HEO: The authors find that perturbed model parameters can also make explanations worse for the same input images and interpreters. 
 % \subsubsection{Transferability of Manipulations}
 % \cite{fooling_nn_interpreters} find that fooling one explanation method with a fooling scheme transfers to other methods. 
 
 %%%%%%%%  %%%%%%%%
+\mypar{}
 \cite{dimanov2020you} examine the relation of interpretation methods and the concept of fairness. They propose to learn a modified model with concealed unfairness. This is done by fine-tuning a classification model with a loss function extended by an explanation loss. 
 
 Their approach differs methodologically to \cite{fooling_nn_interpreters} as follows: 

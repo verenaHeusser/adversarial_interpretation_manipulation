@@ -18,7 +18,7 @@ Note, that within adversarial foolings of models, the perturbation is mostly app
 
 % TODO cite
 Evidence from many studios shows that deep learning models can be easily tricked by adversarial examples. 
-Albeit there are not yet as many studies, there also exists evidence that many interpretation methods are also fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards} as well as to the model itself \cite{fooling_nn_interpreters,dimanov2020you}. This fooling of interpretation methods is outlined below. 
+Albeit there are not yet as many studies, there also exists evidence that many interpretation methods are also fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards} as well as to the model itself \cite{fooling_nn_interpreters, dimanov2020you}. This fooling of interpretation methods is outlined below. 
 
 \mypar{Adversarial Attacks on Model Interpreters. } 
 Contrary to adversarial attacks on machine learning models, the focus of this paper is on the attacks on interpretation techniques without changing the prediction of the model. 
@@ -49,7 +49,6 @@ These measures are to be seen as comparison between a baseline model $N$ and a m
 
 \cite{dimanov2020you} extend these properties to include the so called \textit{model similarity}. This measure extends the \textit{prediction accuracy} to span the accuracy difference in between the baseline model and the new model, and also the mismatch of data points where the predictions of both models differ. 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Taxonomy of Interpretation Manipulation Methods}
 \label{subsec:taxonomy_manipulations}
@@ -64,7 +63,7 @@ The second categorization is based on the target of the manipulations. While unt
 
 \par\smallskip
 \noindent\textbf{Adversarial Input Manipulation.} The general approach is to perturb or alter input data while observing the effect of this perturbation on the model prediction. This concept is visualized in \autoref{fig:input_manipulation}. 
-As found in \cite{advlime_aies20}, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
+As found in \cite{dombrowski2019explanations}, visually-imperceptible perturbations of an input image can make explanations worse for the same model and interpreter. 
 
 \begin{figure}[ht]
     \centering
