@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{33}
+\begin{thebibliography}{37}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -72,6 +72,33 @@
 \newblock \bibinfo{journal}{\emph{Advances in Neural Information Processing
   Systems}}  \bibinfo{volume}{31} (\bibinfo{year}{2018}),
   \bibinfo{pages}{7775--7784}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ancona, Ceolini, {\"O}ztireli, and
+  Gross}{Ancona et~al\mbox{.}}{2017}]%
+        {ancona2017towards}
+\bibfield{author}{\bibinfo{person}{Marco Ancona}, \bibinfo{person}{Enea
+  Ceolini}, \bibinfo{person}{Cengiz {\"O}ztireli}, {and}
+  \bibinfo{person}{Markus Gross}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Towards better understanding of gradient-based
+  attribution methods for deep neural networks}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.06104}}
+  (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Arras, Horn, Montavon, M{\"u}ller, and
+  Samek}{Arras et~al\mbox{.}}{2017}]%
+        {arras2017relevant}
+\bibfield{author}{\bibinfo{person}{Leila Arras}, \bibinfo{person}{Franziska
+  Horn}, \bibinfo{person}{Gr{\'e}goire Montavon}, \bibinfo{person}{Klaus-Robert
+  M{\"u}ller}, {and} \bibinfo{person}{Wojciech Samek}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{" What is relevant in a text document?": An
+  interpretable machine learning approach}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{12},
+  \bibinfo{number}{8} (\bibinfo{year}{2017}), \bibinfo{pages}{e0181142}.
 \newblock
 
 
@@ -375,6 +402,19 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Simonyan, Vedaldi, and Zisserman}{Simonyan
+  et~al\mbox{.}}{2013}]%
+        {simonyan2013deep}
+\bibfield{author}{\bibinfo{person}{Karen Simonyan}, \bibinfo{person}{Andrea
+  Vedaldi}, {and} \bibinfo{person}{Andrew Zisserman}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Deep inside convolutional networks: Visualising
+  image classification models and saliency maps}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1312.6034}}
+  (\bibinfo{year}{2013}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Slack, Hilgard, Jia, Singh, and
   Lakkaraju}{Slack et~al\mbox{.}}{2020}]%
         {advlime_aies20}
@@ -475,6 +515,16 @@
   visualization}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1506.06579}}
   (\bibinfo{year}{2015}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zeiler and Fergus}{Zeiler and Fergus}{2014}]%
+        {zeiler2014visualizing}
+\bibfield{author}{\bibinfo{person}{Matthew~D Zeiler} {and} \bibinfo{person}{Rob
+  Fergus}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Visualizing and understanding convolutional
+  networks}. In \bibinfo{booktitle}{\emph{European conference on computer
+  vision}}. Springer, \bibinfo{pages}{818--833}.
 \newblock
 
 
