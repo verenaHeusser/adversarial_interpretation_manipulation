@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -399,6 +399,19 @@
   via gradient-based localization}. In \bibinfo{booktitle}{\emph{Proceedings of
   the IEEE international conference on computer vision}}.
   \bibinfo{pages}{618--626}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Shrikumar, Greenside, and Kundaje}{Shrikumar
+  et~al\mbox{.}}{2017}]%
+        {shrikumar2017learning}
+\bibfield{author}{\bibinfo{person}{Avanti Shrikumar}, \bibinfo{person}{Peyton
+  Greenside}, {and} \bibinfo{person}{Anshul Kundaje}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Learning important features through propagating
+  activation differences}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1704.02685}}
+  (\bibinfo{year}{2017}).
 \newblock
 
 
