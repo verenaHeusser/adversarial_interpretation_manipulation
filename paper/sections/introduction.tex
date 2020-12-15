@@ -8,9 +8,9 @@ This complexity means that they remain black boxes that cannot be interpreted ev
 
 % rise of XAI
 Such a black box is able to predict well for unseen yet similar data, answering the question of \textit{what} is the most likely label for an input sample. 
-However, most models will provide no answer to \textit{why} the model chose this label for the instance and which features of the instance were crucial for making this prediction. 
+However, most models will provide no answer to \textit{why} or \textit{how} the model chose this label for the instance and which features of the instance were crucial for making this prediction. 
 
-For instance, withing object recognition one would likely assume that the presence (or absence) of an object in the image causes a model to decide for a specific object category, closely akin to how humans base their decision process. As seen in \autoref{fig:bb}, the presence of the cat in the input image $\mathbf{x}$ should be causing the model to predict the label 'cat'.  
+For example, if a machine learning model is tasked with classifying images of cats (as in \autoref{fig:bb}), one would like to assume that the presence (or absence) of a cat in an image is indicative (contraindicative) of the classification of the image into the "cat" ("not cat") category.
 
 \begin{figure}[t]
     \centering
@@ -20,31 +20,41 @@ For instance, withing object recognition one would likely assume that the presen
     \vspace{-0.3cm}
 \end{figure}
 
-Automated algorithms are already in use in critical areas, such as medicine TODOcite, the criminal justice system \cite{chouldechova2017fair} and the financial sector TODOcite or the piloting of self-driving cars.
-Thus, as machine learning models are moving out of the lab into the real-world, the inability of humans to understand these models seems even more problematic. 
+Suppose a deep neural network predicts the risk for cancer from a mammogram, which is an image of breast tissue. A doctor would only use the algorithm if there is a way to validate that (1) tha algorithm is accurate (which can be measured in terms of the predictive accuracy), and (2) if the model is also using the correct indications in the data for predicting the risk of cancer. (1) is the standard approach for validating the performance of machine learning models, but in this example, one can clearly see why predictive accuracy might not be enough in many areas. For approaching (2), i.e. uncovering \textit{why} a model predicts a low / high risk of cancer, the research field of explainable artificial intelligence (XAI) offers a growing number of methods. Some research even suggests to allow 'peeking inside the black box' of deep learning models \cite{adadi2018peeking}.  
 
-Thus, automated interpretation methods are required to make sense of the reasoning process and robustness of such deep learning based models and to ensure that a model makes decisions without unfair or hidden biases. 
-The research field approaching the explanation or validation of machine learning models is called explainable artificial intelligence (XAI).
+Automated algorithms are already in used in critical areas, such as medicine, chemistry, the criminal justice system, the financial sector or the piloting of self-driving cars \cite{chouldechova2017fair, elshawi2019interpretability, whitmore2016mapping}. % med, med, chemistry
+Thus, as machine learning models are moving out of the lab into the real-world, the inability of humans to understand these (black box) models seems even more problematic. Not knowing how a model makes predictions, and not being able to detect systematic biases in the model, prevents the vastly advancing technology of machine learning from being used in highly sensitive and safety-critical applications.  
 
-
-%  not knowing why models decide
-Not knowing about the biases of a network the vastly advancing technology of machine learning to be used in high-stakes and safety critical applications and prevent real-life deployment of such systems. 
+% TODO add security example?
 Furthermore, the rise in machine learning model deployments also caused the development of adversarial attacks. These attacks attempt to fool a machine learning model by providing deceptive input. Fooling refers to the resulting malfunction of the model. 
 % TODO first example
+% hidden model and adversarial examples??
 
-In many areas, prediction accuracy alone is not enough, as users also require to be able to rely on the interpretation (e.g. in financial and medical settings).
+%%%%% iai
+Not knowing about attacks and data arranged to exploit specific vulnerabilities has contributed to the field of XAI comprising topics of (1) \textit{model interpretations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{adversarial manipulations of model interpretations}. All these subfields have the common goal to make models more robust and safe for deployment. 
+(1) refers to the development of techniques that can be used to understand and explain the decision making process of a machine learning model or even the development of models that are inherently interpretable. (2) is the field of detecting vunerabilities in models that cause models to be deceived by altered input. 
+(3) is the main topic of this paper, i.e. how to fool interpretation methods in order to detect vulnerabilities and malfunctions in interpretation methods. 
+
+% Detecting such vulnerabilities in models is most crucial 
+
+% Fragility limits how much wecan trust and learn from the interpretations
 
 
-% security aspect of nns
 
-% Importance of interpretability: hidden biases --> cannot be deployed in real world
+% XAI in general tries to provide means for translating the decisions that machine learning models make into a domain which humans can understand. The subfield \textit{interpretable} machine learning aims to 
+
+%%%% 
+Thus, automated interpretation methods are required to make sense of the reasoning process and robustness of such deep learning based models and to ensure that a model makes decisions without unfair or hidden biases. 
+
+
+
+Ideally, an interpretation, or explanation method should indicate which pixels in the original image contribute to the prediction and also to what extent each pixel contributes. The extent to which each pixel contributes to a prediction is often called the \textit{importance} score of a feature. 
+
+
+
 
 
 % ethical examples: decisions where it is most crucial to have working systems
-
-% Broadness of research field
-
-% Outline of paper
 
 % https://towardsdatascience.com/interpretability-in-machine-learning-70c30694a05f 
 % biases in ml models - boils down to data
@@ -70,13 +80,7 @@ Many works are dedicated to establish a formal definition of what it means to be
 
 
 
-Not knowing about attacks and data arranged to exploit specific vulnerabilities has contributed to a relatively new research field of XAI comprising topics of (1) \textit{model explanations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{adversarial manipulations of model explanations}. All of this is also known by the name of robust machine learning or even explainable artificial intelligence, as all subfields have the common goal to make models more robust and safe for deployment. 
-(1) refers to the development of techniques that can be used to understand and explain the decision making process of a machine learning model or even the development of models that are inherently interpretable. (2) is the field of detecting vulnerabilites in models that cause models to be deceived by altered input. 
-(3) is the main topic of this paper, i.e. how to fool explanation models in order to detect vulnerabilities and malfunctions in explanation methods. 
 
-Detecting such vulnerabilities in models is most crucial 
-
-Fragility limits how much wecan trust and learn from the interpretations
 
 
 

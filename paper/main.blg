@@ -54,45 +54,45 @@ Warning--no number and no volume in xiao2020noise
 Warning--page numbers missing in both pages and numpages fields in xiao2020noise
 Warning--no number and no volume in yosinski2015understanding
 Warning--page numbers missing in both pages and numpages fields in yosinski2015understanding
-You've used 32 entries,
+You've used 33 entries,
             5959 wiz_defined-function locations,
-            1667 strings with 24074 characters,
-and the built_in function-call counts, 42431 in all, are:
-= -- 5354
-> -- 1933
+            1672 strings with 24230 characters,
+and the built_in function-call counts, 43837 in all, are:
+= -- 5580
+> -- 1971
 < -- 0
-+ -- 650
-- -- 636
-* -- 3256
-:= -- 4407
-add.period$ -- 160
-call.type$ -- 32
-change.case$ -- 276
-chr.to.int$ -- 32
-cite$ -- 75
-duplicate$ -- 3472
-empty$ -- 2437
-format.name$ -- 752
-if$ -- 10337
++ -- 663
+- -- 652
+* -- 3341
+:= -- 4536
+add.period$ -- 165
+call.type$ -- 33
+change.case$ -- 282
+chr.to.int$ -- 33
+cite$ -- 76
+duplicate$ -- 3588
+empty$ -- 2518
+format.name$ -- 772
+if$ -- 10704
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 138
-newline$ -- 296
-num.names$ -- 256
-pop$ -- 1411
+missing$ -- 142
+newline$ -- 304
+num.names$ -- 264
+pop$ -- 1445
 preamble$ -- 1
-purify$ -- 563
+purify$ -- 578
 quote$ -- 0
-skip$ -- 1194
+skip$ -- 1238
 stack$ -- 0
-substring$ -- 2886
-swap$ -- 365
+substring$ -- 3013
+swap$ -- 382
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 679
+type$ -- 695
 warning$ -- 43
-while$ -- 210
+while$ -- 221
 width$ -- 0
-write$ -- 577
+write$ -- 594
 (There were 43 warnings)
