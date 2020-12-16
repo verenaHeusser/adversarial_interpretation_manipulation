@@ -13,6 +13,8 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Warning--no number and no volume in ancona2017towards
 Warning--page numbers missing in both pages and numpages fields in ancona2017towards
+Warning--empty publisher in anders2020fairwashing
+Warning--empty address in anders2020fairwashing
 Warning--empty publisher in dimanov2020you
 Warning--empty address in dimanov2020you
 Warning--empty publisher in dombrowski2019explanations
@@ -22,8 +24,16 @@ Warning--page numbers missing in both pages and numpages fields in gao2019univer
 Warning--empty publisher in ghorbani2019interpretation
 Warning--empty address in ghorbani2019interpretation
 Warning--page numbers missing in both pages and numpages fields in fooling_nn_interpreters
+Warning--no number and no volume in jain2019attention
+Warning--page numbers missing in both pages and numpages fields in jain2019attention
 Warning--empty publisher in kim2018interpretability
 Warning--empty address in kim2018interpretability
+Warning--no number and no volume in kindermans2017reliability
+Warning--page numbers missing in both pages and numpages fields in kindermans2017reliability
+Warning--empty publisher in kuppa2020black
+Warning--empty address in kuppa2020black
+Warning--empty publisher in lakkaraju2020fool
+Warning--empty address in lakkaraju2020fool
 Warning--empty publisher in lundberg2017unified
 Warning--empty address in lundberg2017unified
 Warning--empty publisher in nguyen2017plug
@@ -66,45 +76,48 @@ Warning--no number and no volume in yosinski2015understanding
 Warning--page numbers missing in both pages and numpages fields in yosinski2015understanding
 Warning--empty publisher in zeiler2014visualizing
 Warning--empty address in zeiler2014visualizing
-You've used 43 entries,
+Warning--empty publisher in zhang2020interpretable
+Warning--empty address in zhang2020interpretable
+Warning--page numbers missing in both pages and numpages fields in zhang2020interpretable
+You've used 50 entries,
             5959 wiz_defined-function locations,
-            1721 strings with 26331 characters,
-and the built_in function-call counts, 55617 in all, are:
-= -- 7157
-> -- 2463
+            1754 strings with 27724 characters,
+and the built_in function-call counts, 64438 in all, are:
+= -- 8221
+> -- 2848
 < -- 0
-+ -- 825
-- -- 812
-* -- 4202
-:= -- 5738
-add.period$ -- 215
-call.type$ -- 43
-change.case$ -- 358
-chr.to.int$ -- 43
-cite$ -- 98
-duplicate$ -- 4554
-empty$ -- 3198
-format.name$ -- 972
-if$ -- 13616
++ -- 958
+- -- 952
+* -- 4847
+:= -- 6659
+add.period$ -- 249
+call.type$ -- 50
+change.case$ -- 413
+chr.to.int$ -- 50
+cite$ -- 118
+duplicate$ -- 5310
+empty$ -- 3731
+format.name$ -- 1140
+if$ -- 15741
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 176
-newline$ -- 390
-num.names$ -- 344
-pop$ -- 1824
+missing$ -- 208
+newline$ -- 442
+num.names$ -- 400
+pop$ -- 2155
 preamble$ -- 1
-purify$ -- 744
+purify$ -- 862
 quote$ -- 0
-skip$ -- 1577
+skip$ -- 1841
 stack$ -- 0
-substring$ -- 3776
-swap$ -- 478
+substring$ -- 4335
+swap$ -- 543
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 911
-warning$ -- 55
-while$ -- 279
+type$ -- 1079
+warning$ -- 68
+while$ -- 335
 width$ -- 0
-write$ -- 765
-(There were 55 warnings)
+write$ -- 879
+(There were 68 warnings)

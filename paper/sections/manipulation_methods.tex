@@ -41,13 +41,15 @@ A manipulation method is successful in fooling an interpreter, if the following 
     % TODO for all i, as in http://lcfi.ac.uk/media/uploads/files/DimanovBhattJamnikWeller_YouShouldntTrustMe.pdf 
     \item[1.] \textit{Prediction similarity}: The model prediction stays approximately the same, i.e. $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x}) \text{, or } f_{N+\delta}(\mathbf{x}) \approx f_N(\mathbf{x})$$
     \item[2.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} = \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega})$$
-    \item[3.] \textit{Impercpetibility of Perturbation}: In case the attack is in the input domain of the model, the perturbation of input samples must be imperceptible by humans. According to \cite{dombrowski2019explanations}, the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$ % https://arxiv.org/pdf/1710.10547.pdf 
+    \item[3.] \textit{Imperceptibility of Perturbation}: In case the attack is in the input domain of the model, the perturbation of input samples must be imperceptible by humans. According to \cite{dombrowski2019explanations}, the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$ % https://arxiv.org/pdf/1710.10547.pdf 
 \end{enumerate}
 \setlength{\leftskip}{0cm}
 
 These measures are to be seen as comparison between a baseline model $N$ and a model that is applied an the adversarial setting (i.e. either $N$ is not changed but applied to adversarially altered data $x+\delta$, or $N$ is adversarially trained thus becoming $N+\delta$). 
 
 \cite{dimanov2020you} extend these properties to include the so called \textit{model similarity}. This measure extends the \textit{prediction accuracy} to span the accuracy difference in between the baseline model and the new model, and also the mismatch of data points where the predictions of both models differ. 
+
+After formally defining what successfully fooling an interpretation method means, we want to provide intuition in \autoref{fig:lrp_cat}. The interpretation method produces an interpretation, here in form of a saliency map projected onto the original image. If a successful manipulation is applied, the resulting saliency map of the same interpreter should be different to the original map. This effect is clearly visible, as \autoref{fig:lrp_cat_lrp} is visually significantly different to the map produced by the same interpretation method but applied to an adversarial model (see \autoref{fig:lrp_cat_fooled_lrp}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Taxonomy of Interpretation Manipulation Methods}
@@ -100,8 +102,7 @@ In addition to the categorization of manipulation methods based on the manipulat
 The majority of manipulations is untargeted, meaning that the applied perturbations are mostly random and not designed to change the prediction for a specific portion of an input sample. 
 
 \mypar{Targeted Manipulations.} 
-On the contrary, targeted manipulations are designed to specificly alter the explanation of distinct features of an input instance. Such a specific feature might be an object in the input image in the context of image classification. 
-For instance \cite{fooling_nn_interpreters} introduce a fooling scheme in which the interpretations of the target classes elephant and school bus are swapped. 
+On the contrary, targeted manipulations aim at specifically changing the explanation of certain features of an input instance. Such a specific feature might be an object in the input image in the context of image classification. \cite{fooling_nn_interpreters} for instance introduce a fooling scheme in which the interpretations of the target classes elephant and school bus are swapped. 
 Manipulations on the level of the model are mostly targeted, as the explanation methods are being fooled by adapting the model parameters. 
 
 % Model manipulations pose a much higher threat for deploying the models: If a model itself is changed to explicitly, systemactically fool an explanation method, the bias of the model is internal and much harder to reveal than just a different sort of input into the model. 

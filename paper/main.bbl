@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{43}
+\begin{thebibliography}{50}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -85,6 +85,19 @@
   attribution methods for deep neural networks}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.06104}}
   (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Anders, Pasliev, Dombrowski, M{\"u}ller, and
+  Kessel}{Anders et~al\mbox{.}}{2020}]%
+        {anders2020fairwashing}
+\bibfield{author}{\bibinfo{person}{Christopher Anders}, \bibinfo{person}{Plamen
+  Pasliev}, \bibinfo{person}{Ann-Kathrin Dombrowski},
+  \bibinfo{person}{Klaus-Robert M{\"u}ller}, {and} \bibinfo{person}{Pan
+  Kessel}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Fairwashing explanations with off-manifold
+  detergent}. In \bibinfo{booktitle}{\emph{International Conference on Machine
+  Learning}}. PMLR, \bibinfo{pages}{314--323}.
 \newblock
 
 
@@ -269,6 +282,16 @@
 \tempurl}
 
 
+\bibitem[\protect\citeauthoryear{Jain and Wallace}{Jain and Wallace}{2019}]%
+        {jain2019attention}
+\bibfield{author}{\bibinfo{person}{Sarthak Jain} {and} \bibinfo{person}{Byron~C
+  Wallace}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Attention is not explanation}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1902.10186}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Kereliuk, Sturm, and Larsen}{Kereliuk
   et~al\mbox{.}}{2015}]%
         {kereliuk2015deep}
@@ -292,6 +315,55 @@
   Quantitative testing with concept activation vectors (tcav)}. In
   \bibinfo{booktitle}{\emph{International conference on machine learning}}.
   PMLR, \bibinfo{pages}{2668--2677}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kindermans, Hooker, Adebayo, Alber,
+  Sch{\"u}tt, D{\"a}hne, Erhan, and Kim}{Kindermans et~al\mbox{.}}{2017}]%
+        {kindermans2017reliability}
+\bibfield{author}{\bibinfo{person}{Pieter-Jan Kindermans},
+  \bibinfo{person}{Sara Hooker}, \bibinfo{person}{Julius Adebayo},
+  \bibinfo{person}{Maximilian Alber}, \bibinfo{person}{Kristof~T Sch{\"u}tt},
+  \bibinfo{person}{Sven D{\"a}hne}, \bibinfo{person}{Dumitru Erhan}, {and}
+  \bibinfo{person}{Been Kim}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{The (un) reliability of saliency methods}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.00867}}
+  (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kuppa and Le-Khac}{Kuppa and Le-Khac}{2020}]%
+        {kuppa2020black}
+\bibfield{author}{\bibinfo{person}{Aditya Kuppa} {and}
+  \bibinfo{person}{Nhien-An Le-Khac}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Black Box Attacks on Explainable Artificial
+  Intelligence (XAI) methods in Cyber Security}. In
+  \bibinfo{booktitle}{\emph{2020 International Joint Conference on Neural
+  Networks (IJCNN)}}. IEEE, \bibinfo{pages}{1--8}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Lakkaraju and Bastani}{Lakkaraju and
+  Bastani}{2020}]%
+        {lakkaraju2020fool}
+\bibfield{author}{\bibinfo{person}{Himabindu Lakkaraju} {and}
+  \bibinfo{person}{Osbert Bastani}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{" How do I fool you?" Manipulating User Trust via
+  Misleading Black Box Explanations}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the AAAI/ACM Conference on AI, Ethics, and Society}}.
+  \bibinfo{pages}{79--85}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Le~Merrer and Tr{\'e}dan}{Le~Merrer and
+  Tr{\'e}dan}{2020}]%
+        {le2020remote}
+\bibfield{author}{\bibinfo{person}{Erwan Le~Merrer} {and}
+  \bibinfo{person}{Gilles Tr{\'e}dan}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Remote explainability faces the bouncer problem}.
+\newblock \bibinfo{journal}{\emph{Nature Machine Intelligence}}
+  \bibinfo{volume}{2}, \bibinfo{number}{9} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{529--539}.
 \newblock
 
 
@@ -606,6 +678,19 @@
 \newblock \showarticletitle{Visualizing and understanding convolutional
   networks}. In \bibinfo{booktitle}{\emph{European conference on computer
   vision}}. Springer, \bibinfo{pages}{818--833}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhang, Wang, Shen, Ji, Luo, and Wang}{Zhang
+  et~al\mbox{.}}{2020}]%
+        {zhang2020interpretable}
+\bibfield{author}{\bibinfo{person}{Xinyang Zhang}, \bibinfo{person}{Ningfei
+  Wang}, \bibinfo{person}{Hua Shen}, \bibinfo{person}{Shouling Ji},
+  \bibinfo{person}{Xiapu Luo}, {and} \bibinfo{person}{Ting Wang}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Interpretable deep learning under fire}. In
+  \bibinfo{booktitle}{\emph{29th $\{$USENIX$\}$ Security Symposium
+  ($\{$USENIX$\}$ Security 20)}}.
 \newblock
 
 
