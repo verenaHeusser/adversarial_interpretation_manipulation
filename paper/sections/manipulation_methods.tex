@@ -117,7 +117,7 @@ Basides the necessary properties of a successful interpretation manipulation met
 % This property is naturally given for the class of model manipulations
 
 
-\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing trainang instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space, should be affected,
+\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space, should be affected,
 % On the contrary, model manipulations are non-local perturbations, meaning that they do not merely perturb an input sample
 % but rather effect all samples in the way that the model itself is changed. 
 % TODO iid ood?
@@ -132,7 +132,7 @@ Creation of a fooled model by fine-tuning the model with a fooling loss.
 % https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations/blob/master/Materials/PPT.pdf 
 
 
-As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretations methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for chosing an appropriate and robust intarpretation method.  
+As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretations methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust intarpretation method.  
 Evaluations of the quality of an explanation method are separated into qualitative and quantitative evaluations. 
 % \cite{fooling_nn_interpreters} propose to measure the quality of an explanation method by their stability with respect to adversarial model manipulations. 
 

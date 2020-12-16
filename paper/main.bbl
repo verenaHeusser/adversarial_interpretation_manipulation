@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{41}
+\begin{thebibliography}{42}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -488,6 +488,18 @@
 \newblock \showarticletitle{The proof and measurement of association between
   two things.}
 \newblock  (\bibinfo{year}{1961}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Subramanya, Pillai, and Pirsiavash}{Subramanya
+  et~al\mbox{.}}{2019}]%
+        {subramanya2019fooling}
+\bibfield{author}{\bibinfo{person}{Akshayvarun Subramanya},
+  \bibinfo{person}{Vipin Pillai}, {and} \bibinfo{person}{Hamed Pirsiavash}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Fooling network interpretation in image
+  classification}. In \bibinfo{booktitle}{\emph{Proceedings of the IEEE
+  International Conference on Computer Vision}}. \bibinfo{pages}{2020--2029}.
 \newblock
 
 

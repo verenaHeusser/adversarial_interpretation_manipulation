@@ -405,6 +405,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
@@ -438,6 +439,8 @@ INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
@@ -505,9 +508,8 @@ INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
-INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_mothods.tex
-INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_mothods.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
+INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_methods.tex
+INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_methods.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlbmi.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlbmi7.tfm

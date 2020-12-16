@@ -5,6 +5,17 @@ After introducing the terminology of model interpreters and manipulation methods
 
 \subsection{Input Level Manipulations}
 
+\mypar{Fooling both Model and Interpreter. }\newline
+\cite{subramanya2019fooling} design adversarial attacks that fool the machine learning model as well as the model interpretation. 
+They design targeted and untargeted input patches superimposed onto original images and then fed into an image classification network and the intperpretation method GradCAM. 
+
+The authors conclude that GradCAM does not reliably highlight the true cause of the prediction decision made by the model. 
+Top-1 predicted label 
+
+The authors compare targeted and untargeted patches as well as uniform patches and randomly disturbed ones. 
+
+
+
 \mypar{Model-agnostic Interpreters can be gamed.}\newline
 %%%%%%%%  %%%%%%%% Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods
 % https://arxiv.org/pdf/1911.02508.pdf 
