@@ -49,6 +49,8 @@ def main():
     train_loader = dataloader(args, train=True)
     val_loader = dataloader(args, val=True)
     test_loader = dataloader(args, test=True)
+    
+    single_loader = dataloader(args, single=True)
 
     # 2. load model
     print("2. load model")
@@ -213,9 +215,9 @@ def main():
                 torch.cuda.manual_seed_all(20)
                 first_itr = False
 
-                """
-                Eval 1. Visualization
-                """
+                # """
+                # Eval 1. Visualization
+                # """
                 with torch.no_grad():
                     net.eval()
                     num_tested = 0
@@ -303,8 +305,67 @@ def main():
                         os.path.join(args.save_dir, args.img_name + str(itr) + ".pt"),
                     )
 
+                    ###################
+            
+            
+        ##### TEST FOR SINGLE IMAGE
+        """
+        Eval 1. Visualization
+        """
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        with torch.no_grad():
+            net.eval()
+            num_tested = 0
+
+            for j, data in enumerate(single_loader):
+                print(itr, "th training iteration, ", j, "th single test minibatch")
+                inputs, labels = data
+                org_inputs = inputs.clone()
+                if args.cuda:
+                    inputs, labels = inputs.cuda(), labels.cuda()
+
+                activation_output = net.prediction(inputs)
+                _, prediction = torch.max(activation_output, 1)
+
+                R_Ts = []
+                R_inputs = []
+
+                target_layer = args.lrp_target_layer
+
+                for interpreter in R_Ts_keys:
+                    R_Ts.append(
+                        net.interpretation(
+                            activation_output,
+                            interpreter=interpreter,
+                            labels=labels,
+                            target_layer=args.lrp_target_layer,
+                            inputs=inputs,
+                        )
+                    )
+                for interpreter in R_inputs_keys:
+                    R_inputs.append(
+                        net.interpretation(
+                            activation_output,
+                            interpreter=interpreter,
+                            labels=labels,
+                            target_layer=None,
+                            inputs=inputs,
+                        )
+                    )
+
+                visualize5(
+                    R_Ts, R_inputs, R_Ts_keys, R_inputs_keys, inputs, itr, j, prediction, single=True
+                )
+
+                num_tested += inputs.shape[0]
+                                            
+                if num_tested >= args.num_visualize_plot:
+                    break
+        del R_inputs, R_Ts
+        ###################
+
         e_time = time.time()
-        print("---> (Test) Elapsed Time: ", e_time - s_time)
+        print("---> (Test) Elapsed Time: ", e_time - s_time)      
 
 
 if __name__ == "__main__":

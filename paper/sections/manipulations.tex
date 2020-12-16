@@ -15,7 +15,6 @@ Top-1 predicted label
 The authors compare targeted and untargeted patches as well as uniform patches and randomly disturbed ones. 
 
 
-
 \mypar{Model-agnostic Interpreters can be gamed.}\newline
 %%%%%%%%  %%%%%%%% Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods
 % https://arxiv.org/pdf/1911.02508.pdf 
@@ -39,14 +38,34 @@ The authors take a statistical approach model-agnostic interpretation methods. T
 The studies on model manipulation outlined so far have shown that \textit{input perturbations} can make interpretations worse for the same model and interpreter. The articles in this section show that \textit{perturbed model parameters} can also make explanations worse for the same input and interpreter.
 
 \mypar{Adversarial Model Fine-Tuning Fools Multiple Interpreters.}\newline
-\cite{fooling_nn_interpreters} were the first to introduce adversarial model manipulations for fooling interpretation methods. The authors adapted the fine-tuning stage of image classification models by using an altered fooling loss function. This loss function is a combination of the standard cross entropy loss function (to maintain the prediction performance) and an additional adversarial term. The adversarial term is used to encourage the model to give bad interpretations. The results show that the interpretation results are significantly altered while the classification results stay the same. 
-This indicates, that the model robust to the attack, while the interpretation technique is very sensitive. 
+\cite{fooling_nn_interpreters} were the first to introduce adversarial model manipulations for fooling interpretation methods. The authors adapted the fine-tuning stage of image classification models by using an altered fooling loss function. This loss function is a combination of the standard cross entropy loss function (to maintain the prediction performance) and an additional adversarial term. The adversarial term is used to encourage the interpretation method to give bad interpretations. The results show that the interpretation results are significantly altered while the classification accuracy is maintained. 
+This indicates, that the model is robust to the attack, while the interpretation technique is very sensitive. 
 Two categories of fooling methods are introduced: 
 \begin{itemize}
-    \item \textbf{Passive Fooling}, describing the 
-    \item Active Fooling: 
-\end{itemize}}
+    \item \textbf{Passive Fooling}, describing the adaption of the adversarial loss term to fool the interpretation method into highlightish uninformative pixels in the input image. Example results from the paper are in \autoref{fig:heo_intro}. The baseline column shows that the interpretation method applied to the original image highlights pixels within the elephant as highly important for the network prediction. After fine-tuning the model with the adversarial loss, the effect of fooling the interpretation method is visible: Other, rather uninformative pixels are highlighted (see labeled columns two to four in the figure). 
+    \item \textbf{Active Fooling} is a method with the aim of causing the interpreter to highlight a completely different object in the image, i.e. to make the interpreter actively create false interpretations. This is realized by rewriting the loss function to minimize TODO.
+\end{itemize}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{figures/heo_intro.jpg}
+    \caption{}
+    \label{fig:heo_intro}
+    \vspace{-0.3cm}
+\end{figure}
+
+The authors also conduct an analysis to prove that the interpretations are valid. This is done by using the AOPC metric \cite{samek2016evaluating}. 
+They find that all interpreters are fooled to a certain degree, and that the foolings furthermore generalize to other interpreters and especially to the whole validation set. It is worth noting that the proposed attack could not easily fool SmoothGrad, indicating that this is a better, or at least more robust interpretation method. 
+
+
+
+
+
+
+
+The authors find that SmoothGrad is less susceptible to model manipulation, while all other interpreters ()
+
+The main point the authors are trying to make is that machine models can be systematically manipulated to contain unfair biases. They prove that such biases can be explicitly encoded into the loss function during the training stage, which yields an adversarial classifier that will generalizes the learned bias to unseen test samples. This is dangerous, as the bias cannot be uncovered unless one has access to the full training pipeline. As interpretation methods claim to uncover the features a model uses for its decision. 
 
 
 After fine-tuning the model with the regular classification loss combined with an adversarial loss, they investigated if the interpreter results change as a function of model parameters. 

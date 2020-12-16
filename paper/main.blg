@@ -66,45 +66,45 @@ Warning--no number and no volume in yosinski2015understanding
 Warning--page numbers missing in both pages and numpages fields in yosinski2015understanding
 Warning--empty publisher in zeiler2014visualizing
 Warning--empty address in zeiler2014visualizing
-You've used 42 entries,
+You've used 43 entries,
             5959 wiz_defined-function locations,
-            1715 strings with 26054 characters,
-and the built_in function-call counts, 54144 in all, are:
-= -- 6937
-> -- 2400
+            1721 strings with 26331 characters,
+and the built_in function-call counts, 55617 in all, are:
+= -- 7157
+> -- 2463
 < -- 0
-+ -- 804
-- -- 792
-* -- 4089
-:= -- 5592
-add.period$ -- 210
-call.type$ -- 42
-change.case$ -- 349
-chr.to.int$ -- 42
-cite$ -- 97
-duplicate$ -- 4443
-empty$ -- 3120
-format.name$ -- 948
-if$ -- 13240
++ -- 825
+- -- 812
+* -- 4202
+:= -- 5738
+add.period$ -- 215
+call.type$ -- 43
+change.case$ -- 358
+chr.to.int$ -- 43
+cite$ -- 98
+duplicate$ -- 4554
+empty$ -- 3198
+format.name$ -- 972
+if$ -- 13616
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 172
-newline$ -- 382
-num.names$ -- 336
-pop$ -- 1788
+missing$ -- 176
+newline$ -- 390
+num.names$ -- 344
+pop$ -- 1824
 preamble$ -- 1
-purify$ -- 726
+purify$ -- 744
 quote$ -- 0
-skip$ -- 1539
+skip$ -- 1577
 stack$ -- 0
-substring$ -- 3659
-swap$ -- 463
+substring$ -- 3776
+swap$ -- 478
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 895
+type$ -- 911
 warning$ -- 55
-while$ -- 272
+while$ -- 279
 width$ -- 0
-write$ -- 748
+write$ -- 765
 (There were 55 warnings)

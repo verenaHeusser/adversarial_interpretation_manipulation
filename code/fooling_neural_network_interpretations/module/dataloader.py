@@ -7,16 +7,17 @@ from torchvision import transforms
 import numpy as np
 
 
-def dataloader(args, train=False, val=False, test=False):
+def dataloader(args, train=False, val=False, test=False, single=False):
     if train + val + test != 1:
         print("Only one of the loader should be True")
-        print(ERROR)
+        # print(ERROR)
 
     # Change it to your ImageNet directory
     # train_dir = './../../../Interpretable/Data/ImageNet/Data/train'
     # val_dir = './../../../Interpretable/Data/ImageNet/Data/val'
-    train_dir = "./../../data/ILSVRC2012/train"
-    val_dir = "./../../data/ILSVRC2012/val"
+    train_dir = "./../../../data/ILSVRC2012/train"
+    val_dir = "./../../../data/ILSVRC2012/val"
+    single_img_dir = "./../../../data/ILSVRC2012/single_test"
 
     normalize = transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 
@@ -57,7 +58,27 @@ def dataloader(args, train=False, val=False, test=False):
             pin_memory=True,
         )
         return val_loader
-
+    
+    if single: 
+        single_loader = torch.utils.data.DataLoader(
+            torchvision.datasets.ImageFolder(
+                single_img_dir,
+                transforms.Compose(
+                    [
+                        transforms.Resize(256),
+                        transforms.CenterCrop(224),
+                        transforms.ToTensor(),
+                        normalize,
+                    ]
+                ),
+            ),
+            batch_size=args.batch_size_test,
+            shuffle=True,
+            num_workers=args.num_workers,
+            pin_memory=True,
+        )
+        return single_loader
+    
 
 def active_loader(args):
     

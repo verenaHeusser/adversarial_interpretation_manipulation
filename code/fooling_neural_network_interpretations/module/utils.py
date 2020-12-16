@@ -198,10 +198,13 @@ def grad_visualize(R_grad, images):
         heatmaps_grad.append(cam)
     return heatmaps_grad
 
-def save_visualize(l, R, pre_name, epoch, j, image_path):
+def save_visualize(l, R, pre_name, epoch, j, image_path, single=False):
     for i in range(l):
         file_name = str(pre_name) + '_epoch' + str(epoch) + '_no-' + str(i+l*j) + '.png'
-        path = os.path.join(image_path+args.img_name+str('/'), file_name)
+        if single: 
+            path = os.path.join(image_path+args.img_name+str('/test/'), file_name)
+        else: 
+            path = os.path.join(image_path+args.img_name+str('/'), file_name)
         imsave(path, R[i], plugin='pil')
 
 def visualize_bitargeted(R_lrp_to, R_lrp_from, R_lrp34_to, R_lrp34_from, R_grad_to, R_grad_from, image_tensor, epoch, j, prediction):
@@ -266,11 +269,18 @@ def visualize_bitargeted(R_lrp_to, R_lrp_from, R_lrp34_to, R_lrp34_from, R_grad_
 
     
     
-def visualize5(R_34s, R_inputs, R_34s_key, R_inputs_key, image_tensor, epoch, j, prediction):
-    try:
-        os.makedirs(args.img_dir+args.img_name+str('/'))##
-    except OSError:
-        pass
+def visualize5(R_34s, R_inputs, R_34s_key, R_inputs_key, image_tensor, epoch, j, prediction, single=False):
+    if single: 
+        try:
+            os.makedirs(args.img_dir+args.img_name+str('/test/'))##
+        except OSError:
+            pass
+    else: 
+        try:
+            os.makedirs(args.img_dir+args.img_name+str('/'))##
+        except OSError:
+            pass
+    
 
     # 0. input images
     input_shape = image_tensor.shape
@@ -280,6 +290,7 @@ def visualize5(R_34s, R_inputs, R_34s_key, R_inputs_key, image_tensor, epoch, j,
 
     # 0. Ready for save images
     image_path = args.img_dir
+    
     img_name = args.img_name
     prediction_dic = {}
     
@@ -306,7 +317,7 @@ def visualize5(R_34s, R_inputs, R_34s_key, R_inputs_key, image_tensor, epoch, j,
         save_visualize(l, R_34, key, epoch, j, image_path)
     
     # 3. save original image
-    save_visualize(l, images, 'ori', epoch, j, image_path)
+    save_visualize(l, images, 'ori', epoch, j, image_path, single=single)
     
     # 4. save prediction
     np.save(args.img_dir+args.img_name+str('/')+args.img_name+'_prediction.npy', prediction_dic)   

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{42}
+\begin{thebibliography}{43}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -402,6 +402,21 @@
 \urldef\tempurl%
 \url{https://doi.org/10.1007/s11263-015-0816-y}
 \showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Samek, Binder, Montavon, Lapuschkin, and
+  M{\"u}ller}{Samek et~al\mbox{.}}{2016}]%
+        {samek2016evaluating}
+\bibfield{author}{\bibinfo{person}{Wojciech Samek}, \bibinfo{person}{Alexander
+  Binder}, \bibinfo{person}{Gr{\'e}goire Montavon}, \bibinfo{person}{Sebastian
+  Lapuschkin}, {and} \bibinfo{person}{Klaus-Robert M{\"u}ller}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Evaluating the visualization of what a deep neural
+  network has learned}.
+\newblock \bibinfo{journal}{\emph{IEEE transactions on neural networks and
+  learning systems}} \bibinfo{volume}{28}, \bibinfo{number}{11}
+  (\bibinfo{year}{2016}), \bibinfo{pages}{2660--2673}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Samek, Montavon, Vedaldi, Hansen, and
