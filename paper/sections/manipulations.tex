@@ -35,13 +35,20 @@ The authors take a statistical approach model-agnostic interpretation methods. T
 \mypar{Saliency Maps are vulnerable to Adversarial Attacks.}
 \cite{ghorbani2019interpretation} showed that importance scores produced by the popular interpretation methods Simple Grad, DeepLIFT and TODO. 
 
-
-
 \subsection{Model Level Manipulations}
+The studies on model manipulation outlined so far have shown that \textit{input perturbations} can make interpretations worse for the same model and interpreter. The articles in this section show that \textit{perturbed model parameters} can also make explanations worse for the same input and interpreter.
 
-\mypar{Adversarial Model Manipulations can fool a wide range of interpreters.}
-\cite{fooling_nn_interpreters} were the first to introduce adversarial model manipulations for fooling interpretation methods. 
-Their research question is if state-of-the-art interpretation methods be fooled with adversarial model manipulations. For this, the authors adapted the fine-tuning of image-classification models by using an altered loss function. 
+\mypar{Adversarial Model Fine-Tuning Fools Multiple Interpreters.}\newline
+\cite{fooling_nn_interpreters} were the first to introduce adversarial model manipulations for fooling interpretation methods. The authors adapted the fine-tuning stage of image classification models by using an altered fooling loss function. This loss function is a combination of the standard cross entropy loss function (to maintain the prediction performance) and an additional adversarial term. The adversarial term is used to encourage the model to give bad interpretations. The results show that the interpretation results are significantly altered while the classification results stay the same. 
+This indicates, that the model robust to the attack, while the interpretation technique is very sensitive. 
+Two categories of fooling methods are introduced: 
+\begin{itemize}
+    \item \textbf{Passive Fooling}, describing the 
+    \item Active Fooling: 
+\end{itemize}}
+
+
+
 After fine-tuning the model with the regular classification loss combined with an adversarial loss, they investigated if the interpreter results change as a function of model parameters. 
 Two types of fooling methods were introduced, namely \textit{active} and \textit{passive} fooling. 
 
