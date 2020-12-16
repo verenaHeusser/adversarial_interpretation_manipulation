@@ -379,6 +379,7 @@ INPUT /usr/share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ts1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
@@ -404,7 +405,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
@@ -430,6 +430,8 @@ INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
@@ -453,8 +455,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTBI-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTBI-tlf-t1--base.tfm
-INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat.JPEG
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat.JPEG
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat.JPEG
@@ -550,8 +550,6 @@ INPUT /home/veheu/proj/foolingnns/paper/sections/explaining_manipulations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/explaining_manipulations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/uncovering_manipulations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/uncovering_manipulations.tex
-INPUT /home/veheu/proj/foolingnns/paper/sections/sanity_checks_for_interpreters.tex
-INPUT /home/veheu/proj/foolingnns/paper/sections/sanity_checks_for_interpreters.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/benchmarking_interpretations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/benchmarking_interpretations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/discussion.tex

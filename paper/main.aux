@@ -64,7 +64,7 @@
 \citation{lundberg2017unified}
 \citation{bach2015pixel}
 \citation{shrikumar2017learning}
-\citation{selvaraju2017grad}
+\citation{smilkov2017smoothgrad}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Model-agnostic methods.}{4}{subsection.2.3}\protected@file@percent }
 \newlabel{subsec:bb_methods}{{2.3}{4}{Model-agnostic methods}{subsection.2.3}{}}
 \newlabel{fig:bird-a}{{3a}{4}{Original\relax }{figure.caption.4}{}}
@@ -79,6 +79,7 @@
 \newlabel{fig:shap_dog}{{4}{4}{Visualization of the output of the SHAP interpreter applied to applied to an image and image classification model.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Model-transparent methods.}{4}{subsection.2.4}\protected@file@percent }
 \newlabel{subsec:wb_methods}{{2.4}{4}{Model-transparent methods}{subsection.2.4}{}}
+\citation{selvaraju2017grad}
 \citation{gao2019universal,kereliuk2015deep}
 \citation{szegedy_intriguing}
 \citation{adebayo2018sanity,samek2019explainable,alvarez2018towards}
@@ -97,7 +98,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Manipulation Levels}{5}{subsubsection.3.2.1}\protected@file@percent }
 \newlabel{subsubsec:manipulation_levels}{{3.2.1}{5}{Manipulation Levels}{subsubsection.3.2.1}{}}
 \citation{fooling_nn_interpreters}
-\citation{ghorbani2019interpretation}
+\citation{adebayo2018sanity}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples, which are indicated by $\mathbf  {x}+\delta $.\relax }}{6}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:input_manipulation}{{5}{6}{Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples, which are indicated by $\mathbf {x}+\delta $.\relax }{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta $.\relax }}{6}{figure.caption.7}\protected@file@percent }
@@ -106,81 +107,87 @@
 \newlabel{subsubsec:manipulation_targets}{{3.2.2}{6}{Manipulation Targets}{subsubsection.3.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluation Criteria}{6}{subsection.3.3}\protected@file@percent }
 \newlabel{subsec:eval_criteria_manipulations}{{3.3}{6}{Evaluation Criteria}{subsection.3.3}{}}
-\citation{spearman1961proof}
+\citation{ghorbani2019interpretation}
 \citation{fooling_nn_interpreters}
+\citation{ghorbani2019interpretation}
+\citation{spearman1961proof}
+\citation{adebayo2018sanity}
 \citation{adebayo2018sanity}
 \citation{advlime_aies20}
 \citation{ghorbani2019interpretation}
 \citation{fooling_nn_interpreters}
-\citation{dimanov2020you}
-\citation{fooling_nn_interpreters}
-\citation{fooling_nn_interpreters}
-\citation{dimanov2020you}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Interpreter Manipulation Method Examples}{7}{section.4}\protected@file@percent }
 \newlabel{sec:manipulations}{{4}{7}{Interpreter Manipulation Method Examples}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Input Level Manipulations}{7}{subsection.4.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Principal Component Analysis (PCA) on the original data (orange) of the COMPAS dataset and the samples perturbed by LIME (blue). Note that the differences are obvious even in the space reduced to two dimensions.\relax }}{7}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:slack_ood_data}{{7}{7}{Principal Component Analysis (PCA) on the original data (orange) of the COMPAS dataset and the samples perturbed by LIME (blue). Note that the differences are obvious even in the space reduced to two dimensions.\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Model Level Manipulations}{7}{subsection.4.2}\protected@file@percent }
-\citation{adebayo2018sanity}
+\citation{dimanov2020you}
 \citation{fooling_nn_interpreters}
+\citation{fooling_nn_interpreters}
+\citation{dimanov2020you}
+\citation{adebayo2018sanity}
+\citation{compas_dataset}
+\citation{adult_income}
+\citation{fooling_nn_interpreters}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Model Level Manipulations}{8}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Explaining Manipulations}{8}{section.5}\protected@file@percent }
+\newlabel{sec:explaining_manipulations}{{5}{8}{Explaining Manipulations}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Uncovering Manipulations}{8}{section.6}\protected@file@percent }
+\newlabel{sec:uncovering_manipulations}{{6}{8}{Uncovering Manipulations}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Benchmarking Interpretations}{8}{section.7}\protected@file@percent }
+\newlabel{sec:benchmarking}{{7}{8}{Benchmarking Interpretations}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{8}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{8}{8}{Discussion}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Conclusion}{8}{subsection.8.1}\protected@file@percent }
 \citation{lipton2018mythos}
 \bibdata{mybib}
 \bibcite{adadi2018peeking}{{1}{2018}{{Adadi and Berrada}}{{Adadi and Berrada}}}
 \bibcite{adebayo2018sanity}{{2}{2018}{{Adebayo et~al\mbox  {.}}}{{Adebayo, Gilmer, Muelly, Goodfellow, Hardt, and Kim}}}
 \bibcite{alvarez2018towards}{{3}{2018}{{Alvarez~Melis and Jaakkola}}{{Alvarez~Melis and Jaakkola}}}
 \bibcite{ancona2017towards}{{4}{2017}{{Ancona et~al\mbox  {.}}}{{Ancona, Ceolini, {\"O}ztireli, and Gross}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Explaining Manipulations}{8}{section.5}\protected@file@percent }
-\newlabel{sec:explaining_manipulations}{{5}{8}{Explaining Manipulations}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Uncovering Manipulations}{8}{section.6}\protected@file@percent }
-\newlabel{sec:uncovering_manipulations}{{6}{8}{Uncovering Manipulations}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Sanity Checks for Interpreters}{8}{section.7}\protected@file@percent }
-\newlabel{sec:sanity_checks_for_interpreters}{{7}{8}{Sanity Checks for Interpreters}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Benchmarking Interpretations}{8}{section.8}\protected@file@percent }
-\newlabel{sec:benchmarking}{{8}{8}{Benchmarking Interpretations}{section.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion}{8}{section.9}\protected@file@percent }
-\newlabel{sec:discussion}{{9}{8}{Discussion}{section.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Conclusion}{8}{subsection.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Future Work}{8}{subsection.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{8}{section*.9}\protected@file@percent }
-\bibcite{arras2017relevant}{{5}{2017}{{Arras et~al\mbox  {.}}}{{Arras, Horn, Montavon, M{\"u}ller, and Samek}}}
-\bibcite{arrieta2020explainable}{{6}{2020}{{Arrieta et~al\mbox  {.}}}{{Arrieta, D{\'\i }az-Rodr{\'\i }guez, Del~Ser, Bennetot, Tabik, Barbado, Garc{\'\i }a, Gil-L{\'o}pez, Molina, Benjamins, et~al\mbox  {.}}}}
-\bibcite{bach2015pixel}{{7}{2015}{{Bach et~al\mbox  {.}}}{{Bach, Binder, Montavon, Klauschen, M{\"u}ller, and Samek}}}
-\bibcite{brinker2019deep}{{8}{2019}{{Brinker et~al\mbox  {.}}}{{Brinker, Hekler, Enk, Berking, Haferkamp, Hauschild, Weichenthal, Klode, Schadendorf, Holland-Letz, et~al\mbox  {.}}}}
-\bibcite{chouldechova2017fair}{{9}{2017}{{Chouldechova}}{{Chouldechova}}}
-\bibcite{dimanov2020you}{{10}{2020}{{Dimanov et~al\mbox  {.}}}{{Dimanov, Bhatt, Jamnik, and Weller}}}
-\bibcite{dombrowski2019explanations}{{11}{2019}{{Dombrowski et~al\mbox  {.}}}{{Dombrowski, Alber, Anders, Ackermann, M{\"u}ller, and Kessel}}}
-\bibcite{elshawi2019interpretability}{{12}{2019}{{Elshawi et~al\mbox  {.}}}{{Elshawi, Al-Mallah, and Sakr}}}
-\bibcite{gao2019universal}{{13}{2019}{{Gao and Oates}}{{Gao and Oates}}}
-\bibcite{ghorbani2019interpretation}{{14}{2019}{{Ghorbani et~al\mbox  {.}}}{{Ghorbani, Abid, and Zou}}}
-\bibcite{fooling_nn_interpreters}{{15}{2019}{{Heo et~al\mbox  {.}}}{{Heo, Joo, and Moon}}}
-\bibcite{kereliuk2015deep}{{16}{2015}{{Kereliuk et~al\mbox  {.}}}{{Kereliuk, Sturm, and Larsen}}}
-\bibcite{kim2018interpretability}{{17}{2018}{{Kim et~al\mbox  {.}}}{{Kim, Wattenberg, Gilmer, Cai, Wexler, Viegas, et~al\mbox  {.}}}}
-\bibcite{lipton2018mythos}{{18}{2018}{{Lipton}}{{Lipton}}}
-\bibcite{lundberg2017unified}{{19}{2017}{{Lundberg and Lee}}{{Lundberg and Lee}}}
-\bibcite{murdoch2019definitions}{{20}{2019}{{Murdoch et~al\mbox  {.}}}{{Murdoch, Singh, Kumbier, Abbasi-Asl, and Yu}}}
-\bibcite{nguyen2017plug}{{21}{2017}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Clune, Bengio, Dosovitskiy, and Yosinski}}}
-\bibcite{nguyen2020super}{{22}{2020}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Stueker, and Waibel}}}
-\bibcite{ribeiro2016should}{{23}{2016}{{Ribeiro et~al\mbox  {.}}}{{Ribeiro, Singh, and Guestrin}}}
-\bibcite{ruede2020multi}{{24}{2020}{{Ruede et~al\mbox  {.}}}{{Ruede, Heusser, Frank, Roitberg, Haurilet, and Stiefelhagen}}}
-\bibcite{ILSVRC15}{{25}{2015}{{Russakovsky et~al\mbox  {.}}}{{Russakovsky, Deng, Su, Krause, Satheesh, Ma, Huang, Karpathy, Khosla, Bernstein, Berg, and Fei-Fei}}}
-\bibcite{samek2019explainable}{{26}{2019}{{Samek et~al\mbox  {.}}}{{Samek, Montavon, Vedaldi, Hansen, and M{\"u}ller}}}
-\bibcite{selvaraju2017grad}{{27}{2017}{{Selvaraju et~al\mbox  {.}}}{{Selvaraju, Cogswell, Das, Vedantam, Parikh, and Batra}}}
-\bibcite{shrikumar2017learning}{{28}{2017}{{Shrikumar et~al\mbox  {.}}}{{Shrikumar, Greenside, and Kundaje}}}
-\bibcite{simonyan2013deep}{{29}{2013}{{Simonyan et~al\mbox  {.}}}{{Simonyan, Vedaldi, and Zisserman}}}
-\bibcite{advlime_aies20}{{30}{2020}{{Slack et~al\mbox  {.}}}{{Slack, Hilgard, Jia, Singh, and Lakkaraju}}}
-\bibcite{spearman1961proof}{{31}{1961}{{Spearman}}{{Spearman}}}
-\bibcite{szegedy2016rethinking}{{32}{2016}{{Szegedy et~al\mbox  {.}}}{{Szegedy, Vanhoucke, Ioffe, Shlens, and Wojna}}}
-\bibcite{szegedy_intriguing}{{33}{2014}{{Szegedy et~al\mbox  {.}}}{{Szegedy, Zaremba, Sutskever, Bruna, Erhan, Goodfellow, and Fergus}}}
-\bibcite{evaluating_explanations_security}{{34}{2020}{{Warnecke et~al\mbox  {.}}}{{Warnecke, Arp, Wressnegger, and Rieck}}}
-\bibcite{whitmore2016mapping}{{35}{2016}{{Whitmore et~al\mbox  {.}}}{{Whitmore, George, and Hudson}}}
-\bibcite{xiao2020noise}{{36}{2020}{{Xiao et~al\mbox  {.}}}{{Xiao, Engstrom, Ilyas, and Madry}}}
-\bibcite{yosinski2015understanding}{{37}{2015}{{Yosinski et~al\mbox  {.}}}{{Yosinski, Clune, Nguyen, Fuchs, and Lipson}}}
-\bibcite{zeiler2014visualizing}{{38}{2014}{{Zeiler and Fergus}}{{Zeiler and Fergus}}}
+\bibcite{compas_dataset}{{5}{2016}{{Angwin et~al\mbox  {.}}}{{Angwin, Larson, Mattu, and Kirchner}}}
+\bibcite{arras2017relevant}{{6}{2017}{{Arras et~al\mbox  {.}}}{{Arras, Horn, Montavon, M{\"u}ller, and Samek}}}
+\bibcite{arrieta2020explainable}{{7}{2020}{{Arrieta et~al\mbox  {.}}}{{Arrieta, D{\'\i }az-Rodr{\'\i }guez, Del~Ser, Bennetot, Tabik, Barbado, Garc{\'\i }a, Gil-L{\'o}pez, Molina, Benjamins, et~al\mbox  {.}}}}
+\bibcite{bach2015pixel}{{8}{2015}{{Bach et~al\mbox  {.}}}{{Bach, Binder, Montavon, Klauschen, M{\"u}ller, and Samek}}}
+\bibcite{brinker2019deep}{{9}{2019}{{Brinker et~al\mbox  {.}}}{{Brinker, Hekler, Enk, Berking, Haferkamp, Hauschild, Weichenthal, Klode, Schadendorf, Holland-Letz, et~al\mbox  {.}}}}
+\bibcite{chouldechova2017fair}{{10}{2017}{{Chouldechova}}{{Chouldechova}}}
+\bibcite{dimanov2020you}{{11}{2020}{{Dimanov et~al\mbox  {.}}}{{Dimanov, Bhatt, Jamnik, and Weller}}}
+\bibcite{dombrowski2019explanations}{{12}{2019}{{Dombrowski et~al\mbox  {.}}}{{Dombrowski, Alber, Anders, Ackermann, M{\"u}ller, and Kessel}}}
+\bibcite{adult_income}{{13}{2017}{{Dua and Graff}}{{Dua and Graff}}}
+\bibcite{elshawi2019interpretability}{{14}{2019}{{Elshawi et~al\mbox  {.}}}{{Elshawi, Al-Mallah, and Sakr}}}
+\bibcite{gao2019universal}{{15}{2019}{{Gao and Oates}}{{Gao and Oates}}}
+\bibcite{ghorbani2019interpretation}{{16}{2019}{{Ghorbani et~al\mbox  {.}}}{{Ghorbani, Abid, and Zou}}}
+\bibcite{fooling_nn_interpreters}{{17}{2019}{{Heo et~al\mbox  {.}}}{{Heo, Joo, and Moon}}}
+\bibcite{kereliuk2015deep}{{18}{2015}{{Kereliuk et~al\mbox  {.}}}{{Kereliuk, Sturm, and Larsen}}}
+\bibcite{kim2018interpretability}{{19}{2018}{{Kim et~al\mbox  {.}}}{{Kim, Wattenberg, Gilmer, Cai, Wexler, Viegas, et~al\mbox  {.}}}}
+\bibcite{lipton2018mythos}{{20}{2018}{{Lipton}}{{Lipton}}}
+\bibcite{lundberg2017unified}{{21}{2017}{{Lundberg and Lee}}{{Lundberg and Lee}}}
+\bibcite{murdoch2019definitions}{{22}{2019}{{Murdoch et~al\mbox  {.}}}{{Murdoch, Singh, Kumbier, Abbasi-Asl, and Yu}}}
+\bibcite{nguyen2017plug}{{23}{2017}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Clune, Bengio, Dosovitskiy, and Yosinski}}}
+\bibcite{nguyen2020super}{{24}{2020}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Stueker, and Waibel}}}
+\bibcite{ribeiro2016should}{{25}{2016}{{Ribeiro et~al\mbox  {.}}}{{Ribeiro, Singh, and Guestrin}}}
+\bibcite{ruede2020multi}{{26}{2020}{{Ruede et~al\mbox  {.}}}{{Ruede, Heusser, Frank, Roitberg, Haurilet, and Stiefelhagen}}}
+\bibcite{ILSVRC15}{{27}{2015}{{Russakovsky et~al\mbox  {.}}}{{Russakovsky, Deng, Su, Krause, Satheesh, Ma, Huang, Karpathy, Khosla, Bernstein, Berg, and Fei-Fei}}}
+\bibcite{samek2019explainable}{{28}{2019}{{Samek et~al\mbox  {.}}}{{Samek, Montavon, Vedaldi, Hansen, and M{\"u}ller}}}
+\bibcite{selvaraju2017grad}{{29}{2017}{{Selvaraju et~al\mbox  {.}}}{{Selvaraju, Cogswell, Das, Vedantam, Parikh, and Batra}}}
+\bibcite{shrikumar2017learning}{{30}{2017}{{Shrikumar et~al\mbox  {.}}}{{Shrikumar, Greenside, and Kundaje}}}
+\bibcite{simonyan2013deep}{{31}{2013}{{Simonyan et~al\mbox  {.}}}{{Simonyan, Vedaldi, and Zisserman}}}
+\bibcite{advlime_aies20}{{32}{2020}{{Slack et~al\mbox  {.}}}{{Slack, Hilgard, Jia, Singh, and Lakkaraju}}}
+\bibcite{smilkov2017smoothgrad}{{33}{2017}{{Smilkov et~al\mbox  {.}}}{{Smilkov, Thorat, Kim, Vi{\'e}gas, and Wattenberg}}}
+\bibcite{spearman1961proof}{{34}{1961}{{Spearman}}{{Spearman}}}
+\bibcite{szegedy2016rethinking}{{35}{2016}{{Szegedy et~al\mbox  {.}}}{{Szegedy, Vanhoucke, Ioffe, Shlens, and Wojna}}}
+\bibcite{szegedy_intriguing}{{36}{2014}{{Szegedy et~al\mbox  {.}}}{{Szegedy, Zaremba, Sutskever, Bruna, Erhan, Goodfellow, and Fergus}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Future Work}{9}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{9}{section*.9}\protected@file@percent }
+\bibcite{evaluating_explanations_security}{{37}{2020}{{Warnecke et~al\mbox  {.}}}{{Warnecke, Arp, Wressnegger, and Rieck}}}
+\bibcite{whitmore2016mapping}{{38}{2016}{{Whitmore et~al\mbox  {.}}}{{Whitmore, George, and Hudson}}}
+\bibcite{xiao2020noise}{{39}{2020}{{Xiao et~al\mbox  {.}}}{{Xiao, Engstrom, Ilyas, and Madry}}}
+\bibcite{yosinski2015understanding}{{40}{2015}{{Yosinski et~al\mbox  {.}}}{{Yosinski, Clune, Nguyen, Fuchs, and Lipson}}}
+\bibcite{zeiler2014visualizing}{{41}{2014}{{Zeiler and Fergus}}{{Zeiler and Fergus}}}
 \bibstyle{ACM-Reference-Format}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{0pt}
 \newlabel{tocindent2}{0pt}
 \newlabel{tocindent3}{0pt}
-\newlabel{TotPages}{{9}{9}{}{page.9}{}}
+\newlabel{TotPages}{{10}{10}{}{page.10}{}}

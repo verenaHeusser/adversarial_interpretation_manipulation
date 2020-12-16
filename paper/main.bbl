@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{38}
+\begin{thebibliography}{41}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -86,6 +86,22 @@
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.06104}}
   (\bibinfo{year}{2017}).
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Angwin, Larson, Mattu, and Kirchner}{Angwin
+  et~al\mbox{.}}{2016}]%
+        {compas_dataset}
+\bibfield{author}{\bibinfo{person}{Julia Angwin}, \bibinfo{person}{Jeff
+  Larson}, \bibinfo{person}{Surya Mattu}, {and} \bibinfo{person}{Lauren
+  Kirchner}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Machine Bias Risk Assessments in Criminal
+  Sentencing}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Arras, Horn, Montavon, M{\"u}ller, and
@@ -186,6 +202,19 @@
   blame}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
   Processing Systems}}. \bibinfo{pages}{13589--13600}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Dua and Graff}{Dua and Graff}{2017}]%
+        {adult_income}
+\bibfield{author}{\bibinfo{person}{Dheeru Dua} {and} \bibinfo{person}{Casey
+  Graff}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{{UCI} Machine Learning Repository}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{http://archive.ics.uci.edu/ml}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Elshawi, Al-Mallah, and Sakr}{Elshawi
@@ -437,6 +466,18 @@
 \newblock \showarticletitle{Fooling LIME and SHAP: Adversarial Attacks on Post
   hoc Explanation Methods}. In \bibinfo{booktitle}{\emph{AAAI/ACM Conference on
   AI, Ethics, and Society (AIES)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Smilkov, Thorat, Kim, Vi{\'e}gas, and
+  Wattenberg}{Smilkov et~al\mbox{.}}{2017}]%
+        {smilkov2017smoothgrad}
+\bibfield{author}{\bibinfo{person}{Daniel Smilkov}, \bibinfo{person}{Nikhil
+  Thorat}, \bibinfo{person}{Been Kim}, \bibinfo{person}{Fernanda Vi{\'e}gas},
+  {and} \bibinfo{person}{Martin Wattenberg}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Smoothgrad: removing noise by adding noise}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1706.03825}}
+  (\bibinfo{year}{2017}).
 \newblock
 
 

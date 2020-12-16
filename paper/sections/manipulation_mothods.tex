@@ -34,7 +34,7 @@ Again, the problem can be formally defined as:
 \setlength{\leftskip}{0.39cm}
 % as it is the goal to disclose the vulnerability of the explanation method and not the vulnerability of the model.
 \noindent A manipulation method $\mathcal{F}$ is defined as a method for altering the output of an explanation method $\mathcal{I}$ while leaving the model performance of the neural network $N$ roughly unchanged. 
-As manipulations can be applied on the input or the model level (see \autoref{subsec:manipulation_levels}), $\mathbf{x}+\delta$ denotes a perturbed input sample regarding the input level manipulation, while $N+\delta$ denotes a model with altered parameters, referring to the model level manipulation.
+As manipulations can be applied on the input or the model level (see \autoref{subsubsec:manipulation_levels}), $\mathbf{x}+\delta$ denotes a perturbed input sample regarding the input level manipulation, while $N+\delta$ denotes a model with altered parameters, referring to the model level manipulation.
 
 A manipulation method is successful in fooling an interpreter, if the following properties hold: 
 \begin{enumerate}
@@ -128,8 +128,6 @@ Most of the explanation methods outlined in sec. \autoref{sec:interpretation_met
 Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
 Most approaches aim at providing a relevance measure of the input features. \\
 
-
-
 Creation of a fooled model by fine-tuning the model with a fooling loss. 
 % https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations/blob/master/Materials/PPT.pdf 
 
@@ -139,20 +137,39 @@ Evaluations of the quality of an explanation method are separated into qualitati
 % \cite{fooling_nn_interpreters} propose to measure the quality of an explanation method by their stability with respect to adversarial model manipulations. 
 
 \mypar{Qualitative Evaluation.} 
-Inspection and ramdom sampling are commonly used techniques to obtain an intuition about the effect of manipulations. 
+Inspection and random sampling are commonly used techniques to obtain an intuition about the effect of manipulations. 
 As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $\mathbf{x}$. Visual inspection of these evaluations for specific samples is informative, but does not allow for general statistics and validation of manipulation effects. Thus, quantitative evaluations are required. 
+\cite{adebayo2018sanity} consider two kinds of visualizing saliency maps: 
+\begin{itemize}
+    \item \textbf{Absolute Value (ABS).} Saliency maps visualized this way show only the absolute values of the normalizem maps.
+    \item \textbf{Diverging. } The diverging visualization indicates positive and negative importance in different colors. 
+\end{itemize}
 
 \mypar{Quantitative Evaluation.} 
 As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations and data samples before and after perturbation \cite{ghorbani2019interpretation}.
-Common metrics for quantitatively measuring similarities are the following: 
+
+As interpreter manipulations shall alter the output of an interpretation methods while keeping the prediction of a model unchanged, the following metrics 
+
+\begin{itemize}
+    \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to create a measure for systematically measuring the robustness of an interpretation method to adversarial model manipulations. The FSR measures on how many samples from a dataset an interpretation method $\mathcal{I}$ is fooled by a model manipulation. The higher the FSR, the more often an inetpretation method is fooled. 
+    \item \textbf{AOPC} TODO
+\end{itemize}
+
+As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations and data samples before and after perturbation \cite{ghorbani2019interpretation}.
+There are metrics that are applied to identify changes in salient features for any task:
 \begin{itemize}
     \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
     \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
-    \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR) with the aim to create a measure for systematically measuring the robustness of an interpretation method to adversarial model manipulations. The FSR measures on how many samples from a dataset an interpretation method $\mathcal{I}$ is fooled by a model manipulation. The higher the FSR, the more often an inetpretation method is fooled. 
+\end{itemize}
+
+Contrary, the following metrics are used only in computer vision tasks. They have been used in literature to quantify similarities between natural images and remove duplicates. Therefore, they are used in XAI research to compare the changes between saliency maps before and after manipulation for computer vision tasks.
+\begin{itemize}
     \item \textbf{Structural Similarity Index (SSIM).} SSIM values are relative similarity measure in the range $\left[0, 1\right]$, where larger values indicate higher similarity.
     \item \textbf{Pearson Correlation Coefficien (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
+    \item \textbf{Pearson Correlation of the Histogram of Gradients\newline (HOG). } Used by \cite{adebayo2018sanity} to indicate the intensity of change between two images. 
     \item \textbf{Mean Squared Error (MSE).} As an absolute error measure, values close to zero indicate high similarity. 
-    \item \textbf{AOPC} TODO
 \end{itemize}
+
 \noindent Note that these are only examples without demand for completeness. For further information see \cite{adebayo2018sanity}.
 Normalizing these measures to yield values in $\left[0, 1\right]$ with a sum of one is good practice. 
+Note that defining similarities that are similar to human vision is still an active area of research. 
