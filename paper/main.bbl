@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{50}
+\begin{thebibliography}{53}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -266,6 +266,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Hase and Bansal}{Hase and Bansal}{2020}]%
+        {hase2020evaluating}
+\bibfield{author}{\bibinfo{person}{Peter Hase} {and} \bibinfo{person}{Mohit
+  Bansal}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Evaluating Explainable AI: Which Algorithmic
+  Explanations Help Users Predict Model Behavior?}
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2005.01831}}
+  (\bibinfo{year}{2020}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Heo, Joo, and Moon}{Heo et~al\mbox{.}}{2019}]%
         {fooling_nn_interpreters}
 \bibfield{author}{\bibinfo{person}{Juyeon Heo}, \bibinfo{person}{Sunghwan Joo},
@@ -289,6 +300,20 @@
 \newblock \showarticletitle{Attention is not explanation}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1902.10186}}
   (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kaur, Nori, Jenkins, Caruana, Wallach, and
+  Wortman~Vaughan}{Kaur et~al\mbox{.}}{2020}]%
+        {kaur2020interpreting}
+\bibfield{author}{\bibinfo{person}{Harmanpreet Kaur}, \bibinfo{person}{Harsha
+  Nori}, \bibinfo{person}{Samuel Jenkins}, \bibinfo{person}{Rich Caruana},
+  \bibinfo{person}{Hanna Wallach}, {and} \bibinfo{person}{Jennifer
+  Wortman~Vaughan}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Interpreting Interpretability: Understanding Data
+  Scientists' Use of Interpretability Tools for Machine Learning}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2020 CHI Conference on Human
+  Factors in Computing Systems}}. \bibinfo{pages}{1--14}.
 \newblock
 
 
@@ -424,6 +449,19 @@
   Recognition of Conversational Speech}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2010.03449}}
   (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Poursabzi-Sangdeh, Goldstein, Hofman, Vaughan,
+  and Wallach}{Poursabzi-Sangdeh et~al\mbox{.}}{2018}]%
+        {poursabzi2018manipulating}
+\bibfield{author}{\bibinfo{person}{Forough Poursabzi-Sangdeh},
+  \bibinfo{person}{Daniel~G Goldstein}, \bibinfo{person}{Jake~M Hofman},
+  \bibinfo{person}{Jennifer~Wortman Vaughan}, {and} \bibinfo{person}{Hanna
+  Wallach}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Manipulating and measuring model interpretability}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1802.07810}}
+  (\bibinfo{year}{2018}).
 \newblock
 
 

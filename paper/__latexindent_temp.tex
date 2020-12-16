@@ -40,8 +40,8 @@
 % \acmDOI{10.1145/1122445.1122456}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Explainability '20]{Explainability '20: ACM Symposium on Neural Model Explanations}{December 16--20, 2020}{Karlsruhe, DE}
-\acmBooktitle{Explainability '20: ACM Symposium on Neural Model Explanations,
+\acmConference[Explainability '20]{Interpretability '20: ACM Symposium on Neural Model Explanations}{December 16--20, 2020}{Karlsruhe, DE}
+\acmBooktitle{Interpretability '20: ACM Symposium on Neural Model Explanations,
 December 16--20, 2020, Karlsruhe, DE}
 % \acmPrice{15.00}
 % \acmISBN{978-1-4503-XXXX-X/18/06}
@@ -56,8 +56,10 @@ December 16--20, 2020, Karlsruhe, DE}
 
 % macros etc
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\mypar}[1]{\vspace{0.3cm}\noindent\textbf{#1}}
+\newcommand{\mypar}[1]{\vspace{0.2cm}\noindent\textbf{#1}}
+\setlength{\smallskipamount}{2mm}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 \titleformat{\subsubsection}
   {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
@@ -69,7 +71,8 @@ December 16--20, 2020, Karlsruhe, DE}
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
 % \title{Manipulating Model Explanations: How to fool what tries to make sense of}
-\title{Manipulating Model Explanations: Why you shouldn't trust me}
+\title{Why you shouldn't trust me: A survey on Adversarial Model .}
+% \title{Manipulating Model Interpretations: Why you shouldn't trust me.}
 % A survey on adversarial model interpreter manipulations
 
 \author{Verena Heusser}
@@ -82,13 +85,10 @@ December 16--20, 2020, Karlsruhe, DE}
 
 
 \begin{abstract}
-
+  The accuracy of machine learning models is no longer enough: we also want the often inherently complex models to be safe, robust, and interpretable by humans. As machine learning models enter critical areas in human lives such as the criminal justice system, medicine or financial systems, the inability for humans to understand these models is dangerous and problematic. Progress in the emerging research field of explainable artificial intelligence promises to be a remedy, where interpretation methods try to uncover \textit{how} models work. However, while the number of studies using these methods is exploding, there are also a growing number of articles pointing out that the interpretation methods are still fundamentally flawed.   
+  This work provides an overview of the subfield of manipulating interpretable machine learning, with the goal of providing insight into concepts, existing research, and future directions. We want to raise awareness that interpretation methods, just like the underlying machine learning models, can be outwitted by adversaries and that there is often no way to detect adversarial attacks.
   
-  This paper reviews state-of-the-art approaches to model explanations with a focus on those techniques that try to 
-  fool these methods. Based on the findings in the reviewed studies, we conclude that knowledge of the defectiveness of neural networks and their highly sought explanations should be taken with caution. Therefore, the main purpose of this review is to raise awareness that explanations, while helpful, can can be fundamentally flawed.
-
-  We don't only want the model to be good. We want it to be safe and interpretable. 
-  As machine learning models enter critical areas in human lives such as the criminal justice system, medicine or financial systems, the inability for humans to understand these models is dangerous and problematic. Advances in the rising research area of explainable AI seems to be a remedy. However, there is not yet a consensus about the validity and robustness of explanations methods themselves. The main suggestion of this paper is to be cautious about results of explanation methods. Explanations can be fooled just as the underlying machine learning models. So. in the end the question must be posed whether inexplainable mdoels should be used at all if we need other models to explain these models but are not valid themselves .. % TODO loop structire aufbauen
+  % The main suggestion of this paper is to be cautious about results of explanation methods. Explanations can be fooled just as the underlying machine learning models. So. in the end the question must be posed whether inexplainable mdoels should be used at all if we need other models to explain these models but are not valid themselves .. % TODO loop structire aufbauen
 
 \end{abstract}
 
@@ -112,9 +112,10 @@ December 16--20, 2020, Karlsruhe, DE}
 % \ccsdesc[100]{Networks~Network reliability}
 
 %%
-%% Keywords. The author(s) should pick words that accurately describe
+%% Keywords. The author(s) should pick words that accurately descr
+
 %% the work being presented. Separate the keywords with commas.
-\keywords{Interpretability, Neural networks, adversarial training}
+\keywords{Interpretability, Adversarial Machine Learning, Adversarial Model Interpretation Manipulations}
 
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
@@ -128,17 +129,14 @@ December 16--20, 2020, Karlsruhe, DE}
 
 \input{sections/interpretation_methods}
 
-\input{sections/manipulation_mothods}
-
+\input{sections/manipulation_methods}
 
 \input{sections/manipulations}
 
-\input{sections/explaining_manipulations}
+% \input{sections/explaining_manipulations}
 
 % TODO add methods to reverse / disclose manipulations
-\input{sections/uncovering_manipulations}
-
-\input{sections/sanity_checks_for_interpreters}
+% \input{sections/uncovering_manipulations}
 
 \input{sections/benchmarking_interpretations}
 
@@ -146,11 +144,8 @@ December 16--20, 2020, Karlsruhe, DE}
 
 \input{sections/discussion}
 
-% TODO add code link
-% TODO add author notes? -> replcation studies?
 % TODO N neural network chengen to mathcal oder so
 % TODO paper for iid assumption of nns?
-% TODO x anpassen zu bf
 
 % \balance
 \bibliography{mybib}{}

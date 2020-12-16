@@ -406,9 +406,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/introduction.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlmi.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxsy.tfm
@@ -419,6 +416,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlmia.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/bb_cat.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTBI-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinBiolinumTB-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTB-tlf-t1--base.tfm
@@ -439,6 +440,8 @@ INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
@@ -467,9 +470,6 @@ INPUT /home/veheu/proj/foolingnns/paper/figures/lrp_cat_heatmap.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/foolignns/location fooling lrp/lrp_epoch6_no-7.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/foolignns/location fooling lrp/lrp_epoch6_no-7.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/foolignns/location fooling lrp/lrp_epoch6_no-7.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/cat_classification.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/cat_classification.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/cat_classification.png
 INPUT /home/veheu/proj/foolingnns/paper/sections/interpretation_methods.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/interpretation_methods.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
@@ -481,6 +481,15 @@ INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinBiolinumT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTZ-tlf-ot1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1--base.tfm
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-ot1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
@@ -499,15 +508,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTZ-tlf-ot1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1--base.tfm
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_orig.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_mask.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/lime_dog_map1.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
 INPUT /home/veheu/proj/foolingnns/paper/figures/cat_dog_shap.png
@@ -515,7 +515,6 @@ INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_methods.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/manipulation_methods.tex
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-ot1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1--base.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlbmi.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlbmi7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/nxlbmi5.tfm
@@ -548,9 +547,21 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/LibertineMathBMI.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/NewTXBMI.tfm
 INPUT /home/veheu/proj/foolingnns/paper/sections/manipulations.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/manipulations.tex
-INPUT /home/veheu/proj/foolingnns/paper/figures/slack_ood_data.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/slack_ood_data.png
-INPUT /home/veheu/proj/foolingnns/paper/figures/slack_ood_data.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_original.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_original.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_original.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_plus_dog.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_plus_dog.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_plus_dog.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_fooled.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_fooled.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/patch_fooled.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/dombr.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/dombr.png
+INPUT /home/veheu/proj/foolingnns/paper/figures/dombr.png
+INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
 INPUT /home/veheu/proj/foolingnns/paper/figures/heo_intro.jpg
 INPUT /home/veheu/proj/foolingnns/paper/figures/heo_intro.jpg
 INPUT /home/veheu/proj/foolingnns/paper/figures/heo_intro.jpg
@@ -560,8 +571,6 @@ INPUT /home/veheu/proj/foolingnns/paper/sections/discussion.tex
 INPUT /home/veheu/proj/foolingnns/paper/sections/discussion.tex
 INPUT /home/veheu/proj/foolingnns/paper/main.bbl
 INPUT /home/veheu/proj/foolingnns/paper/main.bbl
-INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /home/veheu/proj/foolingnns/paper/main.aux
 INPUT /home/veheu/proj/foolingnns/paper/main.out
 INPUT /home/veheu/proj/foolingnns/paper/main.out
