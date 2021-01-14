@@ -1,12 +1,12 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\footnotetext{Code for replications and experiments will be made available on \url{https://github.com/verenaHeusser/adversarial_interpretation_manipulation}}
-\footnote{All figures in this article are produced by the author unless noted otherwise.}
-
 % Rise of DL
 In recent years, deep learning models have demonstrated superior performance on a variety of tasks \cite{ruede2020multi, brinker2019deep, nguyen2020super}. While performance is still increasing and more tasks are being handled, their performance comes at the cost of complexity: models often use millions to billions of parameters to achieve universal function approximation.
 This complexity means that they remain black boxes that cannot be interpreted even by experts.
+
+\blfootnote{Code for replications and experiments will be made available on \url{https://github.com/verenaHeusser/adversarial_interpretation_manipulation}}
+\blfootnote{All figures in this article are produced by the author unless noted otherwise.}
 
 % rise of XAI
 Such a black box is able to predict fairy well for unseen yet similar data, answering the question of \textit{what} is the most likely label for an input sample. However, most models will provide no answer to \textit{why} or \textit{how} the model chose this label for the instance and which features of the instance were crucial for making this prediction. For example, if a machine learning model is tasked with classifying images of cats (as in \autoref{fig:bb}), one would like to assume that the presence (or absence) of a cat in an image is indicative (contraindicative) of the classification of the image into the "cat" ("not cat") category.
