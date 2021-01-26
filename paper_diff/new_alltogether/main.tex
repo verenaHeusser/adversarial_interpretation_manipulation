@@ -170,7 +170,7 @@ Recent work has shown, that humans are not able to benefit much from interpretat
 Methodologically, it is unclear how the variety of proposed model interpretation methods are related and what common concepts can be used to evaluate and compare them. Many works are dedicated to establish a formal definition of what it means for a model to be interpretable, and how to select and evaluate methods for generating interpretations of machine learning models \cite{murdoch2019definitions, lipton2018mythos}. However, a growing number of researchers also focus on breaking these interpretation methods, similar to research on adversarial attacks on machine learning models, which is deeply fueled by the vast deployment of models in the real world \cite{fooling_nn_interpreters,ghorbani2019interpretation,dimanov2020you,dombrowski2019explanations,advlime_aies20, le2020remote, zhang2020interpretable, kuppa2020black, anders2020fairwashing, lakkaraju2020fool, kindermans2017reliability}.
 
 %%%%%%%%%%%%%%%%%%%%%%%% Outline
-\mypar{Outline. }\newline
+\mypar{Outline.}\newline
 This article examines a topic at the intersection of interpretable and adversarial machine learning research. 
 The overview presented in this article examines the existing literature and contributions in the field of XAI focusing on methods to manipulate explanation methods. We try to offer a comprehensive taxonomy of these interpretation manipulation methods. 
 
@@ -236,16 +236,16 @@ The following section details the two categories and gives examples of commonly 
 \label{subsec:bb_methods}
 
 % https://proceedings.neurips.cc//paper/2020/file/2c29d89cc56cdb191c60db2f0bae796b-Paper.pdf p. 4 
-Model-agnostic interpretations assume no knowledge about the model thus treating it as a black box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. The interpretable model is also dubbed the 'surrogate' model. The common approach for learning the surrogate is to approximate the relationship between the input samples and the corresponding prediction by tho model.
+Model-agnostic interpretations assume no knowledge about the model thus treating it as a black box. The underlying model is approximated by learning it's behavior with an interpretable model, e.g. a linear model. The interpretable model is also dubbed the 'surrogate' model. The common approach for learning the surrogate is to approximate the relationship between the input samples and the corresponding prediction by the model.
 As the model itself does not need to be known, these approaches can be used in scenarios where the model itself is not directly accessible. Model-agnostic interpretations are fairly popular and are used in a wide range of applications, ranging from finance and law to medicine and chemistry \cite{elshawi2019interpretability, whitmore2016mapping}. 
 
 A black-box interpretation offers the great advantage of being applicable to any model and offers simplicity because the interpretation is embedded in the model. However, this option of gaining interpretability might be costly for users that already have a high performing model. For this reason, growing need for methods exists that can be applied without retraining or modifying the underlying model.
 We will briefly describe two common model-agnostic approaches. Please refer to the original papers for details.
 
 \mypar{Local Interpretable Model-agnostic Explanations (LIME).}\newline
-LIME \cite{ribeiro2016should} perturbs the input and observes how the predictions of a black box model change. For the task of image classification, LIME creates a set of perturbed instances by dividing the input image into interpretable components, which are technically contiguous superpixels, and runs each perturbed instance through the model to get the probability for how much the change in each superpixel influences the whole model prediction. 
+LIME \cite{ribeiro2016should} perturbs the input and observes how the predictions of a black box model change. For the task of image classification, LIME creates a set of perturbed instances by dividing the input image into interpretable components, which are technically contiguous super-pixels, and runs each perturbed instance through the model to get the probability for how much the change in each super-pixel influences the whole model prediction. 
 
-\autoref{fig:lime_cat} shows an example of LIME applied to the neural network model Inception-v3 \cite{szegedy2016rethinking}. Input image from the ImageNet dataset \cite{ILSVRC15}. The superpixel in dog instances place is highlighted in green, which correctly indicates that this superpixel has a high influence on the prediction of the images correct class ('bernese mountain dog'). LIME also correctly indicates that the superpixel in the cat's place does not indicate the correct class label.
+\autoref{fig:lime_cat} shows an example of LIME applied to the neural network model Inception-v3 \cite{szegedy2016rethinking}. Input image from the ImageNet dataset \cite{ILSVRC15}. The super-pixel in dog instances place is highlighted in green, which correctly indicates that this super-pixel has a high influence on the prediction of the images correct class ('bernese mountain dog'). LIME also correctly indicates that the super-pixel in the cat's place does not indicate the correct class label.
 
 \begin{figure}[ht]
   \centering
@@ -271,7 +271,7 @@ LIME \cite{ribeiro2016should} perturbs the input and observes how the prediction
 % https://github.com/marcotcr/lime
 % While the model may be very complex globally, it is easier to approximate it around the vicinity of a particular instance. While treating the model as a black box, we perturb the instance we want to explain and learn a sparse linear model around it, as an explanation. The figure below illustrates the intuition for this procedure. The model's decision function is represented by the blue/pink background, and is clearly nonlinear. The bright red cross is the instance being explained (let's call it X). We sample instances around X, and weight them according to their proximity to X (weight here is indicated by size). We then learn a linear model (dashed line) that approximates the model well in the vicinity of X, but not necessarily globally.
 
-\mypar{SHapley Additive exPlanations (SHAP).} SHAP \cite{lundberg2017unified} builds on Shapley analysis, which is essentially about judging the importence of attibutes. The model is trained on a number of subsets of all available features, and the feature importance scores are calculated by evaluating the effects that the omissions of the specific features have on the model prediction. An example is shown in \autoref{fig:shap_dog}. Image regions highlighted in green are found to be important for predicting the correct label.
+\mypar{SHapley Additive exPlanations (SHAP).} SHAP \cite{lundberg2017unified} builds on Shapley analysis, which is essentially about judging the importance of attributes. The model is trained on a number of subsets of all available features, and the feature importance scores are calculated by evaluating the effects that the omissions of the specific features have on the model prediction. An example is shown in \autoref{fig:shap_dog}. Image regions highlighted in green are found to be important for predicting the correct label.
 
 \begin{figure}[ht]
   \centering
@@ -292,7 +292,7 @@ A few example methods within this group are listed below.
 
 \mypar{DeepLIFT} \cite{shrikumar2017learning} is an improved version of LRP, where a reference point in the input feature space is defined. Relevance scores are propagated proportionally to the changes of neuronal activations from the reference. % https://arxiv.org/pdf/1710.10547.pdf
 
-\mypar{SmoothGrad (SG)} \cite{smilkov2017smoothgrad} avarages over interpretations of noisy copies of an input sample thus reducing noise by visually diffusing the interpretation. The noise is drawn from i.i.d. from a normal distribution. 
+\mypar{SmoothGrad (SG)} \cite{smilkov2017smoothgrad} averages over interpretations of noisy copies of an input sample thus reducing noise by visually diffusing the interpretation. The noise is drawn from i.i.d. from a normal distribution. 
 
 Methods developed specifically for convolutional neural networks are for instance Grad-CAM \cite{selvaraju2017grad} or SimpleGrad \cite{simonyan2013deep}.
 
@@ -313,10 +313,10 @@ Adversarial examples, as first introduced by \cite{szegedy_intriguing}, are clev
 \par\smallskip
 \textbf{Definition 2: Model Manipulation Method}
 \begin{enumerate}
-    \item[1.] \textit{Impercpetibility of Perturbation}: The adversal example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
+    \item[1.] \textit{Impercpetibility of Perturbation}: The adversarial example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
     \item[2.] \textit{Prediction dissimilarity}: The prediction of the model is significantly different to the prediction on the non-adversarial example: $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x})$$
 \end{enumerate}
-Note, that within adversarial foolings of models, the perturbation is mostly applied to the input data, and not to the model itself.
+Note, that within adversarial fooling of models, the perturbation is mostly applied to the input data, and not to the model itself.
 
 % TODO cite
 Evidence from many studios shows that deep learning models can be easily tricked by adversarial examples. 
@@ -352,7 +352,7 @@ Interpretation manipulation methods differ with respect to the definition of the
 Some methods aim to make the interpreter give wrong interpretations\cite{fooling_nn_interpreters}. 
 In this case, the following additional property must hold: 
 \begin{enumerate}
-   \item[3.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} = \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega}))$$ where $\mathcal{D}(\cdot)$ is a distance measure. 
+   \item[3.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega}))$$ where $\mathcal{D}(\cdot)$ is a distance measure. 
 \end{enumerate}
 
 Others introduce a systematic bias into tho model while fooling the interpretation method in the sense that the interpretation does not change between the original model and the adversarial model. 
@@ -366,7 +366,7 @@ After formally defining what successfully fooling an interpretation method means
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Taxonomy of Interpretation Manipulation Methods}
 \label{subsec:taxonomy_manipulations}
-There are two important categories of Manipulation Methods that aim at attacking model interpretation methods. The first category is based on the level these manipulations operate on, i.e. input space level or model / paramater level. 
+There are two important categories of Manipulation Methods that aim at attacking model interpretation methods. The first category is based on the level these manipulations operate on, i.e. input space level or model / parameter level. 
 The second categorization is based on the target of the manipulations. While untargeted manipulations are mostly random perturbations, targeted manipulations aim to perturb the interpretation of specific input features. 
 
 %%%%%%%%%%
@@ -392,7 +392,7 @@ As found in \cite{dombrowski2019explanations}, visually-imperceptible perturbati
 Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
 As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2019, this line of research is comparably new. 
 Adversarial model manipulations for fooling the interpreter are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function for the task of image classification of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ is the standard cross-entropy classification loss. 
-Adversarial model mbibliography
+Adversarial model manipulation
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/model_manipulations.png}
@@ -432,7 +432,7 @@ Besides the necessary properties of a successful interpretation manipulation met
 \mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space should be affected. 
 Otherwise, the perturbation is only local around the training points, thus the perturbation does not generalize. 
 \par\smallskip
-As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretation methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust intarpretation method.  
+As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretation methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust interpretation method.  
 Evaluations of the quality of an explanation method are separated into qualitative and quantitative evaluations. 
 
 \mypar{Qualitative Evaluation.} 
@@ -440,7 +440,7 @@ Inspection and random sampling are commonly used techniques to obtain an intuiti
 As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $\mathbf{x}$. Visual inspection of these evaluations for specific samples is informative, but does not allow for general statistics and validation of manipulation effects. Thus, quantitative evaluations are required. 
 \cite{adebayo2018sanity} consider two kinds of visualizing saliency maps: 
 \begin{itemize}
-    \item \textbf{Absolute Value (ABS).} Saliency maps visualized this way show only the absolute values of the normalizem maps.
+    \item \textbf{Absolute Value (ABS).} Saliency maps visualized this way show only the absolute values of the normalized maps.
     \item \textbf{Diverging. } The diverging visualization indicates positive and negative importance in different colors. 
 \end{itemize}
 
@@ -452,13 +452,13 @@ As interpreter manipulations shall alter the output of an interpretation methods
 \begin{itemize}
     \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR). The FSR captures the relationship between the model's predictive accuracy and the correctness of the interpretation averaged over multiple test samples. The 'correctness' of the interpretation is the difference between the original interpretation methods output and the output of the same interpretation method when applied to either an adversarial input sample or adversarial model. 
     The FSR counts samples for the model's prediction did not change but for which the interpretation method's output changed as a successfully fooled example. Thus, the higher the FSR, the the more often the fooling is successful in fooling the interpretation method. 
-    \item \textbf{Area Over Prediction Curve (AOPC). } AOPC \cite{samek2016evaluating} is a principled way of quantitatively evaluating that the interpretations found by interpretation methods are valid, i.e. based on the features that the model truly uses for making the predicton. \cite{fooling_nn_interpreters} use this measure to ensure that their adversarial model training does not fool the model (i.e. the predictive accuracy of the model is unchanged), but does fool the interpretation method.
+    \item \textbf{Area Over Prediction Curve (AOPC). } AOPC \cite{samek2016evaluating} is a principled way of quantitatively evaluating that the interpretations found by interpretation methods are valid, i.e. based on the features that the model truly uses for making the prediction. \cite{fooling_nn_interpreters} use this measure to ensure that their adversarial model training does not fool the model (i.e. the predictive accuracy of the model is unchanged), but does fool the interpretation method.
 \end{itemize}
 
 As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations and data samples before and after perturbation \cite{ghorbani2019interpretation}.
 There are metrics that are applied to identify changes in salient features for any task:
 \begin{itemize}
-    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
+    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural measure for comparing interpretations. 
     \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
 \end{itemize}
 
@@ -487,7 +487,7 @@ After introducing the terminology of model interpreters and manipulation methods
 \mypar{Fooling both Model and Interpreter. }\newline
 \cite{subramanya2019fooling} design adversarial attacks that fool the machine learning model as well as the model interpretation. 
 They design targeted and untargeted input patches of various styles, which overlaid onto the original images. 
-\autoref{fig:patch_fooling} shows that GradCAM is fooled by this simple method as well as the calssification model, resembling findings in research on adversarial attacks on models. 
+\autoref{fig:patch_fooling} shows that GradCAM is fooled by this simple method as well as the classification model, resembling findings in research on adversarial attacks on models. 
 
 \begin{figure}[ht]
     \centering
@@ -506,7 +506,7 @@ They design targeted and untargeted input patches of various styles, which overl
       \caption{\scriptsize{Fooled Map, fooled \newline model. Pred: 'Soccer ball'.}}
       \label{fig:patch_fooled}
     \end{subfigure}
-    \caption{Fooling of the model and GradCAM. The interpreter is fooled is it takes the original target classe's features as evidence for the wrong class. Images from \cite{subramanya2019fooling}.}\label{fig:patch_fooling}
+    \caption{Fooling of the model and GradCAM. The interpreter is deceived as it takes the features of the original target class as evidence of the wrong class. Images from \cite{subramanya2019fooling}.}\label{fig:patch_fooling}
     \vspace{-0.3cm}
 \end{figure}
 
@@ -572,7 +572,7 @@ Using this method, they are also able to create adversarial models that focus on
 Checking the robustness, scope and hence the quality of model interpreters has become an indispensable step in explainable machine learning. 
 Evaluating explanation and interpretation methods is difficult as ground truth is mostly lacking. In most applications, it is not known which input features are most important. 
 
-\cite{adebayo2018sanity} propose a framework for sanity checking saliency map based interpretation methods. Fer this, a number of randomization tests are introduced along with some visualization techniques and metrics to compare interpretation outputs. The authors find that most methods fail their tests, and warn of the danger of visual assessment. Specifically, they warn that humans tend to chose visually significant appearing images that lack sensitivity to the data distribution and generation as well as to the model. 
+\cite{adebayo2018sanity} propose a framework for sanity checking saliency map based interpretation methods. For this, a number of randomization tests are introduced along with some visualization techniques and metrics to compare interpretation outputs. The authors find that most methods fail their tests, and warn of the danger of visual assessment. Specifically, they warn that humans tend to chose visually significant appearing images that lack sensitivity to the data distribution and generation as well as to the model. 
 However, their findings are so far limited to the domain of computer vision models and tasks. % TODO @outlook
 Implementing their randomization tests for other real-world datasets, such as COMPAS \cite{compas_dataset} or the adult income dataset \cite{adult_income} would be an interesting next step. 
 
@@ -593,7 +593,7 @@ The main insights from literature outlined in \autoref{sec:manipulations} are th
     \item Biases can be encoded into the model by adapting the loss function and by inexpensively fine-tuning the model. These adaptations can trick the interpretation methods into yielding wrong results while models remain accurate. \cite{fooling_nn_interpreters}
     \item \cite{dombrowski2019explanations} show the pendant of adversarial model  attacks for interpretation methods: They apply visually imperceptible perturbations to input images, that do not cause the models to misclassify but that cause the interpreter to yield significantly different interpretations.
 \end{itemize}
-On the one hand, the findings suggest that our models aro not fully aligned with how human information processing works. If machine learning interpretation models would decide by the criteria we humans employ for tasks such as image classification, there would be no fooling of interpretation models by input or model manipulations. 
+On the one hand, the findings suggest that our models are not fully aligned with how human information processing works. If machine learning interpretation models would decide by the criteria we humans employ for tasks such as image classification, there would be no fooling of interpretation models by input or model manipulations. 
 On the other hand, it was shown that advances in machine learning models has led to models that rely too much on the data they are trained on (the i.i.d. assumption), thus showing a high susceptibility to o.o.d. properties or properties that are highly correlated with labels in the dataset but are not distinctive in the real world (such as image backgrounds) in the first place. Models and interpreters can still be misled in a large and systematic manner. 
 
 A growing number of studies gives evidence for model how interpretation methods can be gamed. Among these are the studies outlined in \autoref{sec:manipulations}. Other studies also raise concerns about if standard deep learning practices are valid, such as the work on fooling the broadly used attention mechanism \cite{jain2019attention}.

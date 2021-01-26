@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main"] 1611612781 "main.aux" "main.bbl" "main" 1611613127
+["bibtex main"] 1611674866 "main.aux" "main.bbl" "main" 1611674889
   "./ACM-Reference-Format.bst" 1611613117 85327 68580d41bd279ee2c59d376cb377f3d6 ""
-  "main.aux" 1611613126 20678 fcbadb61c0bcb89f71dc1e8747f2c2a4 "pdflatex"
+  "main.aux" 1611674884 20688 959c229713c5d4408fc3808706c1299d "pdflatex"
   "mybib.bib" 1611613117 29626 4ecc403212041bbb2ed66e804c5cc6e1 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1611613124 "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.tex" "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.pdf" "main" 1611613127
-  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.aux" 1611613126 20678 fcbadb61c0bcb89f71dc1e8747f2c2a4 ""
-  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.tex" 1611613123 65112 1388354044a74f563b97da9bd9d38f4d ""
+["pdflatex"] 1611674881 "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.tex" "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.pdf" "main" 1611674889
+  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.aux" 1611674884 20688 959c229713c5d4408fc3808706c1299d ""
+  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.tex" 1611674888 65122 9d2b64db7dbd88aac3dc19f55af94c06 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1607188752 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1607188752 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1607188752 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -292,8 +292,8 @@
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1607249373 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1607249373 4902 efb3d66683a2da2a232f71e3a571a899 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1607249373 33301 a3134070eacafb10b1f371612ce2650d ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1609525054 5013534 fd35bdaa60a6f086a27ce99b94bb8742 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1609525034 2635861 fde5c7d8927db169323d3843c8be478d ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1611666210 5013534 fd35bdaa60a6f086a27ce99b94bb8742 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1611666196 2635860 3da748303b6053d9cd56f358eb62c89d ""
   "figures/bb_cat.png" 1611613117 2584692 0832499b7beddba2ff794b306c5a414a ""
   "figures/cat.JPEG" 1611613117 50051 12dbd428b62cfd0042e127a4d7c06e33 ""
   "figures/cat_dog_shap.png" 1611613117 629026 44f91dd15d9dff6d2ccc5f5a459cc1da ""
@@ -309,14 +309,14 @@
   "figures/patch_fooled.png" 1611613117 93714 e285f66bedeb83515220ee1462f580aa ""
   "figures/patch_original.png" 1611613117 118513 131a67fd0c32d9e18b95d4bd728c6500 ""
   "figures/patch_plus_dog.png" 1611613117 112030 6d51df724cf8f444777fadf9a6346620 ""
-  "main.aux" 1611613126 20678 fcbadb61c0bcb89f71dc1e8747f2c2a4 "pdflatex"
-  "main.bbl" 1611613117 32685 511e879778b1faa53138c4d0e56e59e3 "bibtex main"
-  "main.out" 1611613126 2851 3014f4351b84d0b84116548ba3d35d28 "pdflatex"
-  "main.tex" 1611613123 65112 1388354044a74f563b97da9bd9d38f4d ""
+  "main.aux" 1611674884 20688 959c229713c5d4408fc3808706c1299d "pdflatex"
+  "main.bbl" 1611674867 32685 511e879778b1faa53138c4d0e56e59e3 "bibtex main"
+  "main.out" 1611674884 2851 3014f4351b84d0b84116548ba3d35d28 "pdflatex"
+  "main.tex" 1611674888 65122 9d2b64db7dbd88aac3dc19f55af94c06 ""
   (generated)
-  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.log"
-  "main.aux"
   "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.pdf"
+  "main.aux"
   "main.out"
-  "main.pdf"
   "main.log"
+  "main.pdf"
+  "/home/veheu/proj/foolingnns/paper_diff/new_alltogether/main.log"
