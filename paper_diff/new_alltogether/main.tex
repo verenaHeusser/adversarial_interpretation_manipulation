@@ -47,10 +47,10 @@
 % \acmISBN{978-1-4503-XXXX-X/18/06}
 % \settopmatter{printacmref=false}
 
-\copyrightyear{2020, Verena Heusser}
+\copyrightyear{Verena Heusser}
 \setcopyright{none} % here you will see an error, but still works
 \acmConference[Seminar ``Explainable Machine Learning'']{}{Karlsruhe
-Institute of Technology (KIT)}{2020}
+Institute of Technology (KIT), Intelligent System Security Research Group}{2020}
 \acmDOI{}
 \acmISBN{}
 
@@ -82,7 +82,7 @@ Institute of Technology (KIT)}{2020}
 
 \begin{document}
 
-\title{Why you shouldn't trust me: A survey on Adversarial Model Interpretation Manipulations.}
+\title[Why you shouldn't trust me.]{Why you shouldn't trust me: A survey on Adversarial Model Interpretation Manipulations.}
 
 \author{Verena Heusser}
 \email{verena.heusser@student.kit.edu}
@@ -123,7 +123,7 @@ Such a black box is able to predict fairy well for unseen yet similar data, answ
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/bb_cat.png}
-    \caption{Prediction pipeline using a machine learning model, depicted as a black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessmant of the model's accuracy. Additionally answering the question \textit{why}, i.e. making the model interpretable for a human, requires additional methods.}
+    \caption{Prediction pipeline using a machine learning model, depicted as black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessment of the model's accuracy. Additionally answering the question \textit{why}, i.e. making the model interpretable for a human, requires additional methods.}
     \label{fig:bb}
     \vspace{-0.3cm}
 \end{figure}
@@ -137,7 +137,7 @@ Suppose a deep neural network predicts the risk for cancer from a mammogram, whi
 % In addition to this insecurity on the model level, it is likely that machine learning systems in deployment will be attacked. 
 
 %%%%% iai
-The threats of adversarial attacks on deployments of machine learning models has contributed to the field of XAI comprising topics of (1) \textit{model interpretations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{adversarial manipulations of model interpretations}. All these subfields have the common goal to make models more robust and safe for deployment. 
+The threats of adversarial attacks on deployments of machine learning models has contributed to the field of XAI comprising topics of (1) \textit{model interpretations}, (2) \textit{adversarial attacks}, or manipulation methods and (3) the field of \textit{adversarial manipulations of model interpretations}. All these subfields have the common goal to make models more robust and safe for deployment. We informally define a model to be robust if it's output is consistently accurate even if one or more of the input features are altered. 
 (1) refers to the development of techniques that can be used to understand and explain the decision making process of a machine learning model or even the development of models that are inherently interpretable. (2) is the field of detecting vulnerabilities in models that cause these models to be deceived by altered input. 
 (3) is the main topic of this paper, i.e. how to fool interpretation methods in order to detect vulnerabilities and malfunctions in interpretation methods. 
 %%%% 
@@ -186,23 +186,25 @@ In \autoref{sec:manipulation_methods}, the main topic of this paper, namely mani
 
 There exists a variety of definitions in the vastly expanding research field of XAI, and the concept of \textit{interpretability} still has no formal commonly used technical meaning \cite{lipton2018mythos}. To build on the common ground of existing research, this work follows the terminology of Lipton et al. \cite{lipton2018mythos} and Arrieta et al. \cite{arrieta2020explainable}.
 
-Broadly, interpretabiity focuses on \textit{how} and \textit{why} a machine learning model makes predictions.
+Broadly, interpretability focuses on \textit{how} and \textit{why} a machine learning model makes predictions.
 Simply put, interpretability is focused on getting some notion of an explanation in human understandable terms for the decisions made by a machine learning model.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Terminology}
 \label{subsec:interpretation_methods_terminology}
-The authors of \cite{arrieta2020explainable} make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainibility}. Lipton \cite{lipton2018mythos} further breaks down interpretability into \textit{transparency} and \textit{post-hoc} interpretability. The notion of \textit{explainibility} from \cite{arrieta2020explainable} can be related to Liptons's \textit{transparency}, while Lipton's \textit{post-hoc} interpretability is essentially \textit{interpretability} as defined by Arrieta et al. \cite{arrieta2020explainable}.
+The authors of \cite{arrieta2020explainable} make a distinction between the related but different concepts of \textit{interpretability} and \textit{explainability}. Lipton \cite{lipton2018mythos} further breaks down interpretability into \textit{transparency} and \textit{post-hoc} interpretability. The notion of \textit{explainability} from \cite{arrieta2020explainable} can be related to Liptons's \textit{transparency}, while Lipton's \textit{post-hoc} interpretability is essentially \textit{interpretability} as defined by Arrieta et al. \cite{arrieta2020explainable}.
 
-\mypar{Post-hoc Interpretability} refers to the the extent to which cause and effect can be observed in a model, which can be translated to uncovering \textit{why} a model made prediction $y$ to an input $\mathbf{x}$, or how input and output ralate. Consider the example of image classification from \autoref{fig:bb}. Here, interpretability would mean that if a cat is present in the image (the cause), the model classifies it to the category 'cat' (the effect). Now imagine we find that the model takes the green meadow in the image as evidence to predict 'cat', and not the cat itself. This would imply a lack of interpretability, as the model learns to assign features to the concept 'cat' other than those related to 'cat' in the correct sense. This toy example emphasizes a common problem in image classification: \cite{xiao2020noise} observe the over-reliance of models on image background, rather than on objects in the foreground. 
+\mypar{Post-hoc Interpretability} refers to the the extent to which cause and effect can be observed in a model, which can be translated to uncovering \textit{why} a model made prediction $y$ to an input $\mathbf{x}$, or how input and output relate to each other. \textit{Post-hoc} means that interpretations are computed by applying methods that analyze the model after training. Consider the example of image classification from \autoref{fig:bb}. Here, interpretability would mean that if a cat is present in the image (the cause), the (trained) model classifies it to the category 'cat' (the effect). Now imagine we find that the model takes the green meadow in the image as evidence to predict 'cat', and not the cat itself. This would imply a lack of interpretability, as the model learns to assign features to the concept 'cat' other than those related to 'cat' in the correct sense. This toy example emphasizes a common problem in image classification: \cite{xiao2020noise} observe the over-reliance of models on image background, rather than on objects in the foreground, and is thus not just a reality distant toy example.
 
-\mypar{Explainibility or Transparency} on the other hand spans methods to uncover \textit{how} a model makes predictions, meaning to observe the inner workings of a model and thus to literally explain what is happening in terms of understanding of the mechanisms by which a model works. Thus, tansparency refers to the model's inherent properties that can be known before the training process and that are helpful to understand the model.
+\mypar{Explainability or Transparency} on the other hand spans methods to uncover \textit{how} a model makes predictions, meaning to observe the inner workings of a model and thus to literally explain what is happening in terms of understanding of the mechanisms by which a model works. Thus, transparency refers to the model's inherent properties that can be known before the training process and that are helpful to understand the model.
 
 \par\smallskip\vspace*{-0.1cm}
 While both concepts seem to be important for the general objective of explainable artificial intelligence, this paper focuses on post-hoc interpretability.
-There are essentially two ways to achieve interpretability: (1) to use inherently interpretable models or (2) to post-process a model in a fashion that allows to yield insights. The former is known as the development of \textit{surrogate} models and more generally described as \textit{model-agnostic} methods. Option (2) is known as \textit{model-transparent} methods. 
+There are essentially two ways to achieve interpretability: (1) to use inherently interpretable models or (2) to post-process a model in a fashion that allows to yield insights into it's decision. 
+An inherently interpretable model is a model with restricted complexity (e.g. a linear model). On the other hand, \textit{post-hoc}, as outlined earlier, refers to the application of methods for analyzing a model after model training.
+Post-hoc methods span \textit{model-agnostic} methods and \textit{model-transparent} methods. Within model-agnostic methods, the model itself is unknown and approximated with a \textit{surrogate} model (see \autoref{subsec:bb_methods}), while within \textit{model-transparent} methods, the model itself is used to compute interpretations (see \autoref{subsec:wb_methods}). 
 
-\mypar{Local and Global Methods.} A further categorization can be made based on the scope of interpretations: \textit{Local} methods aim at providing interpretations that are true for a single data points and its neighbors. 
+\mypar{Local and Global Methods.} A further categorization can be made based on the scope of interpretations: \textit{Local} methods aim at providing interpretations that are true for a single data point and its neighbors. 
 \textit{Global} methods aim at gaining interpretations that are valid for most data points in a class \cite{kim2018interpretability, nguyen2017plug, yosinski2015understanding}. The interpretation methods discussed within this paper mostly fall into the class of local explanation methods \cite{ribeiro2016should, lundberg2017unified, bach2015pixel}.
 
 \mypar{Feature Attribution Methods and Sample Attribution Methods. } Interpretation methods aim at making complex and inherently uninterpretable black box models interpretable by creating human readable visualizations. 
@@ -280,11 +282,10 @@ LIME \cite{ribeiro2016should} perturbs the input and observes how the prediction
   \vspace{-0.3cm}
 \end{figure}
 
-
 \subsection{Model-transparent methods.}
 \label{subsec:wb_methods}
 
-The other group of interpretations are model-transparent, or white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Methods within this group are for example propagation-based and gradient-based approaches. The former propagate back the model's prediction back through the model. The latter make use of the information provided by the gradients of the loss function, which contain sensitive information about the prediction and the features. Using the backpropagation method, features in the input can be highlighted based on the amount of gradient they receive. This shows their contribution to the final score. 
+The other group of interpretations are model-transparent, or white-box methods, where the underlying model is known with all its parameters. Thus, the interpretation can be directly computed by using the model instead of relying on an approximation of $f_N$ as within the black-box methods. These methods typically rely on the relationship between an input sample, the underlying model's prediction and the associated activations of the models hidden layers. Methods within this group are for example propagation-based and gradient-based approaches. The former propagate the model's prediction back through the model. The latter make use of the information provided by the gradients of the loss function, which contain sensitive information about the prediction and the features. Using the backpropagation method, features in the input can be highlighted based on the amount of gradient they receive. This shows their contribution to the final score. 
 A few example methods within this group are listed below. 
 
 \mypar{Layer-wise Relevance Propagation (LRP).} While many approaches in the group of model-transparent interpretations are designed only for image classification, or convolutional neural networks, this method \cite{bach2015pixel} is an exception. LRP propagates relevance values backwards through the network and decomposes the score of a predicted class backwards through the network. It relies on a Taylor series close to the prediction point rather than partial derivatives at the prediction point itself. An example for a feature map produced by LRP can be found in \autoref{fig:lrp_cat_lrp}.
@@ -292,7 +293,7 @@ A few example methods within this group are listed below.
 
 \mypar{DeepLIFT} \cite{shrikumar2017learning} is an improved version of LRP, where a reference point in the input feature space is defined. Relevance scores are propagated proportionally to the changes of neuronal activations from the reference. % https://arxiv.org/pdf/1710.10547.pdf
 
-\mypar{SmoothGrad (SG)} \cite{smilkov2017smoothgrad} averages over interpretations of noisy copies of an input sample thus reducing noise by visually diffusing the interpretation. The noise is drawn from i.i.d. from a normal distribution. 
+\mypar{SmoothGrad (SG)} \cite{smilkov2017smoothgrad} averages over interpretations of noisy copies of an input sample thus reducing noise by visually diffusing the interpretation. The noise is drawn i.i.d. from a normal distribution. 
 
 Methods developed specifically for convolutional neural networks are for instance Grad-CAM \cite{selvaraju2017grad} or SimpleGrad \cite{simonyan2013deep}.
 
@@ -313,7 +314,7 @@ Adversarial examples, as first introduced by \cite{szegedy_intriguing}, are clev
 \par\smallskip
 \textbf{Definition 2: Model Manipulation Method}
 \begin{enumerate}
-    \item[1.] \textit{Impercpetibility of Perturbation}: The adversarial example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
+    \item[1.] \textit{Imperceptibility of Perturbation}: The adversarial example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
     \item[2.] \textit{Prediction dissimilarity}: The prediction of the model is significantly different to the prediction on the non-adversarial example: $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x})$$
 \end{enumerate}
 Note, that within adversarial fooling of models, the perturbation is mostly applied to the input data, and not to the model itself.
@@ -322,11 +323,12 @@ Note, that within adversarial fooling of models, the perturbation is mostly appl
 Evidence from many studios shows that deep learning models can be easily tricked by adversarial examples. 
 Albeit there are not yet as many studies, there also exists evidence that many interpretation methods are also fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards} as well as to the model itself \cite{fooling_nn_interpreters, dimanov2020you}. This fooling of interpretation methods is outlined below. 
 
-\mypar{Adversarial Attacks on Model Interpreters. } 
+\mypar{Adversarial Attacks on Model Interpreters.} 
 Contrary to adversarial attacks on machine learning models, the focus of this paper is on the attacks on interpretation techniques without changing the prediction of the model. 
 An adversarial attack on a model interpretation is in the following also called a \textit{manipulation} method. 
 The goal is to apply perturbations to either an input sample or the model to change the output of an interpretation technique while leaving the model prediction unchanged. The last condition is important because adversarial interpreter manipulations aim to fool the interpretation method and essentially not the model itself. 
-Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability of the interpretation method. 
+Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability \footnote{Stability is given if a method yields consistent outcomes in independent runs.} of the interpretation method.
+
 Again, the problem can be formally defined as:
 
 % A manipulation method refers to a method influencing an interpretation method $\mathcal{I}$ to yield a wrong interpretation. This influence on the interpretation method is also called \textit{fooling} or an \textit{attack}. 
@@ -428,9 +430,11 @@ Besides the necessary properties of a successful interpretation manipulation met
 \mypar{Transferability.} The manipulation does not only fool one type of interpretation method, but it's effect transfers to other interpretation techniques. 
 % This property is naturally given for the class of model manipulations
 
+\mypar{Stability.} The manipulation method influences the interpretation method consistently in a similar way in independent runs. 
 
-\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space should be affected. 
+\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples interpretations, but also samples that are far away in the feature space should be affected. 
 Otherwise, the perturbation is only local around the training points, thus the perturbation does not generalize. 
+
 \par\smallskip
 As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretation methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust interpretation method.  
 Evaluations of the quality of an explanation method are separated into qualitative and quantitative evaluations. 
@@ -465,7 +469,7 @@ There are metrics that are applied to identify changes in salient features for a
 Contrary, the following metrics are used only in computer vision tasks. They have been used in literature to quantify similarities between natural images and remove duplicates. Therefore, they are used in XAI research to compare the changes between saliency maps before and after manipulation for computer vision tasks.
 \begin{itemize}
     \item \textbf{Structural Similarity Index (SSIM).} SSIM values are relative similarity measure in the range $\left[0, 1\right]$, where larger values indicate higher similarity.
-    \item \textbf{Pearson Correlation Coefficien (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
+    \item \textbf{Pearson Correlation Coefficient (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
     \item \textbf{Pearson Correlation of the Histogram of Gradients\newline (HOG). } Used by \cite{adebayo2018sanity} to indicate the intensity of change between two images. 
     \item \textbf{Mean Squared Error (MSE).} As an absolute error measure, values close to zero indicate high similarity. 
 \end{itemize}
@@ -538,7 +542,7 @@ Two categories of fooling methods are introduced:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/heo_intro.jpg}
-    \caption{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct class (\textit{elephant}) to a wrong calss \textit{(fire truck}).}
+    \caption{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct (\textit{elephant}) to a wrong class \textit{(fire truck}). Image from \cite{fooling_nn_interpreters}.}
     \label{fig:heo_intro}
     \vspace{-0.3cm}
 \end{figure}

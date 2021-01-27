@@ -25,9 +25,9 @@
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Prediction pipeline using a machine learning model, depicted as a black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessmant of the model's accuracy. Additionally answering the question \textit  {why}, i.e. making the model interpretable for a human, requires additional methods.\relax }}{1}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Prediction pipeline using a machine learning model, depicted as black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessment of the model's accuracy. Additionally answering the question \textit  {why}, i.e. making the model interpretable for a human, requires additional methods.\relax }}{1}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:bb}{{1}{1}{Prediction pipeline using a machine learning model, depicted as a black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessmant of the model's accuracy. Additionally answering the question \textit {why}, i.e. making the model interpretable for a human, requires additional methods.\relax }{figure.caption.2}{}}
+\newlabel{fig:bb}{{1}{1}{Prediction pipeline using a machine learning model, depicted as black box. Typically, evaluation metrics require the prediction $y$ and the ground truth label $y^*$ allowing for the assessment of the model's accuracy. Additionally answering the question \textit {why}, i.e. making the model interpretable for a human, requires additional methods.\relax }{figure.caption.2}{}}
 \citation{fooling_nn_interpreters}
 \citation{fooling_nn_interpreters}
 \citation{bach2015pixel,simonyan2013deep,zeiler2014visualizing}
@@ -65,9 +65,9 @@
 \citation{ribeiro2016should}
 \citation{szegedy2016rethinking}
 \citation{ILSVRC15}
-\citation{lundberg2017unified}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Model-agnostic methods.}{3}{subsection.2.2}\protected@file@percent }
 \newlabel{subsec:bb_methods}{{2.2}{3}{Model-agnostic methods}{subsection.2.2}{}}
+\citation{lundberg2017unified}
 \citation{bach2015pixel}
 \citation{shrikumar2017learning}
 \citation{smilkov2017smoothgrad}
@@ -105,21 +105,21 @@
 \newlabel{subsubsec:manipulation_levels}{{3.2.1}{5}{Manipulation Levels}{subsubsection.3.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples, which are indicated by $\mathbf  {x}+\delta $.\relax }}{5}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:input_manipulation}{{5}{5}{Depiction of an adversarial input manipulation. The model is fine-tuned with altered input samples, which are indicated by $\mathbf {x}+\delta $.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Manipulation Targets}{5}{subsubsection.3.2.2}\protected@file@percent }
-\newlabel{subsubsec:manipulation_targets}{{3.2.2}{5}{Manipulation Targets}{subsubsection.3.2.2}{}}
 \citation{fooling_nn_interpreters}
 \citation{simonyan2013deep}
 \citation{fooling_nn_interpreters}
 \citation{adebayo2018sanity}
 \citation{ghorbani2019interpretation}
 \citation{fooling_nn_interpreters}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta $.\relax }}{6}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:input_manipulation}{{6}{6}{Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta $.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Manipulation Targets}{6}{subsubsection.3.2.2}\protected@file@percent }
+\newlabel{subsubsec:manipulation_targets}{{3.2.2}{6}{Manipulation Targets}{subsubsection.3.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluation Criteria}{6}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec:eval_criteria_manipulations}{{3.3}{6}{Evaluation Criteria}{subsection.3.3}{}}
 \citation{samek2016evaluating}
 \citation{fooling_nn_interpreters}
 \citation{ghorbani2019interpretation}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta $.\relax }}{6}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:input_manipulation}{{6}{6}{Depiction of an adversarial model manipulation. The model is fine-tuned with the same distribution of input data and a fooling loss, thus yielding the biased model $N+\delta $.\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluation Criteria}{6}{subsection.3.3}\protected@file@percent }
-\newlabel{subsec:eval_criteria_manipulations}{{3.3}{6}{Evaluation Criteria}{subsection.3.3}{}}
 \citation{spearman1961proof}
 \citation{adebayo2018sanity}
 \citation{adebayo2018sanity}
@@ -131,6 +131,7 @@
 \citation{dombrowski2019explanations}
 \citation{ghorbani2019interpretation}
 \citation{dombrowski2019explanations}
+\citation{fooling_nn_interpreters}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Interpreter Manipulation Method Examples}{7}{section.4}\protected@file@percent }
 \newlabel{sec:manipulations}{{4}{7}{Interpreter Manipulation Method Examples}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Input Level Manipulations}{7}{subsection.4.1}\protected@file@percent }
@@ -142,20 +143,19 @@
 \newlabel{sub@fig:patch_fooled}{{c}{7}{\scriptsize {Fooled Map, fooled \newline model. Pred: 'Soccer ball'.}\relax }{figure.caption.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Fooling of the model and GradCAM. The interpreter is deceived as it takes the features of the original target class as evidence of the wrong class. Images from \citep  {subramanya2019fooling}.\relax }}{7}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:patch_fooling}{{7}{7}{Fooling of the model and GradCAM. The interpreter is deceived as it takes the features of the original target class as evidence of the wrong class. Images from \cite {subramanya2019fooling}.\relax }{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces On the left, the original image with corresponding interpretation map is shown. The right column shows the imperceptibly perturbed input image and it's explanation. The target interpretation map was chosen to be an image with the text "this explanation was manipulated". Image from \citep  {dombrowski2019explanations}.\relax }}{7}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:dombr}{{8}{7}{On the left, the original image with corresponding interpretation map is shown. The right column shows the imperceptibly perturbed input image and it's explanation. The target interpretation map was chosen to be an image with the text "this explanation was manipulated". Image from \cite {dombrowski2019explanations}.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Model Level Manipulations}{7}{subsection.4.2}\protected@file@percent }
+\citation{fooling_nn_interpreters}
 \citation{fooling_nn_interpreters}
 \citation{advlime_aies20}
 \citation{dimanov2020you}
 \citation{fooling_nn_interpreters}
 \citation{fooling_nn_interpreters}
 \citation{dimanov2020you}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces On the left, the original image with corresponding interpretation map is shown. The right column shows the imperceptibly perturbed input image and it's explanation. The target interpretation map was chosen to be an image with the text "this explanation was manipulated". Image from \citep  {dombrowski2019explanations}.\relax }}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:dombr}{{8}{8}{On the left, the original image with corresponding interpretation map is shown. The right column shows the imperceptibly perturbed input image and it's explanation. The target interpretation map was chosen to be an image with the text "this explanation was manipulated". Image from \cite {dombrowski2019explanations}.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct (\textit  {elephant}) to a wrong class \textit  {(fire truck}). Image from \citep  {fooling_nn_interpreters}.\relax }}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:heo_intro}{{9}{8}{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct (\textit {elephant}) to a wrong class \textit {(fire truck}). Image from \cite {fooling_nn_interpreters}.\relax }{figure.caption.10}{}}
 \citation{adebayo2018sanity}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Model Level Manipulations}{8}{subsection.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct class (\textit  {elephant}) to a wrong calss \textit  {(fire truck}).\relax }}{8}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:heo_intro}{{9}{8}{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct class (\textit {elephant}) to a wrong calss \textit {(fire truck}).\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Benchmarking Interpretations}{8}{section.5}\protected@file@percent }
-\newlabel{sec:benchmarking}{{5}{8}{Benchmarking Interpretations}{section.5}{}}
 \citation{compas_dataset}
 \citation{adult_income}
 \citation{fooling_nn_interpreters}
@@ -171,14 +171,16 @@
 \bibcite{alvarez2018towards}{{3}{2018}{{Alvarez~Melis and Jaakkola}}{{Alvarez~Melis and Jaakkola}}}
 \bibcite{ancona2017towards}{{4}{2017}{{Ancona et~al\mbox  {.}}}{{Ancona, Ceolini, {\"O}ztireli, and Gross}}}
 \bibcite{anders2020fairwashing}{{5}{2020}{{Anders et~al\mbox  {.}}}{{Anders, Pasliev, Dombrowski, M{\"u}ller, and Kessel}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Benchmarking Interpretations}{9}{section.5}\protected@file@percent }
+\newlabel{sec:benchmarking}{{5}{9}{Benchmarking Interpretations}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{9}{Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{References}{9}{section*.11}\protected@file@percent }
 \bibcite{compas_dataset}{{6}{2016}{{Angwin et~al\mbox  {.}}}{{Angwin, Larson, Mattu, and Kirchner}}}
 \bibcite{arras2017relevant}{{7}{2017}{{Arras et~al\mbox  {.}}}{{Arras, Horn, Montavon, M{\"u}ller, and Samek}}}
 \bibcite{arrieta2020explainable}{{8}{2020}{{Arrieta et~al\mbox  {.}}}{{Arrieta, D{\'\i }az-Rodr{\'\i }guez, Del~Ser, Bennetot, Tabik, Barbado, Garc{\'\i }a, Gil-L{\'o}pez, Molina, Benjamins, et~al\mbox  {.}}}}
 \bibcite{bach2015pixel}{{9}{2015}{{Bach et~al\mbox  {.}}}{{Bach, Binder, Montavon, Klauschen, M{\"u}ller, and Samek}}}
 \bibcite{brinker2019deep}{{10}{2019}{{Brinker et~al\mbox  {.}}}{{Brinker, Hekler, Enk, Berking, Haferkamp, Hauschild, Weichenthal, Klode, Schadendorf, Holland-Letz, et~al\mbox  {.}}}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}\protected@file@percent }
-\newlabel{sec:discussion}{{6}{9}{Conclusion}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{References}{9}{section*.11}\protected@file@percent }
 \bibcite{chouldechova2017fair}{{11}{2017}{{Chouldechova}}{{Chouldechova}}}
 \bibcite{dimanov2020you}{{12}{2020}{{Dimanov et~al\mbox  {.}}}{{Dimanov, Bhatt, Jamnik, and Weller}}}
 \bibcite{dombrowski2019explanations}{{13}{2019}{{Dombrowski et~al\mbox  {.}}}{{Dombrowski, Alber, Anders, Ackermann, M{\"u}ller, and Kessel}}}
