@@ -1,7 +1,7 @@
 ---
 title: "Why you shouldn't trust me: A survey on Adversarial Model Interpretation Manipulations"
 author: "Verena Heusser"
-institute: "KIT, Seminar Explainable Machine Learning, Intelligent System Security Research Group"
+institute: "KIT,  Intelligent System Security Research Group, Seminar Explainable Machine Learning"
 topic: "Pandoc how-to"
 # theme: "Frankfurt"
 # colortheme: "beaver"
@@ -15,45 +15,36 @@ date: \today
 lang: en-US
 section-titles: true
 toc: false
+<!-- today i will present a survey in the field of explainable ml: On how to fool interpretation methods -->
 ---
 
-# Overview
+
+# Omnipresent Machine Learning
+
+* Verification of machine learning (ML) algorithms mostly w.r.t. accuracy and efficiency 
+* Also: 
+    * Regulations: 
+        * Right to explanation (GDPR 2018)
+        * California-25: Cash bail 
 
 
+
+ 
 # Motivation
-
-
 
 # Interpretation Methods
 
 # Adversarial Setting
+
+## Adversarials: How to fool a model
+* Adversarial examples \cite{}
 
 # Interpreter Manipulation Methods
 
 # Fooling Examples
 
----
+# References
 
-<!-- # Why you shouldn't trust me: \newline A survey on Adversarial Model Interpretation Manipulations
+# Sources
 
-# Motivation
 
-## First Slide
-
-Something
-
-## Second Slide
-
-- First
-
-* Second
-
-# Interpretation Methods
-
-## Terminology
-
-# Adversarial Setting
-
-## Adversarial Machine Learning
-
-# Fooling Methods -->
