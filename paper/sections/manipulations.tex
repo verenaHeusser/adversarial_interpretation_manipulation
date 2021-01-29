@@ -3,20 +3,12 @@
 
 After introducing the terminology of model interpreters and manipulation methods in the previous chapters, this chapter gives detailed information about recent manipulation methods. This section also provides insight into major findings in the field of manipulating model interpretations. First, input level manipulations are discussed, followed by model level manipulations. 
 
-% TODO \\
-% Most of the explanation methods outlined in sec. \autoref{sec:interpretation_methods} have been shown to be vulnerable to adversarial perturbations. 
-% Manipulation methods often show that there exist small feature changes resulting in a change of the explanation methods output while the output of the model itself does not change. 
-% Most approaches aim at providing a relevance measure of the input features. \\
-
-% Creation of a fooled model by fine-tuning the model with a fooling loss. 
-% https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations/blob/master/Materials/PPT.pdf 
-
 \subsection{Input Level Manipulations}
 
 \mypar{Fooling both Model and Interpreter. }\newline
 \cite{subramanya2019fooling} design adversarial attacks that fool the machine learning model as well as the model interpretation. 
 They design targeted and untargeted input patches of various styles, which overlaid onto the original images. 
-\autoref{fig:patch_fooling} shows that GradCAM is fooled by this simple method as well as the calssification model, resembling findings in research on adversarial attacks on models. 
+\autoref{fig:patch_fooling} shows that GradCAM is fooled by this simple method as well as the classification model, resembling findings in research on adversarial attacks on models. 
 
 \begin{figure}[ht]
     \centering
@@ -35,7 +27,7 @@ They design targeted and untargeted input patches of various styles, which overl
       \caption{\scriptsize{Fooled Map, fooled \newline model. Pred: 'Soccer ball'.}}
       \label{fig:patch_fooled}
     \end{subfigure}
-    \caption{Fooling of the model and GradCAM. The interpreter is fooled is it takes the original target classe's features as evidence for the wrong class. Images from \cite{subramanya2019fooling}.}\label{fig:patch_fooling}
+    \caption{Fooling of the model and GradCAM. The interpreter is deceived as it takes the features of the original target class as evidence of the wrong class. Images from \cite{subramanya2019fooling}.}\label{fig:patch_fooling}
     \vspace{-0.3cm}
 \end{figure}
 
@@ -67,12 +59,11 @@ Two categories of fooling methods are introduced:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/heo_intro.jpg}
-    \caption{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct class (\textit{elephant}) to a wrong calss \textit{(fire truck}).}
+    \caption{Fooling of LRP and GradCAM. Passive fooling causes the interpreters to highlight wrong, uninformative pixels. Active shifts the interpreters indications from a correct (\textit{elephant}) to a wrong class \textit{(fire truck}). Image from \cite{fooling_nn_interpreters}.}
     \label{fig:heo_intro}
     \vspace{-0.3cm}
 \end{figure}
 
-% TODO fork it
 % The authors also conduct quantitative analysis using the AOPC metric to prove that the interpretations found by the interpreters are valid.
  They find that all tested interpreters are fooled to a certain degree, and that the interpreter malfunctions furthermore generalize to other interpreters and especially to the whole validation set. It is worth noting that the proposed attack could not easily fool SmoothGrad, indicating that this is a better, or at least more robust interpretation method. 
 
@@ -85,17 +76,6 @@ The main point the authors are trying to make is that machine models can be syst
 The authors take a statistical approach model-agnostic interpretation methods. They examined the data produced by LIME's and SHAP's perturbation schemes and showed that the perturbed samples are out-of-distribution (o.o.d.) samples compared to the distribution of the regular training data. The authors used this insight, i.e. that LIME and SHAP heavily rely on o.o.d. samples and are thus o.o.d. classifiers, to train an adversarial classifier: This classifier exhibits biased behavior (e.g. using the feature 'race' for predicting the income class of a person) on instances from the original data distribution, while using insensitive features for predicting on o.o.d. samples. It is shown that the interpreters are not able to detect the model bias as they create innocuous interpretations. However, LIME performs slightly better than SHAP. 
 
 This adversarial framework is applied to numerous real-world datasets, and are thus one of the few papers \textit{not} considering computer vision tasks but rather tasks that actually suit the core motivational concern in XAI: That models might be adversarial und unbiased, and that we might not be able to detect that their decision functions are unfair, racist or discriminatory. 
-% TODO better explain this
-
-% \autoref{fig:slack_ood_data} shows that the data samples generated by LIME are distributed differently than the data original, non-perturbed data samples. 
-
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=0.8\linewidth]{figures/slack_ood_data.png}
-%     \caption{Principal Component Analysis (PCA) on the original data (orange) of the COMPAS dataset and the samples perturbed by LIME (blue). Note that the differences are obvious even in the space reduced to two dimensions.}
-%     \label{fig:slack_ood_data}
-%     \vspace{-0.3cm}
-% \end{figure}
 
 \mypar{Learning Models Which Conceal Unfairness.}
 \cite{dimanov2020you} examine the relation of interpretation methods and the concept of fairness. They propose to learn a modified model with concealed unfairness. Their approach differs methodologically to \cite{fooling_nn_interpreters} as follows: 

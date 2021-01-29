@@ -4,11 +4,9 @@
 Checking the robustness, scope and hence the quality of model interpreters has become an indispensable step in explainable machine learning. 
 Evaluating explanation and interpretation methods is difficult as ground truth is mostly lacking. In most applications, it is not known which input features are most important. 
 
-% https://github.com/google-research-datasets/bam 
-% https://arxiv.org/abs/1907.09701
-
-\cite{adebayo2018sanity} propose a framework for sanity checking saliency map based interpretation methods. Fer this, a number of randomization tests are introduced along with some visualization techniques and metrics to compare interpretation outputs. The authors find that most methods fail their tests, and warn of the danger of visual assessment. Specifically, they warn that humans tend to chose visually significant appearing images that lack sensitivity to the data distribution and generation as well as to the model. 
+\cite{adebayo2018sanity} propose a framework for sanity checking saliency map based interpretation methods. For this, a number of randomization tests are introduced along with some visualization techniques and metrics to compare interpretation outputs. The authors find that most methods fail their tests, and warn of the danger of visual assessment. Specifically, they warn that humans tend to chose visually significant appearing images that lack sensitivity to the data distribution and generation as well as to the model. 
 However, their findings are so far limited to the domain of computer vision models and tasks. % TODO @outlook
 Implementing their randomization tests for other real-world datasets, such as COMPAS \cite{compas_dataset} or the adult income dataset \cite{adult_income} would be an interesting next step. 
 
 Additionally, in order to account for adversarial model manipulations, Heo et al. \cite{fooling_nn_interpreters} propose to expand the criteria for checking the robustness of interpreters further.
+

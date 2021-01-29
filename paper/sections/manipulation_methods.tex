@@ -11,20 +11,21 @@ Adversarial examples, as first introduced by \cite{szegedy_intriguing}, are clev
 \par\smallskip
 \textbf{Definition 2: Model Manipulation Method}
 \begin{enumerate}
-    \item[1.] \textit{Impercpetibility of Perturbation}: The adversal example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
+    \item[1.] \textit{Imperceptibility of Perturbation}: The adversarial example is similar to original data, i.e. the norm of the added perturbation $\delta$ to an input sample $\mathbf{x}$ thus must be small, i.e. $$\norm{\mathbf{x}+\delta} = \norm{(\mathbf{x}+\delta)-\mathbf{x}}_{\inf} \leq \epsilon$$
     \item[2.] \textit{Prediction dissimilarity}: The prediction of the model is significantly different to the prediction on the non-adversarial example: $$f_N(\mathbf{x}+\delta) \approx f_N(\mathbf{x})$$
 \end{enumerate}
-Note, that within adversarial foolings of models, the perturbation is mostly applied to the input data, and not to the model itself.
+Note, that within adversarial fooling of models, the perturbation is mostly applied to the input data, and not to the model itself.
 
 % TODO cite
 Evidence from many studios shows that deep learning models can be easily tricked by adversarial examples. 
 Albeit there are not yet as many studies, there also exists evidence that many interpretation methods are also fragile with respect to small changes to input data \cite{adebayo2018sanity, samek2019explainable, alvarez2018towards} as well as to the model itself \cite{fooling_nn_interpreters, dimanov2020you}. This fooling of interpretation methods is outlined below. 
 
-\mypar{Adversarial Attacks on Model Interpreters. } 
+\mypar{Adversarial Attacks on Model Interpreters.} 
 Contrary to adversarial attacks on machine learning models, the focus of this paper is on the attacks on interpretation techniques without changing the prediction of the model. 
 An adversarial attack on a model interpretation is in the following also called a \textit{manipulation} method. 
 The goal is to apply perturbations to either an input sample or the model to change the output of an interpretation technique while leaving the model prediction unchanged. The last condition is important because adversarial interpreter manipulations aim to fool the interpretation method and essentially not the model itself. 
-Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability of the interpretation method. 
+Fooling the model would only disclose the vulnerability of the model but would not allow to gain insight into the stability \footnote{Stability is given if a method yields consistent outcomes in independent runs.} of the interpretation method.
+
 Again, the problem can be formally defined as:
 
 % A manipulation method refers to a method influencing an interpretation method $\mathcal{I}$ to yield a wrong interpretation. This influence on the interpretation method is also called \textit{fooling} or an \textit{attack}. 
@@ -50,7 +51,7 @@ Interpretation manipulation methods differ with respect to the definition of the
 Some methods aim to make the interpreter give wrong interpretations\cite{fooling_nn_interpreters}. 
 In this case, the following additional property must hold: 
 \begin{enumerate}
-   \item[3.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} = \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega}))$$ where $\mathcal{D}(\cdot)$ is a distance measure. 
+   \item[3.] \textit{Interpretation dissimilarity}: The explanation map $h(\mathbf{x}+\delta)$ is significantly different to the explanation map resulting from non adversarial models or inputs $h(\mathbf{x})$, i.e. $h(\mathbf{x}+\delta)$ or $$\argmax_{\delta} \mathcal{D}(\mathcal{I}(x_i, \boldsymbol{\omega}), \mathcal{I}(x_i+\delta, \boldsymbol{\omega}))$$ where $\mathcal{D}(\cdot)$ is a distance measure. 
 \end{enumerate}
 
 Others introduce a systematic bias into tho model while fooling the interpretation method in the sense that the interpretation does not change between the original model and the adversarial model. 
@@ -64,7 +65,7 @@ After formally defining what successfully fooling an interpretation method means
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Taxonomy of Interpretation Manipulation Methods}
 \label{subsec:taxonomy_manipulations}
-There are two important categories of Manipulation Methods that aim at attacking model interpretation methods. The first category is based on the level these manipulations operate on, i.e. input space level or model / paramater level. 
+There are two important categories of Manipulation Methods that aim at attacking model interpretation methods. The first category is based on the level these manipulations operate on, i.e. input space level or model / parameter level. 
 The second categorization is based on the target of the manipulations. While untargeted manipulations are mostly random perturbations, targeted manipulations aim to perturb the interpretation of specific input features. 
 
 %%%%%%%%%%
@@ -90,8 +91,7 @@ As found in \cite{dombrowski2019explanations}, visually-imperceptible perturbati
 Contrary to input manipulations, model manipulations do not operate on the input space but rather on the model parameter space itself. 
 As first introduced by Heo et al. \cite{fooling_nn_interpreters} in 2019, this line of research is comparably new. 
 Adversarial model manipulations for fooling the interpreter are obtained by fine-tuning the model on the same data but with an adapted objective function. \cite{fooling_nn_interpreters} propose the adapted loss function for the task of image classification of $$ \mathcal{L} = \mathcal{L}_{CE}(\mathcal{D};\omega) + \lambda \cdot \mathcal{L}(\mathcal{D};\omega; \omega_0) $$ where $\mathcal{L}_{CE}$ is the standard cross-entropy classification loss. 
-Adversarial model manipulation is depicted in \autoref{fig:input_manipulation} where the altered model is indicated by $N+\delta$.
-
+Adversarial model manipulation
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/model_manipulations.png}
@@ -127,16 +127,13 @@ Besides the necessary properties of a successful interpretation manipulation met
 \mypar{Transferability.} The manipulation does not only fool one type of interpretation method, but it's effect transfers to other interpretation techniques. 
 % This property is naturally given for the class of model manipulations
 
+\mypar{Stability.} The manipulation method influences the interpretation method consistently in a similar way in independent runs. 
 
-\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples intarpretations, but also samples that are far away in the feature space should be affected. 
+\mypar{Generalisation.} Generalization of an attack refers to the transfer of fooling to other test samples. This is noteworthy since a manipulation method might only perturb the decision boundary locally around the training points, i.e. only influencing training instances and their neighbors. However, it is desired that the explanations of unseen samples are affected as well. Furthermore, not only unseen samples interpretations, but also samples that are far away in the feature space should be affected. 
 Otherwise, the perturbation is only local around the training points, thus the perturbation does not generalize. 
-% On the contrary, model manipulations are non-local perturbations, meaning that they do not merely perturb an input sample
-% but rather effect all samples in the way that the model itself is changed. 
-% TODO iid ood?
-% The  generalisation  of  the  attack  to  testpoints  is  noteworthy  since  we  might  expect  that  the  deci-sion boundary would be perturbed locally around the train-ing points to affect only their explanations, without signifi-cant change for test points, especially if far away in featurespace (see Appendix for more)
 
 \par\smallskip
-As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretation methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust intarpretation method.  
+As outlined in section \autoref{sec:manipulation_methods}, there exists a plethora of interpretation methods differing in the assumption about the model character and also with respect to how interpretations are obtained. Thus, reliable evaluation methods are required allowing for a choice of an appropriate and robust interpretation method. Ultimately, the accordance to these evaluations should naturally allow for choosing an appropriate and robust interpretation method.  
 Evaluations of the quality of an explanation method are separated into qualitative and quantitative evaluations. 
 
 \mypar{Qualitative Evaluation.} 
@@ -144,7 +141,7 @@ Inspection and random sampling are commonly used techniques to obtain an intuiti
 As interpretations are attributed to input features, the resulting relevance values $l$ can be easily mapped to the input vector $\mathbf{x}$. Visual inspection of these evaluations for specific samples is informative, but does not allow for general statistics and validation of manipulation effects. Thus, quantitative evaluations are required. 
 \cite{adebayo2018sanity} consider two kinds of visualizing saliency maps: 
 \begin{itemize}
-    \item \textbf{Absolute Value (ABS).} Saliency maps visualized this way show only the absolute values of the normalizem maps.
+    \item \textbf{Absolute Value (ABS).} Saliency maps visualized this way show only the absolute values of the normalized maps.
     \item \textbf{Diverging. } The diverging visualization indicates positive and negative importance in different colors. 
 \end{itemize}
 
@@ -156,20 +153,20 @@ As interpreter manipulations shall alter the output of an interpretation methods
 \begin{itemize}
     \item \textbf{Fooling Success Rate (FSR).} \cite{fooling_nn_interpreters} introduce the concept of the Fooling Success Rate (FSR). The FSR captures the relationship between the model's predictive accuracy and the correctness of the interpretation averaged over multiple test samples. The 'correctness' of the interpretation is the difference between the original interpretation methods output and the output of the same interpretation method when applied to either an adversarial input sample or adversarial model. 
     The FSR counts samples for the model's prediction did not change but for which the interpretation method's output changed as a successfully fooled example. Thus, the higher the FSR, the the more often the fooling is successful in fooling the interpretation method. 
-    \item \textbf{Area Over Prediction Curve (AOPC). } AOPC \cite{samek2016evaluating} is a principled way of quantitatively evaluating that the interpretations found by interpretation methods are valid, i.e. based on the features that the model truly uses for making the predicton. \cite{fooling_nn_interpreters} use this measure to ensure that their adversarial model training does not fool the model (i.e. the predictive accuracy of the model is unchanged), but does fool the interpretation method.
+    \item \textbf{Area Over Prediction Curve (AOPC). } AOPC \cite{samek2016evaluating} is a principled way of quantitatively evaluating that the interpretations found by interpretation methods are valid, i.e. based on the features that the model truly uses for making the prediction. \cite{fooling_nn_interpreters} use this measure to ensure that their adversarial model training does not fool the model (i.e. the predictive accuracy of the model is unchanged), but does fool the interpretation method.
 \end{itemize}
 
 As the goal of interpreter manipulations is to fool an interpreter, thus altering the output of in interpreter, it is straightforward to compare interpretations and data samples before and after perturbation \cite{ghorbani2019interpretation}.
 There are metrics that are applied to identify changes in salient features for any task:
 \begin{itemize}
-    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural meusure for comparing interpretations. 
+    \item \textbf{Spearman's rank order correlation.} As interpretation methods rank the features based on their importance, the rank correlation \cite{spearman1961proof} is a natural measure for comparing interpretations. 
     \item \textbf{Intersection of the top-$k$ features.} For some tasks, only the top-$k$ features are relevant, such that a comparison between these top-$k$ features is insightful. 
 \end{itemize}
 
 Contrary, the following metrics are used only in computer vision tasks. They have been used in literature to quantify similarities between natural images and remove duplicates. Therefore, they are used in XAI research to compare the changes between saliency maps before and after manipulation for computer vision tasks.
 \begin{itemize}
     \item \textbf{Structural Similarity Index (SSIM).} SSIM values are relative similarity measure in the range $\left[0, 1\right]$, where larger values indicate higher similarity.
-    \item \textbf{Pearson Correlation Coefficien (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
+    \item \textbf{Pearson Correlation Coefficient (PCC).} PCC is also a relative similarity measure returning values in the range $\left[0, 1\right]$. Larger values indicate higher similarity.
     \item \textbf{Pearson Correlation of the Histogram of Gradients\newline (HOG). } Used by \cite{adebayo2018sanity} to indicate the intensity of change between two images. 
     \item \textbf{Mean Squared Error (MSE).} As an absolute error measure, values close to zero indicate high similarity. 
 \end{itemize}
