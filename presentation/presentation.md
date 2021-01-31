@@ -20,53 +20,155 @@ toc: false
 
 # Motivation
 
-# Omnipresent Machine Learning
-<!-- ml used for a lot of different tasks, as an example we can think of the example of image classif into an object category, where the performance of a model is mostly / per default measured wrt accuracy and efficiency-->
+## Omnipresent Machine Learning
+- Machine learning algorithms are moving our of the lab into the real world  <!-- autonomous driving, apps, internet: ml models have reached super human performance on a number of tasks + more and more tasks are being handled -->
+- Performance comes at the cost of complexity
+<!-- so instead of having a simple model, more complex modes (in terms of number of parameters) are used as they achieve better results -->
 
-* Verification of machine learning algorithms mostly w.r.t. accuracy and efficiency 
+![Machine learning Pipeline for Image Classification](../paper/figures/ml_pipelines_multipage-nn_cat_onlyScore.png "nn_cat_onlyScore"){ width=60% }
 
-![Machine learning Pipeline for Image Classification](../paper/figures/bb_cat_onlyScore.png "bb_cat_onlyClassif"){ width=60% }
+## Omnipresent Machine Learning
+- Machine learning algorithms are moving our of the lab into the real world
+- Performance comes at the cost of complexity
+  
+![Machine learning Pipeline for Image Classification](../paper/figures/ml_pipelines_multipage-bb_cat_onlyScore.png "bb_cat_onlyScore"){ width=60% }
 
-# Omnipresent Machine Learning
-<!-- ..but this is not enough: focus is shifting to better understand why a dacision was made instead of just answering how well a model performs -->
+## Omnipresent Machine Learning
+- Machine learning algorithms are moving our of the lab into the real world
+- Performance comes at the cost of complexity
 
-* Verification of machine learning algorithms mostly w.r.t. accuracy and efficiency 
-* Also Interpretability: Uncovering why a model made a decision
 
+<!-- understanding these bb models is hard, even for humans. and mostly, just having a model that preforms well on a held out
+test set does not give stakeholders and users enough trust -->
+- so far: *what* is the most likely label
+- now also: *why* does the model choose this label and  
+  which features were important for the decision $\rightarrow$ Explainable ML
+  
 ![Machine learning Pipeline for Image Classification](../paper/figures/bb_cat.png "bb_cat"){ width=60% }
 
-# Omnipresent Machine Learning
-<!-- ..but this is not enough: focus is shifting to better understand why a dacision was made instead of just answering how well a model performs -->
+## Omnipresent Machine Learning
+- Machine learning algorithms are moving our of the lab into the real world
+- Performance comes at the cost of complexity
 
-* Verification of machine learning algorithms mostly w.r.t. accuracy and efficiency 
-* Also Interpretability: Uncovering why a model made a decision
-
+<!-- furthermore, as the application areas are also expanded to more critical areas, such as medicine, politics an even personal rights  -->
+<!-- the recent discussions an the US on the california 25 cash bail discussions are one example of (as I believe) many more to come -->
+- so far: *what* is the most likely label
+- now also: *why* does the model choose this label and  
+  which features were important for the decision $\rightarrow$ Explainable ML
+  
 ![Machine learning Pipeline for Image Classification](../paper/figures/bb_prop25.png "bb_prop25"){ width=60% }
 
-* Especially: 
-  * Critical applications: Politics, Medicine, ... <!-- Even more crucial when moving to critical applications such as recidivism risk / release decisions (~US California proposition 25: Replace cash bail by automated risk assessment/system) -->
-  <!-- * Regulations: 
-      * Right to explanation (GDPR 2018)
-      * California-25: Cash bail  -->
+
+## Explainable Machine Learning
+
+::: columns
+
+:::: {.column width=60%}
+- Goal: Make stakeholders and customers comfortable
+- Problem: Tradeoff between complexity and interpretability
   
+::::
+ <!--
+simple model (e.g. linear) is interpretable, but not so powerful
+Deep model is complex, but powerful  ⇒ make interpretable
+-->
 
-# Interpretability 
+:::: {.column width=30%}
+![](../paper/figures/simple_vs_complex.png "simple_vs_complex"){width=99%}
+::::
 
-<!-- mostly we do not know how the model decides, as the structure is too compex -->
- 
-# Motivation
+:::
 
-# Interpretation Methods
+## Explainable Machine Learning
 
-# Adversarial Setting
+::: columns
 
-## Adversarials: How to fool a model
-* Adversarial examples \cite{}
+:::: {.column width=60%}
+- Goal: Make stakeholders and customers comfortable
+- Problem: Tradeoff between complexity and interpretability
+- $\rightarrow$ Need for methods helping with uncovering the *why*
+::::
+ <!--
+simple model (e.g. linear) is interpretable, but not so powerful
+Deep model is complex, but powerful  ⇒ make interpretable
+-->
 
-# Interpreter Manipulation Methods
+:::: {.column width=30%}
+![](../paper/figures/simple_vs_complex.png "simple_vs_complex"){width=99%}
+::::
 
-# Fooling Examples
+:::
 
-# References
+## Terminology
 
-# Sources
+- *Interpretability*: Observation of cause and effect ~ uncover the *why*
+- *Explainability*: Observation of inner workings ~ uncover the *how*  
+
+![](../paper/figures/bb_cat.png "bb_cat"){ width=60% }
+
+
+## Terminology
+
+- __*Interpretability*__: Observation of cause and effect ~ uncover the *why*
+  - *Post-hoc* interpretability: interpretations are computed by applying   
+    methods that analyze the model after training
+- *Explainability*: Observation of inner workings ~ uncover the *how*  
+
+![](../paper/figures/bb_cat.png "bb_cat"){ width=60% }
+
+# Interpretation Methods 
+
+## Types of Interpretation Methods
+
+::: columns
+
+:::: {.column width=50%}
+Local Methods  
+- why you think this image is a cat?
+
+Model agnostic methods  
+- the model is seen as black box (no access to the parameters, we can only query the model)
+- the underlying model is approximated with a surrogate model
+
+::::
+
+:::: {.column width=50%}
+Global Methods  
+- what does a cat look like?
+
+Model transparent methods  
+- the model is known and the parameters can be accessed
+::::
+
+:::
+<!-- interpretation methods can be discriminated based on different criteria 
+the criteria important here are whether local interpretarions are generated or global ones
+
+but more importantly (for this work)
+based on the assumptions the methods make about the underlying models
+-->
+
+## Methods
+
+# Interpreter Fooling
+## Adversarial Setting
+
+- why are interpretations so important and why is model fooling dangerous?
+
+Adversarial Setting: 
+::: columns
+
+:::: {.column width=50%}
+Adversarial model fooling
+::::
+
+:::: {.column width=50%}
+Adversarial interpreter fooling
+::::
+
+:::
+
+## Implications of Interpreter Fooling
+
+# Methods
+now, we want to take a look it specific findings of researchers from the past years
