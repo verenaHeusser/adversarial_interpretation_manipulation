@@ -23,54 +23,50 @@ theme: metropolis
 
 ## Omnipresent Machine Learning
 
-- Machine learning algorithms are moving our of the lab into the real world <!-- autonomous driving, apps, internet: ml models have reached super human performance on a number of tasks + more and more tasks are being handled -->
+- Machine learning algorithms are moving out of the lab into the real world
 - Performance comes at the cost of complexity
-<!-- so instead of having a simple model, more complex modes (in terms of number of parameters) are used as they achieve better results -->
 
 \begin{center}
-\includegraphics[width=0.75\textwidth]{../paper/figures/ml_pipelines_multipage-nn_cat_onlyScore.png}
+\includegraphics[width=0.75\textwidth]{figures/ml_pipeline_presentation-nn_cat.png}
 \end{center}
 
 ## Omnipresent Machine Learning
 
-- Machine learning algorithms are moving our of the lab into the real world
-- Performance comes at the cost of complexity
+- Machine learning algorithms are moving out of the lab into the real world
+- Performance comes at the cost of complexity $\rightarrow$ black box
 
 \begin{center}
-\includegraphics[width=0.75\textwidth]{../paper/figures/ml_pipelines_multipage-bb_cat_onlyScore.png}
+\includegraphics[width=0.75\textwidth]{figures/ml_pipeline_presentation-bb_cat.png}
 \end{center}
 
 ## Omnipresent Machine Learning
 
-- Machine learning algorithms are moving our of the lab into the real world
-- Performance comes at the cost of complexity
+- Machine learning algorithms are moving out of the lab into the real world
+- Performance comes at the cost of complexity $\rightarrow$ black box
 
-<!-- understanding these bb models is hard, even for humans. and mostly, just having a model that preforms well on a held out
-test set does not give stakeholders and users enough trust -->
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/ml_pipeline_presentation-bb_prop25.png}
+\end{center}
+
+## Omnipresent Machine Learning
+
+- Machine learning algorithms are moving out of the lab into the real world
+- Performance comes at the cost of complexity $\rightarrow$ black box
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/ml_pipeline_presentation-bb_prop25_all.png}
+\end{center}
+
+## Explainable Machine Learning
 
 - so far: _what_ is the most likely label
 - now also: _why_ does the model choose this label and  
   which features were important for the decision $\rightarrow$ Explainable ML
 
 \begin{center}
-\includegraphics[width=0.75\textwidth]{../paper/figures/bb_cat.png}
+\includegraphics[width=0.75\textwidth]{figures/ml_pipeline_presentation-bb_prop25_all.png}
 \end{center}
 
-## Omnipresent Machine Learning
-
-- Machine learning algorithms are moving our of the lab into the real world
-- Performance comes at the cost of complexity
-
-<!-- furthermore, as the application areas are also expanded to more critical areas, such as medicine, politics an even personal rights  -->
-<!-- the recent discussions an the US on the california 25 cash bail discussions are one example of (as I believe) many more to come -->
-
-- so far: _what_ is the most likely label
-- now also: _why_ does the model choose this label and  
-   which features were important for the decision $\rightarrow$ Explainable ML
-
-\begin{center}
-\includegraphics[width=0.75\textwidth]{../paper/figures/bb_prop25.png}
-\end{center}
 
 ## Explainable Machine Learning
 
@@ -130,7 +126,6 @@ Deep model is complex, but powerful  ⇒ make interpretable
   - _Post-hoc_ interpretability: interpretations are computed by applying  
     methods that analyze the model after training
 - _Explainability_: Observation of inner workings ~ uncover the _how_
-
 
 \begin{center}
 \includegraphics[width=0.75\textwidth]{../paper/figures/bb_cat.png}
