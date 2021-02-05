@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1612095140 "main.aux" "main.bbl" "main" 1612456975
+["bibtex main"] 1612095140 "main.aux" "main.bbl" "main" 1612536507
   "./ACM-Reference-Format.bst" 1606996826 85327 68580d41bd279ee2c59d376cb377f3d6 ""
-  "main.aux" 1612456975 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e "pdflatex"
+  "main.aux" 1612536506 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e "pdflatex"
   "mybib.bib" 1608207975 29626 4ecc403212041bbb2ed66e804c5cc6e1 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1612456972 "/home/veheu/proj/foolingnns/paper/main.tex" "/home/veheu/proj/foolingnns/paper/main.pdf" "main" 1612456975
-  "/home/veheu/proj/foolingnns/paper/main.aux" 1612456975 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e ""
+["pdflatex"] 1612536504 "/home/veheu/proj/foolingnns/paper/main.tex" "/home/veheu/proj/foolingnns/paper/main.pdf" "main" 1612536507
+  "/home/veheu/proj/foolingnns/paper/main.aux" 1612536506 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e ""
   "/home/veheu/proj/foolingnns/paper/main.tex" 1612265151 4782 5f387c6ecc1304d9ab38452c809fef19 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1607188752 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1607188752 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -309,20 +309,20 @@
   "figures/patch_fooled.png" 1608207975 93714 e285f66bedeb83515220ee1462f580aa ""
   "figures/patch_original.png" 1608207975 118513 131a67fd0c32d9e18b95d4bd728c6500 ""
   "figures/patch_plus_dog.png" 1608207975 112030 6d51df724cf8f444777fadf9a6346620 ""
-  "main.aux" 1612456975 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e "pdflatex"
+  "main.aux" 1612536506 20832 1c5f00b1daf58ecd8c27cd38a7d8d63e "pdflatex"
   "main.bbl" 1611931733 32685 511e879778b1faa53138c4d0e56e59e3 "bibtex main"
-  "main.out" 1612456975 2851 3014f4351b84d0b84116548ba3d35d28 "pdflatex"
+  "main.out" 1612536506 2851 3014f4351b84d0b84116548ba3d35d28 "pdflatex"
   "main.tex" 1612265151 4782 5f387c6ecc1304d9ab38452c809fef19 ""
   "sections/benchmarking_interpretations.tex" 1611931593 1413 70ca21cabf79947a2fb280e5694e100f ""
   "sections/discussion.tex" 1611931619 4406 656fcbe6e76a1355504983bf4436bd58 ""
   "sections/interpretation_methods.tex" 1611931463 15092 20ff77fa7a04195d717dcb3bfb7096c1 ""
   "sections/introduction.tex" 1612456971 9303 67f16417ced4caaf2f507198e5186f20 ""
   "sections/manipulation_methods.tex" 1611931512 19626 3bd39d38b66ffbb9436fd30be3eb4e0d ""
-  "sections/manipulations.tex" 1611931568 10234 7e9d2d9fe5eec6b51aee1a37839206cc ""
+  "sections/manipulations.tex" 1612536503 10249 d722ae6c8ed1b69b50d975697c9e8c02 ""
   (generated)
+  "main.log"
+  "/home/veheu/proj/foolingnns/paper/main.pdf"
+  "/home/veheu/proj/foolingnns/paper/main.log"
+  "main.out"
   "main.pdf"
   "main.aux"
-  "main.log"
-  "/home/veheu/proj/foolingnns/paper/main.log"
-  "/home/veheu/proj/foolingnns/paper/main.pdf"
-  "main.out"
