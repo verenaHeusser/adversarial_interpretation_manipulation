@@ -69,6 +69,10 @@ You Shouldn’t Trust Me: Learning Models Which Conceal Unfairness FromMultiple 
 
 http://ceur-ws.org/Vol-2560/paper8.pdf
 
+n contrast, we penalise the gradient withrespect to specified target feature to reduce its importancescore.
+We demonstrated that many popular explanation methods used in real-world settings are not able to indicate reliablywhether or not a model is fair. We provided an intuitive ex-planation to show how this can happen. We introduced amethod to modify an existing model and showed its empir-ical success in downgrading the feature importance of keysensitive features across six explanation methods and unseentest points across four datasets, while having little effect onmodel accuracy.
+
+
 
 --------------------------------------------------
 # ghorbani
