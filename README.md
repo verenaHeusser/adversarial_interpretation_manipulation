@@ -1,4 +1,4 @@
-# Why you shouldn’t trust me: A survey on Adversarial ModelInterpretation Manipulations
+# Why you shouldn’t trust me: A survey on Adversarial Model Interpretation Manipulations
 
 This repository contains the code of my seminar article 'Why you shouldn’t trust me: A survey on Adversarial ModelInterpretation Manipulations'.
 For this article, I have investigated diverse methods from Explainable / Interpretable AI and have played with the code of some of the open source implementations of both
